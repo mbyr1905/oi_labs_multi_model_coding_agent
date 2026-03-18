@@ -1,5 +1,5 @@
 .env
-/oi_labs_venv
+/oi_venv
 /mlruns
 mlflow.db
 /shivendu

@@ -13,5 +13,3 @@ langchain-groq
 pillow
 mlflow
 react
-
--- mlflow ui --backend-store-uri sqlite:///mlflow.db

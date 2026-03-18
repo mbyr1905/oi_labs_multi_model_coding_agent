@@ -115,6 +115,14 @@ def frontend_code_agent(state: AgentState):
             - Ensure JSON is valid and parsable
             - Ensure all files have proper content
             - Output STRICTLY valid JSON 
+            
+            ========================
+            SPECIAL FILE RULES
+            ========================
+            - Create ONE common requirements.txt file
+            - The file path MUST be: ../requirements.txt
+            - This ensures it is created inside src_code/
+            - Do NOT create requirements.txt inside frontend folder
             """
 
         log_text(prompt, "frontend_code_prompt.txt")

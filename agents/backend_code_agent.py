@@ -59,7 +59,7 @@ def backend_code_agent(state: AgentState):
                 - service layer
             - Ensure all modules are connected properly
             - Use clean folder structure
-
+            
             Return ONLY valid JSON:
 
             {{
@@ -74,6 +74,16 @@ def backend_code_agent(state: AgentState):
             Rules:
             - No explanation
             - No markdown
+            - Ensure JSON is valid and parsable
+            - Ensure all files have proper content
+            - Output STRICTLY valid JSON 
+            ========================
+            SPECIAL FILE RULES
+            ========================
+            - Create ONE common requirements.txt file
+            - The file path MUST be: ../requirements.txt
+            - This ensures it is created inside src_code/
+            - Do NOT create requirements.txt inside backend folder
             """
 
         log_text(prompt, "backend_code_prompt.txt")
