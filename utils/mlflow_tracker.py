@@ -1,4 +1,5 @@
 import mlflow
+import traceback
 
 mlflow.set_tracking_uri("sqlite:///mlflow.db")
 mlflow.set_experiment("ai_coding_agent") 
@@ -28,6 +29,20 @@ def log_text(text, filename):
     mlflow.log_text(text, filename)
 
 
-def end_run():
+def log_error(error: Exception):
 
-    mlflow.end_run()
+    mlflow.log_param("error_type", type(error).__name__)
+    mlflow.log_param("error_message", str(error))
+
+    stack_trace = traceback.format_exc()
+    mlflow.log_text(stack_trace, "error_stack_trace.txt")
+
+
+def fail_run():
+    if mlflow.active_run():
+        mlflow.end_run(status="FAILED")
+
+
+def end_success_run():
+    if mlflow.active_run():
+        mlflow.end_run(status="FINISHED")

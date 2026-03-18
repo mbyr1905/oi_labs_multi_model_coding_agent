@@ -7,20 +7,30 @@ from langchain_groq import ChatGroq
 from groq import Groq
 from graph.state import AgentState
 from utils.logger import logger 
-import ENVConstants
-from utils.mlflow_tracker import log_param, log_metric, log_text
+from utils.mlflow_tracker import log_param, log_metric, log_text, log_error
+from llm.groq_llm import get_llm
 
-llm = ChatGroq(model='llama-3.3-70b-versatile', temperature=0.2, api_key=ENVConstants.GROQ_API_KEY)
 
 def extract_json(text):
-    match = re.search(r"\{.*\}", text, re.DOTALL)
-    if not match:
-        raise ValueError("No JSON found in LLM output")
-    return json.loads(match.group())
+    try:
+        return json.loads(text)
+    except:
+        pass
+
+    match = re.search(r"```json(.*?)```", text, re.DOTALL)
+    if match:
+        return json.loads(match.group(1).strip())
+
+    match = re.search(r"\{.*?\}", text, re.DOTALL)
+    if match:
+        return json.loads(match.group())
+
+    raise ValueError("No valid JSON found in LLM output")
 
 def requirement_agent(state: AgentState):
     try:
         start_time = time.time()
+        llm = get_llm()
         logger.info("Starting requirement_agent")
         prd_text = state["prd_text"]
         figma_path = state.get("figma_image_path")
@@ -42,7 +52,8 @@ def requirement_agent(state: AgentState):
 
             {figma_context}
 
-            Return JSON:
+            Return ONLY valid JSON.
+
 
             {{
             "frontend": "",
@@ -56,6 +67,8 @@ def requirement_agent(state: AgentState):
             Rules:
             - Only extract features mentioned in PRD
             - Output valid JSON
+            Do NOT include explanation.
+            Do NOT include markdown.
         """
         log_text(prompt, "requirement_agent_prompt.txt")
         res = llm.invoke(prompt)
@@ -69,15 +82,16 @@ def requirement_agent(state: AgentState):
 
         state["components"] = system_spec["components"]
         runtime = time.time() - start_time
-
+        
+        logger.debug(f"Parsed system_spec: {system_spec}")
+        
         log_metric("requirement_agent_runtime", runtime)
-
         log_metric("pages_detected", len(state["pages"]))
-
         log_metric("components_detected", len(state["components"]))
-
+        
         logger.info(f"Completed requirement_agent")
         return state
     except Exception as e:
         logger.error(f"Error in requirement_agent: {e}")
+        log_error(e)
         raise e

@@ -125,3 +125,251 @@
 2026-03-18 08:39:19,465 | INFO | No figma image provided
 2026-03-18 08:39:20,473 | INFO | Completed requirement_agent
 2026-03-18 08:39:20,566 | INFO | LangGraph workflow completed
+2026-03-18 09:12:55,916 | INFO | Starting AI coding pipeline
+2026-03-18 09:12:55,922 | INFO | Invoking LangGraph workflow
+2026-03-18 09:12:56,169 | INFO | Starting requirement_agent
+2026-03-18 09:12:56,187 | INFO | No figma image provided
+2026-03-18 09:12:57,013 | INFO | Completed requirement_agent
+2026-03-18 09:12:57,193 | INFO | LangGraph workflow completed
+2026-03-18 09:13:31,750 | INFO | Starting AI coding pipeline
+2026-03-18 09:13:31,757 | INFO | Invoking LangGraph workflow
+2026-03-18 09:13:32,015 | INFO | Starting requirement_agent
+2026-03-18 09:13:32,042 | INFO | No figma image provided
+2026-03-18 09:13:32,686 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 09:13:32,735 | INFO | Completed requirement_agent
+2026-03-18 09:13:32,840 | INFO | LangGraph workflow completed
+2026-03-18 09:22:58,905 | INFO | Starting AI coding pipeline
+2026-03-18 09:22:58,906 | INFO | Invoking LangGraph workflow
+2026-03-18 09:22:59,141 | ERROR | Error in requirement_agent: name 'ENVConstants' is not defined
+2026-03-18 09:22:59,270 | ERROR | Error in main: name 'ENVConstants' is not defined
+2026-03-18 09:23:22,995 | INFO | Starting AI coding pipeline
+2026-03-18 09:23:23,002 | INFO | Invoking LangGraph workflow
+2026-03-18 09:23:24,037 | INFO | Starting requirement_agent
+2026-03-18 09:23:24,060 | INFO | No figma image provided
+2026-03-18 09:23:24,624 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 09:23:24,657 | INFO | Completed requirement_agent
+2026-03-18 09:23:24,721 | INFO | LangGraph workflow completed
+2026-03-18 09:32:32,388 | INFO | Starting AI coding pipeline
+2026-03-18 09:32:32,388 | INFO | Invoking LangGraph workflow
+2026-03-18 09:32:33,668 | INFO | Starting requirement_agent
+2026-03-18 09:32:33,695 | INFO | No figma image provided
+2026-03-18 09:32:34,306 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 09:32:34,340 | INFO | Completed requirement_agent
+2026-03-18 09:32:34,356 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 09:32:35,843 | ERROR | ARCHITECTURE_AGENT | ERROR: {str(e)}
+2026-03-18 09:32:35,949 | ERROR | Error in main: Expecting value: line 1 column 1 (char 0)
+2026-03-18 09:37:15,285 | INFO | Starting AI coding pipeline
+2026-03-18 09:37:15,294 | INFO | Invoking LangGraph workflow
+2026-03-18 09:37:16,576 | INFO | Starting requirement_agent
+2026-03-18 09:37:16,589 | INFO | No figma image provided
+2026-03-18 09:37:17,297 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 09:37:17,329 | INFO | Completed requirement_agent
+2026-03-18 09:37:17,342 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 09:37:18,816 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Microservices",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication Module",
+            "Product Module",
+            "Order Module",
+            "Admin Module"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        {
+            "name": "Authentication API",
+            "endpoints": [
+                "/login",
+                "/register",
+                "/logout"
+            ]
+        },
+        {
+            "name": "Product API",
+            "endpoints": [
+                "/products",
+                "/products/{product_id}",
+                "/categories"
+            ]
+        },
+        {
+            "name": "Order API",
+            "endpoints": [
+                "/orders",
+                "/orders/{order_id}",
+                "/cart"
+            ]
+        },
+        {
+            "name": "Admin API",
+            "endpoints": [
+                "/admin/users",
+                "/admin/products",
+                "/admin/orders"
+            ]
+        }
+    ]
+}
+```
+2026-03-18 09:37:18,825 | ERROR | ARCHITECTURE_AGENT | ERROR: name 're' is not defined
+2026-03-18 09:37:18,917 | ERROR | Error in main: name 're' is not defined
+2026-03-18 09:38:26,926 | INFO | Starting AI coding pipeline
+2026-03-18 09:38:26,935 | INFO | Invoking LangGraph workflow
+2026-03-18 09:38:28,511 | INFO | Starting requirement_agent
+2026-03-18 09:38:28,548 | INFO | No figma image provided
+2026-03-18 09:38:29,364 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 09:38:29,396 | INFO | Completed requirement_agent
+2026-03-18 09:38:29,415 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 09:38:30,829 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Microservices Architecture",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication Module",
+            "Product Module",
+            "Order Module",
+            "Admin Module"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        {
+            "name": "Authentication API",
+            "endpoints": [
+                "/login",
+                "/register",
+                "/logout"
+            ]
+        },
+        {
+            "name": "Product API",
+            "endpoints": [
+                "/products",
+                "/products/{product_id}",
+                "/categories",
+                "/categories/{category_id}"
+            ]
+        },
+        {
+            "name": "Order API",
+            "endpoints": [
+                "/orders",
+                "/orders/{order_id}",
+                "/cart",
+                "/cart/{cart_id}"
+            ]
+        },
+        {
+            "name": "Admin API",
+            "endpoints": [
+                "/admin/orders",
+                "/admin/products",
+                "/admin/users"
+            ]
+        }
+    ]
+}
+```
+2026-03-18 09:38:30,837 | DEBUG | Architecture Plan: {'architecture_type': 'Microservices Architecture', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication Module', 'Product Module', 'Order Module', 'Admin Module']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': [{'name': 'Authentication API', 'endpoints': ['/login', '/register', '/logout']}, {'name': 'Product API', 'endpoints': ['/products', '/products/{product_id}', '/categories', '/categories/{category_id}']}, {'name': 'Order API', 'endpoints': ['/orders', '/orders/{order_id}', '/cart', '/cart/{cart_id}']}, {'name': 'Admin API', 'endpoints': ['/admin/orders', '/admin/products', '/admin/users']}]}
+2026-03-18 09:38:30,837 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 09:38:30,904 | INFO | LangGraph workflow completed
+2026-03-18 09:42:37,520 | INFO | Starting AI coding pipeline
+2026-03-18 09:42:37,547 | INFO | Invoking LangGraph workflow
+2026-03-18 09:42:38,796 | INFO | Starting requirement_agent
+2026-03-18 09:42:38,810 | INFO | No figma image provided
+2026-03-18 09:42:39,627 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 09:42:39,661 | INFO | Completed requirement_agent
+2026-03-18 09:42:39,676 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 09:42:41,098 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Order Management",
+            "Shopping Cart",
+            "Checkout System",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "seller_info",
+            "admin_info"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Order API",
+        "Cart API",
+        "Checkout API",
+        "Seller API",
+        "Admin API"
+    ]
+}
+```
+2026-03-18 09:42:41,113 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Order Management', 'Shopping Cart', 'Checkout System', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'seller_info', 'admin_info']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API', 'Checkout API', 'Seller API', 'Admin API']}
+2026-03-18 09:42:41,113 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 09:42:41,181 | INFO | LangGraph workflow completed
