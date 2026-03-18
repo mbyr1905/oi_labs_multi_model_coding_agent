@@ -373,3 +373,1399 @@
 2026-03-18 09:42:41,113 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Order Management', 'Shopping Cart', 'Checkout System', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'seller_info', 'admin_info']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API', 'Checkout API', 'Seller API', 'Admin API']}
 2026-03-18 09:42:41,113 | INFO | ARCHITECTURE_AGENT | Completed
 2026-03-18 09:42:41,181 | INFO | LangGraph workflow completed
+2026-03-18 10:13:45,797 | INFO | Starting AI coding pipeline
+2026-03-18 10:13:45,826 | INFO | Invoking LangGraph workflow
+2026-03-18 10:13:47,481 | INFO | Starting requirement_agent
+2026-03-18 10:13:47,498 | INFO | No figma image provided
+2026-03-18 10:13:48,074 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 10:13:48,129 | INFO | Completed requirement_agent
+2026-03-18 10:13:48,158 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 10:13:49,764 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Order Management",
+            "Admin Panel",
+            "Seller Dashboard"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "product_categories"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Order API",
+        "Cart API",
+        "Category API"
+    ]
+}
+```
+2026-03-18 10:13:49,781 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Order Management', 'Admin Panel', 'Seller Dashboard']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'product_categories']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API', 'Category API']}
+2026-03-18 10:13:49,781 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 10:13:49,799 | INFO | TASK_AGENT | Started
+2026-03-18 10:13:51,505 | DEBUG | TASK_AGENT | Raw output: ```
+{
+  "backend_tasks": [
+    "Implement Authentication System module using FastAPI",
+    "Develop Product Catalog module using FastAPI",
+    "Create Order Management module using FastAPI",
+    "Design and implement Admin Panel module using FastAPI",
+    "Develop Seller Dashboard module using FastAPI",
+    "Integrate all backend modules"
+  ],
+  "database_tasks": [
+    "Create users table",
+    "Create products table",
+    "Create categories table",
+    "Create orders table",
+    "Create order_items table",
+    "Create cart_items table",
+    "Create product_categories table",
+    "Define relationships between tables"
+  ],
+  "frontend_tasks": [
+    "Design and implement Homepage using Next.js",
+    "Develop Product Detail Page using Next.js",
+    "Create Cart Page using Next.js",
+    "Design and implement Seller Dashboard using Next.js",
+    "Develop Admin Panel using Next.js",
+    "Implement responsive design for all pages"
+  ],
+  "integration_tasks": [
+    "Integrate Authentication API with frontend",
+    "Integrate Product API with frontend",
+    "Integrate Order API with frontend",
+    "Integrate Cart API with frontend",
+    "Integrate Category API with frontend",
+    "Test all API integrations"
+  ]
+}
+```
+2026-03-18 10:13:51,509 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System module using FastAPI', 'Develop Product Catalog module using FastAPI', 'Create Order Management module using FastAPI', 'Design and implement Admin Panel module using FastAPI', 'Develop Seller Dashboard module using FastAPI', 'Integrate all backend modules'], 'database_tasks': ['Create users table', 'Create products table', 'Create categories table', 'Create orders table', 'Create order_items table', 'Create cart_items table', 'Create product_categories table', 'Define relationships between tables'], 'frontend_tasks': ['Design and implement Homepage using Next.js', 'Develop Product Detail Page using Next.js', 'Create Cart Page using Next.js', 'Design and implement Seller Dashboard using Next.js', 'Develop Admin Panel using Next.js', 'Implement responsive design for all pages'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with frontend', 'Integrate Order API with frontend', 'Integrate Cart API with frontend', 'Integrate Category API with frontend', 'Test all API integrations']}
+2026-03-18 10:13:51,519 | INFO | TASK_AGENT | Completed
+2026-03-18 10:13:51,594 | INFO | LangGraph workflow completed
+2026-03-18 11:24:21,907 | INFO | Starting AI coding pipeline
+2026-03-18 11:24:21,940 | INFO | Invoking LangGraph workflow
+2026-03-18 11:24:25,711 | INFO | Starting requirement_agent
+2026-03-18 11:24:25,749 | INFO | No figma image provided
+2026-03-18 11:24:26,850 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 11:24:26,889 | INFO | Completed requirement_agent
+2026-03-18 11:24:26,910 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 11:24:28,763 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Order Management",
+            "Admin Panel",
+            "Seller Dashboard"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "product_categories"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Order API",
+        "Cart API",
+        "Category API"
+    ]
+}
+```
+2026-03-18 11:24:28,780 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Order Management', 'Admin Panel', 'Seller Dashboard']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'product_categories']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API', 'Category API']}
+2026-03-18 11:24:28,781 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 11:24:28,798 | INFO | TASK_AGENT | Started
+2026-03-18 11:24:31,152 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System using FastAPI",
+        "Develop Product Catalog module",
+        "Create Order Management module",
+        "Design and implement Admin Panel",
+        "Develop Seller Dashboard",
+        "Integrate Authentication System with other modules",
+        "Implement API endpoints for backend modules"
+    ],
+    "database_tasks": [
+        "Design and create users table",
+        "Design and create products table",
+        "Design and create categories table",
+        "Design and create orders table",
+        "Design and create order_items table",
+        "Design and create cart_items table",
+        "Design and create product_categories table",
+        "Establish relationships between tables"
+    ],
+    "frontend_tasks": [
+        "Implement Homepage using Next.js",
+        "Develop Product Detail Page",
+        "Create Cart Page",
+        "Design and implement Seller Dashboard",
+        "Design and implement Admin Panel",
+        "Implement client-side authentication and authorization"
+    ],
+    "integration_tasks": [
+        "Integrate Authentication API with frontend",
+        "Integrate Product API with Product Catalog module and frontend",
+        "Integrate Order API with Order Management module and frontend",
+        "Integrate Cart API with Cart Page and backend",
+        "Integrate Category API with Product Catalog module and frontend"
+    ]
+}
+```
+2026-03-18 11:24:31,156 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System using FastAPI', 'Develop Product Catalog module', 'Create Order Management module', 'Design and implement Admin Panel', 'Develop Seller Dashboard', 'Integrate Authentication System with other modules', 'Implement API endpoints for backend modules'], 'database_tasks': ['Design and create users table', 'Design and create products table', 'Design and create categories table', 'Design and create orders table', 'Design and create order_items table', 'Design and create cart_items table', 'Design and create product_categories table', 'Establish relationships between tables'], 'frontend_tasks': ['Implement Homepage using Next.js', 'Develop Product Detail Page', 'Create Cart Page', 'Design and implement Seller Dashboard', 'Design and implement Admin Panel', 'Implement client-side authentication and authorization'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with Product Catalog module and frontend', 'Integrate Order API with Order Management module and frontend', 'Integrate Cart API with Cart Page and backend', 'Integrate Category API with Product Catalog module and frontend']}
+2026-03-18 11:24:31,166 | INFO | TASK_AGENT | Completed
+2026-03-18 11:24:31,181 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-18 11:24:38,033 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom routes import router\n\napp = FastAPI()\n\napp.include_router(router)\n\norigins = [\n    \"*\"\n]\n\napp.add_middleware(\n    CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=[\"*\"], allow_headers=[\"*\"]\n)\n"
+        },
+        {
+            "path": "routes.py",
+            "content": "from fastapi import APIRouter\nfrom routes.auth import auth_router\nfrom routes.products import products_router\nfrom routes.orders import orders_router\nfrom routes.cart import cart_router\nfrom routes.category import category_router\n\nrouter = APIRouter()\n\nrouter.include_router(auth_router, prefix=\"/auth\")\nrouter.include_router(products_router, prefix=\"/products\")\nrouter.include_router(orders_router, prefix=\"/orders\")\nrouter.include_router(cart_router, prefix=\"/cart\")\nrouter.include_router(category_router, prefix=\"/category\")\n"
+        },
+        {
+            "path": "routes/auth.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.user import UserCreate, User\nfrom services.auth import get_current_user, create_user\n\nauth_router = APIRouter()\n\n@auth_router.post(\"/register\")\ndef create_new_user(user: UserCreate):\n    return create_user(user)\n\n@auth_router.get(\"/me\")\ndef read_users_me(current_user: User = Depends(get_current_user)):\n    return current_user\n"
+        },
+        {
+            "path": "routes/products.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.product import ProductCreate, Product\nfrom services.products import get_products, create_product\n\nproducts_router = APIRouter()\n\n@products_router.get(\"/\")\ndef read_products():\n    return get_products()\n\n@products_router.post(\"/\")\ndef create_new_product(product: ProductCreate):\n    return create_product(product)\n"
+        },
+        {
+            "path": "routes/orders.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.order import OrderCreate, Order\nfrom services.orders import get_orders, create_order\n\norders_router = APIRouter()\n\n@orders_router.get(\"/\")\ndef read_orders():\n    return get_orders()\n\n@orders_router.post(\"/\")\ndef create_new_order(order: OrderCreate):\n    return create_order(order)\n"
+        },
+        {
+            "path": "routes/cart.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.cart import CartCreate, Cart\nfrom services.cart import get_cart, create_cart\n\n cart_router = APIRouter()\n\n@cart_router.get(\"/\")\ndef read_cart():\n    return get_cart()\n\n@cart_router.post(\"/\")\ndef create_new_cart(cart: CartCreate):\n    return create_cart(cart)\n"
+        },
+        {
+            "path": "routes/category.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.category import CategoryCreate, Category\nfrom services.category import get_categories, create_category\n\ncategory_router = APIRouter()\n\n@category_router.get(\"/\")\ndef read_categories():\n    return get_categories()\n\n@category_router.post(\"/\")\ndef create_new_category(category: CategoryCreate):\n    return create_category(category)\n"
+        },
+        {
+            "path": "schemas/user.py",
+            "content": "from pydantic import BaseModel\nfrom typing import Optional\n\nclass UserCreate(BaseModel):\n    username: str\n    email: str\n    password: str\n\nclass User(UserCreate):\n    id: int\n    is_active: bool\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "schemas/product.py",
+            "content": "from pydantic import BaseModel\nfrom typing import Optional\n\nclass ProductCreate(BaseModel):\n    name: str\n    description: str\n    price: float\n\nclass Product(ProductCreate):\n    id: int\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "schemas/order.py",
+            "content": "from pydantic import BaseModel\nfrom typing import Optional\n\nclass OrderCreate(BaseModel):\n    product_id: int\n    quantity: int\n\nclass Order(OrderCreate):\n    id: int\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "schemas/cart.py",
+            "content": "from pydantic import BaseModel\nfrom typing import Optional\n\nclass CartCreate(BaseModel):\n    product_id: int\n    quantity: int\n\nclass Cart(CartCreate):\n    id: int\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "schemas/category.py",
+            "content": "from pydantic import BaseModel\nfrom typing import Optional\n\nclass CategoryCreate(BaseModel):\n    name: str\n\nclass Category(CategoryCreate):\n    id: int\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "services/auth.py",
+            "content": "from sqlalchemy.orm import Session\nfrom models.user import User\nfrom schemas.user import UserCreate\nfrom utils.security import get_password_hash\n\ndef get_current_user(db: Session, token: str):\n    # implement token verification\n    pass\n\ndef create_user(db: Session, user: UserCreate):\n    hashed_password = get_password_hash(user.password)\n    db_user = User(username=user.username, email=user.email, password=hashed_password)\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user\n"
+        },
+        {
+            "path": "services/products.py",
+            "content": "from sqlalchemy.orm import Session\nfrom models.product import Product\nfrom schemas.product import ProductCreate\n\ndef get_products(db: Session):\n    return db.query(Product).all()\n\ndef create_product(db: Session, product: ProductCreate):\n    db_product = Product(name=product.name, description=product.description, price=product.price)\n    db.add(db_product)\n    db.commit()\n    db.refresh(db_product)\n    return db_product\n"
+        },
+        {
+            "path": "services/orders.py",
+            "content": "from sqlalchemy.orm import Session\nfrom models.order import Order\nfrom schemas.order import OrderCreate\n\ndef get_orders(db: Session):\n    return db.query(Order).all()\n\ndef create_order(db: Session, order: OrderCreate):\n    db_order = Order(product_id=order.product_id, quantity=order.quantity)\n    db.add(db_order)\n    db.commit()\n    db.refresh(db_order)\n    return db_order\n"
+        },
+        {
+            "path": "services/cart.py",
+            "content": "from sqlalchemy.orm import Session\nfrom models.cart import Cart\nfrom schemas.cart import CartCreate\n\ndef get_cart(db: Session):\n    return db.query(Cart).all()\n\ndef create_cart(db: Session, cart: CartCreate):\n    db_cart = Cart(product_id=cart.product_id, quantity=cart.quantity)\n    db.add(db_cart)\n    db.commit()\n    db.refresh(db_cart)\n    return db_cart\n"
+        },
+        {
+            "path": "services/category.py",
+            "content": "from sqlalchemy.orm import Session\nfrom models.category import Category\nfrom schemas.category import CategoryCreate\n\ndef get_categories(db: Session):\n    return db.query(Category).all()\n\ndef create_category(db: Session, category: CategoryCreate):\n    db_category = Category(name=category.name)\n    db.add(db_category)\n    db.commit()\n    db.refresh(db_category)\n    return db_category\n"
+        },
+        {
+            "path": "models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n"
+        },
+        {
+            "path": "models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String, Float\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = \"products\"\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Float)\n"
+        },
+        {
+            "path": "models/order.py",
+            "content": "from sqlalchemy import Column, Integer\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Order(Base):\n    __tablename__ = \"orders\"\n    id = Column(Integer, primary_key=True)\n    product_id = Column(Integer)\n    quantity = Column(Integer)\n"
+        },
+        {
+            "path": "models/cart.py",
+            "content": "from sqlalchemy import Column, Integer\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Cart(Base):\n    __tablename__ = \"cart_items\"\n    id = Column(Integer, primary_key=True)\n    product_id = Column(Integer)\n    quantity = Column(Integer)\n"
+        },
+        {
+            "path": "models/category.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Category(Base):\n    __tablename__ = \"categories\"\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n"
+        },
+        {
+            "path": "utils/security.py",
+            "content": "from passlib.context import CryptContext\n\ncrypt_context = CryptContext(schemes=[\"bcrypt\"], default=\"bcrypt\")\n\ndef get_password_hash(password: str):\n    return crypt_context.hash(password)\n"
+        }
+    ]
+}
+```
+2026-03-18 11:24:38,039 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-18 11:24:38,046 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-18 11:24:38,117 | INFO | LangGraph workflow completed
+2026-03-18 12:01:20,159 | INFO | Starting AI coding pipeline
+2026-03-18 12:01:20,184 | INFO | Invoking LangGraph workflow
+2026-03-18 12:01:21,110 | INFO | Starting requirement_agent
+2026-03-18 12:01:21,121 | INFO | No figma image provided
+2026-03-18 12:01:21,879 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 12:01:21,910 | INFO | Completed requirement_agent
+2026-03-18 12:01:21,927 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 12:01:23,189 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Product Categories",
+            "Shopping Cart",
+            "Checkout System",
+            "Order Management",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "cart_items",
+            "order_items",
+            "seller_info",
+            "admin_info"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Category API",
+        "Cart API",
+        "Checkout API",
+        "Order API",
+        "Seller API",
+        "Admin API"
+    ]
+}
+```
+2026-03-18 12:01:23,206 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Product Categories', 'Shopping Cart', 'Checkout System', 'Order Management', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'cart_items', 'order_items', 'seller_info', 'admin_info']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard']}, 'apis': ['Authentication API', 'Product API', 'Category API', 'Cart API', 'Checkout API', 'Order API', 'Seller API', 'Admin API']}
+2026-03-18 12:01:23,206 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 12:01:23,220 | INFO | TASK_AGENT | Started
+2026-03-18 12:01:25,174 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System using FastAPI",
+        "Develop Product Catalog module",
+        "Create Product Categories module",
+        "Design and implement Shopping Cart functionality",
+        "Build Checkout System with payment gateway integration",
+        "Develop Order Management system",
+        "Create Seller Dashboard with order management and product listing features",
+        "Implement Admin Panel with user management and analytics features"
+    ],
+    "database_tasks": [
+        "Create users table with relevant fields",
+        "Design and create products table with product details",
+        "Create categories table with category information",
+        "Develop orders table to store order information",
+        "Create cart_items table to store cart items",
+        "Design and create order_items table to store order items",
+        "Create seller_info table to store seller information",
+        "Create admin_info table to store admin information"
+    ],
+    "frontend_tasks": [
+        "Design and implement Homepage using Next.js",
+        "Create Product Detail Page with product information and reviews",
+        "Develop Cart Page with cart item listing and update functionality",
+        "Build Seller Dashboard with order management and product listing features using Next.js"
+    ],
+    "integration_tasks": [
+        "Integrate Authentication API with frontend",
+        "Integrate Product API with Product Catalog module",
+        "Integrate Category API with Product Categories module",
+        "Integrate Cart API with Shopping Cart functionality",
+        "Integrate Checkout API with Checkout System",
+        "Integrate Order API with Order Management system",
+        "Integrate Seller API with Seller Dashboard",
+        "Integrate Admin API with Admin Panel"
+    ]
+}
+```
+2026-03-18 12:01:25,178 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System using FastAPI', 'Develop Product Catalog module', 'Create Product Categories module', 'Design and implement Shopping Cart functionality', 'Build Checkout System with payment gateway integration', 'Develop Order Management system', 'Create Seller Dashboard with order management and product listing features', 'Implement Admin Panel with user management and analytics features'], 'database_tasks': ['Create users table with relevant fields', 'Design and create products table with product details', 'Create categories table with category information', 'Develop orders table to store order information', 'Create cart_items table to store cart items', 'Design and create order_items table to store order items', 'Create seller_info table to store seller information', 'Create admin_info table to store admin information'], 'frontend_tasks': ['Design and implement Homepage using Next.js', 'Create Product Detail Page with product information and reviews', 'Develop Cart Page with cart item listing and update functionality', 'Build Seller Dashboard with order management and product listing features using Next.js'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with Product Catalog module', 'Integrate Category API with Product Categories module', 'Integrate Cart API with Shopping Cart functionality', 'Integrate Checkout API with Checkout System', 'Integrate Order API with Order Management system', 'Integrate Seller API with Seller Dashboard', 'Integrate Admin API with Admin Panel']}
+2026-03-18 12:01:25,178 | INFO | TASK_AGENT | Completed
+2026-03-18 12:01:25,198 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-18 12:01:32,284 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom routes import router\n\napp = FastAPI()\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=['*'],\n    allow_credentials=True,\n    allow_methods=['*'],\n    allow_headers=['*'],\n)\n\napp.include_router(router)"
+        },
+        {
+            "path": "models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass UserBase(BaseModel):\n    username: str\n    email: str\n\nclass UserCreate(UserBase):\n    password: str\n\nclass User(UserBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "routes/user.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.user import UserCreate, User\nfrom models.user import User as UserModel\nfrom database import SessionLocal\nfrom service.user import get_user, create_user\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/users/{user_id}', response_model=User)\ndef read_user(user_id: int):\n    return get_user(db, user_id)\n\n@router.post('/users/', response_model=User)\ndef create_new_user(user: UserCreate):\n    return create_user(db, user)"
+        },
+        {
+            "path": "service/user.py",
+            "content": "from models.user import User as UserModel\nfrom database import SessionLocal\nfrom schemas.user import UserCreate\n\ndb = SessionLocal()\n\ndef get_user(db: SessionLocal, user_id: int):\n    return db.query(UserModel).filter(UserModel.id == user_id).first()\n\ndef create_user(db: SessionLocal, user: UserCreate):\n    db_user = UserModel(username=user.username, email=user.email, password=user.password)\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user"
+        },
+        {
+            "path": "database.py",
+            "content": "from sqlalchemy import create_engine\nfrom sqlalchemy.orm import sessionmaker\nSQLALCHEMY_DATABASE_URL = 'sqlite:///example.db'\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)"
+        },
+        {
+            "path": "routes/product.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.product import ProductCreate, Product\nfrom models.product import Product as ProductModel\nfrom database import SessionLocal\nfrom service.product import get_product, create_product\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/products/{product_id}', response_model=Product)\ndef read_product(product_id: int):\n    return get_product(db, product_id)\n\n@router.post('/products/', response_model=Product)\ndef create_new_product(product: ProductCreate):\n    return create_product(db, product)"
+        },
+        {
+            "path": "models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Integer)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass ProductBase(BaseModel):\n    name: str\n    description: str\n    price: int\n\nclass ProductCreate(ProductBase):\n    pass\n\nclass Product(ProductBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "service/product.py",
+            "content": "from models.product import Product as ProductModel\nfrom database import SessionLocal\nfrom schemas.product import ProductCreate\n\ndb = SessionLocal()\n\ndef get_product(db: SessionLocal, product_id: int):\n    return db.query(ProductModel).filter(ProductModel.id == product_id).first()\n\ndef create_product(db: SessionLocal, product: ProductCreate):\n    db_product = ProductModel(name=product.name, description=product.description, price=product.price)\n    db.add(db_product)\n    db.commit()\n    db.refresh(db_product)\n    return db_product"
+        },
+        {
+            "path": "routes/category.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.category import CategoryCreate, Category\nfrom models.category import Category as CategoryModel\nfrom database import SessionLocal\nfrom service.category import get_category, create_category\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/categories/{category_id}', response_model=Category)\ndef read_category(category_id: int):\n    return get_category(db, category_id)\n\n@router.post('/categories/', response_model=Category)\ndef create_new_category(category: CategoryCreate):\n    return create_category(db, category)"
+        },
+        {
+            "path": "models/category.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass Category(Base):\n    __tablename__ = 'categories'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/category.py",
+            "content": "from pydantic import BaseModel\n\nclass CategoryBase(BaseModel):\n    name: str\n    description: str\n\nclass CategoryCreate(CategoryBase):\n    pass\n\nclass Category(CategoryBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "service/category.py",
+            "content": "from models.category import Category as CategoryModel\nfrom database import SessionLocal\nfrom schemas.category import CategoryCreate\n\ndb = SessionLocal()\n\ndef get_category(db: SessionLocal, category_id: int):\n    return db.query(CategoryModel).filter(CategoryModel.id == category_id).first()\n\ndef create_category(db: SessionLocal, category: CategoryCreate):\n    db_category = CategoryModel(name=category.name, description=category.description)\n    db.add(db_category)\n    db.commit()\n    db.refresh(db_category)\n    return db_category"
+        },
+        {
+            "path": "routes/cart.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.cart import CartCreate, Cart\nfrom models.cart import Cart as CartModel\nfrom database import SessionLocal\nfrom service.cart import get_cart, create_cart\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/carts/{cart_id}', response_model=Cart)\ndef read_cart(cart_id: int):\n    return get_cart(db, cart_id)\n\n@router.post('/carts/', response_model=Cart)\ndef create_new_cart(cart: CartCreate):\n    return create_cart(db, cart)"
+        },
+        {
+            "path": "models/cart.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass Cart(Base):\n    __tablename__ = 'cart_items'\n    id = Column(Integer, primary_key=True)\n    product_id = Column(Integer)\n    user_id = Column(Integer)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/cart.py",
+            "content": "from pydantic import BaseModel\n\nclass CartBase(BaseModel):\n    product_id: int\n    user_id: int\n\nclass CartCreate(CartBase):\n    pass\n\nclass Cart(CartBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "service/cart.py",
+            "content": "from models.cart import Cart as CartModel\nfrom database import SessionLocal\nfrom schemas.cart import CartCreate\n\ndb = SessionLocal()\n\ndef get_cart(db: SessionLocal, cart_id: int):\n    return db.query(CartModel).filter(CartModel.id == cart_id).first()\n\ndef create_cart(db: SessionLocal, cart: CartCreate):\n    db_cart = CartModel(product_id=cart.product_id, user_id=cart.user_id)\n    db.add(db_cart)\n    db.commit()\n    db.refresh(db_cart)\n    return db_cart"
+        },
+        {
+            "path": "routes/checkout.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.checkout import CheckoutCreate, Checkout\nfrom models.checkout import Checkout as CheckoutModel\nfrom database import SessionLocal\nfrom service.checkout import get_checkout, create_checkout\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/checkouts/{checkout_id}', response_model=Checkout)\ndef read_checkout(checkout_id: int):\n    return get_checkout(db, checkout_id)\n\n@router.post('/checkouts/', response_model=Checkout)\ndef create_new_checkout(checkout: CheckoutCreate):\n    return create_checkout(db, checkout)"
+        },
+        {
+            "path": "models/checkout.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass Checkout(Base):\n    __tablename__ = 'orders'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer)\n    total = Column(Integer)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/checkout.py",
+            "content": "from pydantic import BaseModel\n\nclass CheckoutBase(BaseModel):\n    user_id: int\n    total: int\n\nclass CheckoutCreate(CheckoutBase):\n    pass\n\nclass Checkout(CheckoutBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "service/checkout.py",
+            "content": "from models.checkout import Checkout as CheckoutModel\nfrom database import SessionLocal\nfrom schemas.checkout import CheckoutCreate\n\ndb = SessionLocal()\n\ndef get_checkout(db: SessionLocal, checkout_id: int):\n    return db.query(CheckoutModel).filter(CheckoutModel.id == checkout_id).first()\n\ndef create_checkout(db: SessionLocal, checkout: CheckoutCreate):\n    db_checkout = CheckoutModel(user_id=checkout.user_id, total=checkout.total)\n    db.add(db_checkout)\n    db.commit()\n    db.refresh(db_checkout)\n    return db_checkout"
+        },
+        {
+            "path": "routes/order.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.order import OrderCreate, Order\nfrom models.order import Order as OrderModel\nfrom database import SessionLocal\nfrom service.order import get_order, create_order\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/orders/{order_id}', response_model=Order)\ndef read_order(order_id: int):\n    return get_order(db, order_id)\n\n@router.post('/orders/', response_model=Order)\ndef create_new_order(order: OrderCreate):\n    return create_order(db, order)"
+        },
+        {
+            "path": "models/order.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass Order(Base):\n    __tablename__ = 'orders'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer)\n    total = Column(Integer)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/order.py",
+            "content": "from pydantic import BaseModel\n\nclass OrderBase(BaseModel):\n    user_id: int\n    total: int\n\nclass OrderCreate(OrderBase):\n    pass\n\nclass Order(OrderBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "service/order.py",
+            "content": "from models.order import Order as OrderModel\nfrom database import SessionLocal\nfrom schemas.order import OrderCreate\n\ndb = SessionLocal()\n\ndef get_order(db: SessionLocal, order_id: int):\n    return db.query(OrderModel).filter(OrderModel.id == order_id).first()\n\ndef create_order(db: SessionLocal, order: OrderCreate):\n    db_order = OrderModel(user_id=order.user_id, total=order.total)\n    db.add(db_order)\n    db.commit()\n    db.refresh(db_order)\n    return db_order"
+        },
+        {
+            "path": "routes/seller.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.seller import SellerCreate, Seller\nfrom models.seller import Seller as SellerModel\nfrom database import SessionLocal\nfrom service.seller import get_seller, create_seller\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/sellers/{seller_id}', response_model=Seller)\ndef read_seller(seller_id: int):\n    return get_seller(db, seller_id)\n\n@router.post('/sellers/', response_model=Seller)\ndef create_new_seller(seller: SellerCreate):\n    return create_seller(db, seller)"
+        },
+        {
+            "path": "models/seller.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass Seller(Base):\n    __tablename__ = 'seller_info'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    email = Column(String)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/seller.py",
+            "content": "from pydantic import BaseModel\n\nclass SellerBase(BaseModel):\n    name: str\n    email: str\n\nclass SellerCreate(SellerBase):\n    pass\n\nclass Seller(SellerBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "service/seller.py",
+            "content": "from models.seller import Seller as SellerModel\nfrom database import SessionLocal\nfrom schemas.seller import SellerCreate\n\ndb = SessionLocal()\n\ndef get_seller(db: SessionLocal, seller_id: int):\n    return db.query(SellerModel).filter(SellerModel.id == seller_id).first()\n\ndef create_seller(db: SessionLocal, seller: SellerCreate):\n    db_seller = SellerModel(name=seller.name, email=seller.email)\n    db.add(db_seller)\n    db.commit()\n    db.refresh(db_seller)\n    return db_seller"
+        },
+        {
+            "path": "routes/admin.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.admin import AdminCreate, Admin\nfrom models.admin import Admin as AdminModel\nfrom database import SessionLocal\nfrom service.admin import get_admin, create_admin\n\nrouter = APIRouter()\n\ndb = SessionLocal()\n\n@router.get('/admins/{admin_id}', response_model=Admin)\ndef read_admin(admin_id: int):\n    return get_admin(db, admin_id)\n\n@router.post('/admins/', response_model=Admin)\ndef create_new_admin(admin: AdminCreate):\n    return create_admin(db, admin)"
+        },
+        {
+            "path": "models/admin.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass Admin(Base):\n    __tablename__ = 'admin_info'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    email = Column(String)\n\nBase.metadata.create_all(engine)"
+        },
+        {
+            "path": "schemas/admin.py",
+            "content": "from pydantic import BaseModel\n\nclass AdminBase(BaseModel):\n    name: str\n    email: str\n\nclass AdminCreate(AdminBase):\n    pass\n\nclass Admin(AdminBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "service/admin.py",
+            "content": "from models.admin import Admin as AdminModel\nfrom database import SessionLocal\nfrom schemas.admin import AdminCreate\n\ndb = SessionLocal()\n\ndef get_admin(db: SessionLocal, admin_id: int):\n    return db.query(AdminModel).filter(AdminModel.id == admin_id).first()\n\ndef create_admin(db: SessionLocal, admin: AdminCreate):\n    db_admin = AdminModel(name=admin.name, email=admin.email)\n    db.add(db_admin)\n    db.commit()\n    db.refresh(db_admin)\n    return db_admin"
+        }
+    ]
+}
+```
+2026-03-18 12:01:32,284 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-18 12:01:32,305 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-18 12:01:32,319 | INFO | FILE_WRITER_AGENT | Started
+2026-03-18 12:01:32,319 | ERROR | FILE_WRITER_AGENT | ERROR: code_key not provided in state
+2026-03-18 12:01:32,438 | ERROR | Error in main: code_key not provided in state
+2026-03-18 12:07:15,039 | INFO | Starting AI coding pipeline
+2026-03-18 12:07:15,047 | INFO | Invoking LangGraph workflow
+2026-03-18 12:07:16,031 | INFO | Starting requirement_agent
+2026-03-18 12:07:16,042 | INFO | No figma image provided
+2026-03-18 12:07:16,565 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 12:07:16,605 | INFO | Completed requirement_agent
+2026-03-18 12:07:16,606 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 12:07:17,729 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Order Management",
+            "Shopping Cart",
+            "Checkout System",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "seller_info",
+            "admin_info"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Order API",
+        "Cart API",
+        "Checkout API",
+        "Seller API",
+        "Admin API"
+    ]
+}
+```
+2026-03-18 12:07:17,737 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Order Management', 'Shopping Cart', 'Checkout System', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'seller_info', 'admin_info']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API', 'Checkout API', 'Seller API', 'Admin API']}
+2026-03-18 12:07:17,737 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 12:07:17,755 | INFO | TASK_AGENT | Started
+2026-03-18 12:07:19,066 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System module using FastAPI",
+        "Develop Product Catalog module using FastAPI",
+        "Design and implement Order Management module using FastAPI",
+        "Create Shopping Cart module using FastAPI",
+        "Build Checkout System module using FastAPI",
+        "Develop Seller Dashboard module using FastAPI",
+        "Implement Admin Panel module using FastAPI"
+    ],
+    "database_tasks": [
+        "Create users table in database",
+        "Create products table in database",
+        "Create categories table in database",
+        "Create orders table in database",
+        "Create order_items table in database",
+        "Create cart_items table in database",
+        "Create seller_info table in database",
+        "Create admin_info table in database"
+    ],
+    "frontend_tasks": [
+        "Design and implement Homepage using Next.js",
+        "Develop Product Detail Page using Next.js",
+        "Create Cart Page using Next.js",
+        "Build Seller Dashboard page using Next.js",
+        "Implement Admin Panel page using Next.js"
+    ],
+    "integration_tasks": [
+        "Integrate Authentication API with frontend",
+        "Integrate Product API with Product Catalog module",
+        "Integrate Order API with Order Management module",
+        "Integrate Cart API with Shopping Cart module",
+        "Integrate Checkout API with Checkout System module",
+        "Integrate Seller API with Seller Dashboard module",
+        "Integrate Admin API with Admin Panel module"
+    ]
+}
+```
+2026-03-18 12:07:19,071 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System module using FastAPI', 'Develop Product Catalog module using FastAPI', 'Design and implement Order Management module using FastAPI', 'Create Shopping Cart module using FastAPI', 'Build Checkout System module using FastAPI', 'Develop Seller Dashboard module using FastAPI', 'Implement Admin Panel module using FastAPI'], 'database_tasks': ['Create users table in database', 'Create products table in database', 'Create categories table in database', 'Create orders table in database', 'Create order_items table in database', 'Create cart_items table in database', 'Create seller_info table in database', 'Create admin_info table in database'], 'frontend_tasks': ['Design and implement Homepage using Next.js', 'Develop Product Detail Page using Next.js', 'Create Cart Page using Next.js', 'Build Seller Dashboard page using Next.js', 'Implement Admin Panel page using Next.js'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with Product Catalog module', 'Integrate Order API with Order Management module', 'Integrate Cart API with Shopping Cart module', 'Integrate Checkout API with Checkout System module', 'Integrate Seller API with Seller Dashboard module', 'Integrate Admin API with Admin Panel module']}
+2026-03-18 12:07:19,082 | INFO | TASK_AGENT | Completed
+2026-03-18 12:07:19,096 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-18 12:07:23,561 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom routes import router\n\napp = FastAPI()\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=['*'],\n    allow_credentials=True,\n    allow_methods=['*'],\n    allow_headers=['*'],\n)\n\napp.include_router(router)"
+        },
+        {
+            "path": "models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n"
+        },
+        {
+            "path": "models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Integer)\n"
+        },
+        {
+            "path": "schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass UserBase(BaseModel):\n    username: str\n    email: str\n\nclass UserCreate(UserBase):\n    password: str\n\nclass User(UserBase):\n    id: int\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass ProductBase(BaseModel):\n    name: str\n    description: str\n    price: int\n\nclass ProductCreate(ProductBase):\n    pass\n\nclass Product(ProductBase):\n    id: int\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "routes/__init__.py",
+            "content": "from fastapi import APIRouter\nfrom . import authentication, products, orders, cart, checkout, seller, admin\n\nrouter = APIRouter()\n\nrouter.include_router(authentication.router, prefix='/auth')\nrouter.include_router(products.router, prefix='/products')\nrouter.include_router(orders.router, prefix='/orders')\nrouter.include_router(cart.router, prefix='/cart')\nrouter.include_router(checkout.router, prefix='/checkout')\nrouter.include_router(seller.router, prefix='/seller')\nrouter.include_router(admin.router, prefix='/admin')\n"
+        },
+        {
+            "path": "routes/authentication.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.user import UserCreate, User\nfrom services.authentication import authenticate_user, get_user\n\nrouter = APIRouter()\n\n@router.post('/login')\ndef login(user: UserCreate):\n    return authenticate_user(user.username, user.password)\n\n@router.get('/me')\ndef get_current_user(current_user: User = Depends(get_user)):\n    return current_user\n"
+        },
+        {
+            "path": "routes/products.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.product import ProductCreate, Product\nfrom services.products import get_products, create_product\n\nrouter = APIRouter()\n\n@router.get('/')\ndef get_products_list():\n    return get_products()\n\n@router.post('/')\ndef create_new_product(product: ProductCreate):\n    return create_product(product)\n"
+        },
+        {
+            "path": "routes/orders.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.order import OrderCreate, Order\nfrom services.orders import get_orders, create_order\n\nrouter = APIRouter()\n\n@router.get('/')\ndef get_orders_list():\n    return get_orders()\n\n@router.post('/')\ndef create_new_order(order: OrderCreate):\n    return create_order(order)\n"
+        },
+        {
+            "path": "routes/cart.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.cart import CartCreate, Cart\nfrom services.cart import get_cart, create_cart\n\nrouter = APIRouter()\n\n@router.get('/')\ndef get_cart_list():\n    return get_cart()\n\n@router.post('/')\ndef create_new_cart(cart: CartCreate):\n    return create_cart(cart)\n"
+        },
+        {
+            "path": "routes/checkout.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.checkout import CheckoutCreate, Checkout\nfrom services.checkout import get_checkout, create_checkout\n\nrouter = APIRouter()\n\n@router.get('/')\ndef get_checkout_list():\n    return get_checkout()\n\n@router.post('/')\ndef create_new_checkout(checkout: CheckoutCreate):\n    return create_checkout(checkout)\n"
+        },
+        {
+            "path": "routes/seller.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.seller import SellerCreate, Seller\nfrom services.seller import get_seller, create_seller\n\nrouter = APIRouter()\n\n@router.get('/')\ndef get_seller_list():\n    return get_seller()\n\n@router.post('/')\ndef create_new_seller(seller: SellerCreate):\n    return create_seller(seller)\n"
+        },
+        {
+            "path": "routes/admin.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.admin import AdminCreate, Admin\nfrom services.admin import get_admin, create_admin\n\nrouter = APIRouter()\n\n@router.get('/')\ndef get_admin_list():\n    return get_admin()\n\n@router.post('/')\ndef create_new_admin(admin: AdminCreate):\n    return create_admin(admin)\n"
+        },
+        {
+            "path": "services/authentication.py",
+            "content": "from models.user import User\nfrom schemas.user import UserCreate\nfrom sqlalchemy.orm import Session\n\ndef authenticate_user(username: str, password: str, db: Session):\n    user = db.query(User).filter(User.username == username).first()\n    if not user or not user.password == password:\n        return False\n    return user\n\ndef get_user(db: Session, user_id: int):\n    return db.query(User).filter(User.id == user_id).first()\n"
+        },
+        {
+            "path": "services/products.py",
+            "content": "from models.product import Product\nfrom schemas.product import ProductCreate\nfrom sqlalchemy.orm import Session\n\ndef get_products(db: Session):\n    return db.query(Product).all()\n\ndef create_product(db: Session, product: ProductCreate):\n    db_product = Product(name=product.name, description=product.description, price=product.price)\n    db.add(db_product)\n    db.commit()\n    db.refresh(db_product)\n    return db_product\n"
+        },
+        {
+            "path": "services/orders.py",
+            "content": "from models.order import Order\nfrom schemas.order import OrderCreate\nfrom sqlalchemy.orm import Session\n\ndef get_orders(db: Session):\n    return db.query(Order).all()\n\ndef create_order(db: Session, order: OrderCreate):\n    db_order = Order(user_id=order.user_id, product_id=order.product_id, quantity=order.quantity)\n    db.add(db_order)\n    db.commit()\n    db.refresh(db_order)\n    return db_order\n"
+        },
+        {
+            "path": "services/cart.py",
+            "content": "from models.cart import Cart\nfrom schemas.cart import CartCreate\nfrom sqlalchemy.orm import Session\n\ndef get_cart(db: Session):\n    return db.query(Cart).all()\n\ndef create_cart(db: Session, cart: CartCreate):\n    db_cart = Cart(user_id=cart.user_id, product_id=cart.product_id, quantity=cart.quantity)\n    db.add(db_cart)\n    db.commit()\n    db.refresh(db_cart)\n    return db_cart\n"
+        },
+        {
+            "path": "services/checkout.py",
+            "content": "from models.checkout import Checkout\nfrom schemas.checkout import CheckoutCreate\nfrom sqlalchemy.orm import Session\n\ndef get_checkout(db: Session):\n    return db.query(Checkout).all()\n\ndef create_checkout(db: Session, checkout: CheckoutCreate):\n    db_checkout = Checkout(user_id=checkout.user_id, order_id=checkout.order_id, payment_method=checkout.payment_method)\n    db.add(db_checkout)\n    db.commit()\n    db.refresh(db_checkout)\n    return db_checkout\n"
+        },
+        {
+            "path": "services/seller.py",
+            "content": "from models.seller import Seller\nfrom schemas.seller import SellerCreate\nfrom sqlalchemy.orm import Session\n\ndef get_seller(db: Session):\n    return db.query(Seller).all()\n\ndef create_seller(db: Session, seller: SellerCreate):\n    db_seller = Seller(name=seller.name, email=seller.email, phone=seller.phone)\n    db.add(db_seller)\n    db.commit()\n    db.refresh(db_seller)\n    return db_seller\n"
+        },
+        {
+            "path": "services/admin.py",
+            "content": "from models.admin import Admin\nfrom schemas.admin import AdminCreate\nfrom sqlalchemy.orm import Session\n\ndef get_admin(db: Session):\n    return db.query(Admin).all()\n\ndef create_admin(db: Session, admin: AdminCreate):\n    db_admin = Admin(name=admin.name, email=admin.email, phone=admin.phone)\n    db.add(db_admin)\n    db.commit()\n    db.refresh(db_admin)\n    return db_admin\n"
+        }
+    ]
+}
+```
+2026-03-18 12:07:23,565 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-18 12:07:23,565 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-18 12:07:23,585 | INFO | FILE_WRITER_AGENT | Started
+2026-03-18 12:07:23,586 | ERROR | FILE_WRITER_AGENT | ERROR: code_key not provided in state
+2026-03-18 12:07:23,661 | ERROR | Error in main: code_key not provided in state
+2026-03-18 12:08:30,820 | INFO | Starting AI coding pipeline
+2026-03-18 12:08:30,833 | INFO | Invoking LangGraph workflow
+2026-03-18 12:08:32,324 | INFO | Starting requirement_agent
+2026-03-18 12:08:32,353 | INFO | No figma image provided
+2026-03-18 12:08:33,096 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 12:08:33,128 | INFO | Completed requirement_agent
+2026-03-18 12:08:33,144 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 12:08:34,555 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Shopping Cart",
+            "Checkout System",
+            "Order Management",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "product_categories"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Category API",
+        "Cart API",
+        "Order API",
+        "Seller Dashboard API",
+        "Admin Panel API"
+    ]
+}
+```
+2026-03-18 12:08:34,573 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Shopping Cart', 'Checkout System', 'Order Management', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'product_categories']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard']}, 'apis': ['Authentication API', 'Product API', 'Category API', 'Cart API', 'Order API', 'Seller Dashboard API', 'Admin Panel API']}
+2026-03-18 12:08:34,573 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 12:08:34,592 | INFO | TASK_AGENT | Started
+2026-03-18 12:08:36,325 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System module using FastAPI",
+        "Develop Product Catalog module using FastAPI",
+        "Create Shopping Cart module using FastAPI",
+        "Design Checkout System module using FastAPI",
+        "Build Order Management module using FastAPI",
+        "Develop Seller Dashboard module using FastAPI",
+        "Create Admin Panel module using FastAPI"
+    ],
+    "database_tasks": [
+        "Create users table",
+        "Create products table",
+        "Create categories table",
+        "Create orders table",
+        "Create order_items table",
+        "Create cart_items table",
+        "Create product_categories table"
+    ],
+    "frontend_tasks": [
+        "Design and implement Homepage using Next.js",
+        "Develop Product Detail Page using Next.js",
+        "Create Cart Page using Next.js",
+        "Build Seller Dashboard using Next.js"
+    ],
+    "integration_tasks": [
+        "Integrate Authentication API with frontend",
+        "Integrate Product API with Product Catalog module",
+        "Integrate Category API with Product Catalog module",
+        "Integrate Cart API with Shopping Cart module",
+        "Integrate Order API with Checkout System module",
+        "Integrate Seller Dashboard API with Seller Dashboard module",
+        "Integrate Admin Panel API with Admin Panel module"
+    ]
+}
+```
+2026-03-18 12:08:36,332 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System module using FastAPI', 'Develop Product Catalog module using FastAPI', 'Create Shopping Cart module using FastAPI', 'Design Checkout System module using FastAPI', 'Build Order Management module using FastAPI', 'Develop Seller Dashboard module using FastAPI', 'Create Admin Panel module using FastAPI'], 'database_tasks': ['Create users table', 'Create products table', 'Create categories table', 'Create orders table', 'Create order_items table', 'Create cart_items table', 'Create product_categories table'], 'frontend_tasks': ['Design and implement Homepage using Next.js', 'Develop Product Detail Page using Next.js', 'Create Cart Page using Next.js', 'Build Seller Dashboard using Next.js'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with Product Catalog module', 'Integrate Category API with Product Catalog module', 'Integrate Cart API with Shopping Cart module', 'Integrate Order API with Checkout System module', 'Integrate Seller Dashboard API with Seller Dashboard module', 'Integrate Admin Panel API with Admin Panel module']}
+2026-03-18 12:08:36,343 | INFO | TASK_AGENT | Completed
+2026-03-18 12:08:36,363 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-18 12:08:42,968 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom routes import authentication_routes, product_routes, cart_routes, checkout_routes, order_routes, seller_routes, admin_routes\n\napp = FastAPI()\n\napp.include_router(authentication_routes.router)\napp.include_router(product_routes.router)\napp.include_router(cart_routes.router)\napp.include_router(checkout_routes.router)\napp.include_router(order_routes.router)\napp.include_router(seller_routes.router)\napp.include_router(admin_routes.router)\n\norigins = [\n    \"http://localhost:3000\",\n    \"http://localhost:8000\"\n]\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)"
+        },
+        {
+            "path": "models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom database import engine\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n"
+        },
+        {
+            "path": "schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass UserSchema(BaseModel):\n    username: str\n    email: str\n    password: str\n\nclass UserResponseSchema(BaseModel):\n    id: int\n    username: str\n    email: str\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "routes/authentication.py",
+            "content": "from fastapi import APIRouter, Depends, HTTPException\nfrom fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm\nfrom pydantic import BaseModel\nfrom schemas.user import UserSchema, UserResponseSchema\nfrom services.authentication import authenticate_user\n\nrouter = APIRouter()\n\n@router.post(\"/login\")\nasync def login(form_data: OAuth2PasswordRequestForm = Depends()):\n    user = authenticate_user(form_data.username, form_data.password)\n    if not user:\n        raise HTTPException(\n            status_code=401,\n            detail=\"Incorrect username or password\"\n        )\n    return {\n        \"access_token\": user.username,\n        \"token_type\": \"bearer\"\n    }"
+        },
+        {
+            "path": "services/authentication.py",
+            "content": "from database import SessionLocal\nfrom models.user import User\nfrom schemas.user import UserSchema\n\ndef authenticate_user(username: str, password: str):\n    db = SessionLocal()\n    user = db.query(User).filter(User.username == username).first()\n    if not user or not user.password == password:\n        return None\n    return user"
+        },
+        {
+            "path": "routes/product.py",
+            "content": "from fastapi import APIRouter\nfrom pydantic import BaseModel\nfrom schemas.product import ProductSchema, ProductResponseSchema\nfrom services.product import get_products, create_product\n\nrouter = APIRouter()\n\n@router.get(\"/products\")\nasync def get_products_endpoint():\n    return get_products()\n\n@router.post(\"/products\")\nasync def create_product_endpoint(product: ProductSchema):\n    return create_product(product)"
+        },
+        {
+            "path": "schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass ProductSchema(BaseModel):\n    name: str\n    description: str\n    price: float\n\nclass ProductResponseSchema(BaseModel):\n    id: int\n    name: str\n    description: str\n    price: float\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "services/product.py",
+            "content": "from database import SessionLocal\nfrom models.product import Product\nfrom schemas.product import ProductSchema, ProductResponseSchema\n\ndef get_products():\n    db = SessionLocal()\n    products = db.query(Product).all()\n    return [ProductResponseSchema.from_orm(product) for product in products]\n\ndef create_product(product: ProductSchema):\n    db = SessionLocal()\n    db_product = Product(name=product.name, description=product.description, price=product.price)\n    db.add(db_product)\n    db.commit()\n    db.refresh(db_product)\n    return ProductResponseSchema.from_orm(db_product)"
+        },
+        {
+            "path": "models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String, Float\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom database import engine\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Float)"
+        },
+        {
+            "path": "routes/cart.py",
+            "content": "from fastapi import APIRouter\nfrom pydantic import BaseModel\nfrom schemas.cart import CartSchema, CartResponseSchema\nfrom services.cart import get_cart, add_to_cart, remove_from_cart\n\nrouter = APIRouter()\n\n@router.get(\"/cart\")\nasync def get_cart_endpoint():\n    return get_cart()\n\n@router.post(\"/cart\")\nasync def add_to_cart_endpoint(product_id: int):\n    return add_to_cart(product_id)\n\n@router.delete(\"/cart/{product_id}\")\nasync def remove_from_cart_endpoint(product_id: int):\n    return remove_from_cart(product_id)"
+        },
+        {
+            "path": "schemas/cart.py",
+            "content": "from pydantic import BaseModel\n\nclass CartSchema(BaseModel):\n    product_id: int\n\nclass CartResponseSchema(BaseModel):\n    id: int\n    product_id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "services/cart.py",
+            "content": "from database import SessionLocal\nfrom models.cart import Cart\nfrom schemas.cart import CartSchema, CartResponseSchema\n\ndef get_cart():\n    db = SessionLocal()\n    cart = db.query(Cart).all()\n    return [CartResponseSchema.from_orm(item) for item in cart]\n\ndef add_to_cart(product_id: int):\n    db = SessionLocal()\n    cart_item = Cart(product_id=product_id)\n    db.add(cart_item)\n    db.commit()\n    db.refresh(cart_item)\n    return CartResponseSchema.from_orm(cart_item)\n\ndef remove_from_cart(product_id: int):\n    db = SessionLocal()\n    cart_item = db.query(Cart).filter(Cart.product_id == product_id).first()\n    if cart_item:\n        db.delete(cart_item)\n        db.commit()\n    return {\"message\": \"Item removed from cart\"}"
+        },
+        {
+            "path": "models/cart.py",
+            "content": "from sqlalchemy import Column, Integer, ForeignKey\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom database import engine\nfrom models.product import Product\n\nBase = declarative_base()\n\nclass Cart(Base):\n    __tablename__ = 'cart_items'\n    id = Column(Integer, primary_key=True)\n    product_id = Column(Integer, ForeignKey('products.id'))"
+        },
+        {
+            "path": "routes/checkout.py",
+            "content": "from fastapi import APIRouter\nfrom pydantic import BaseModel\nfrom schemas.checkout import CheckoutSchema, CheckoutResponseSchema\nfrom services.checkout import checkout\n\nrouter = APIRouter()\n\n@router.post(\"/checkout\")\nasync def checkout_endpoint(checkout_schema: CheckoutSchema):\n    return checkout(checkout_schema)"
+        },
+        {
+            "path": "schemas/checkout.py",
+            "content": "from pydantic import BaseModel\n\nclass CheckoutSchema(BaseModel):\n    cart_id: int\n    payment_method: str\n\nclass CheckoutResponseSchema(BaseModel):\n    id: int\n    cart_id: int\n    payment_method: str\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "services/checkout.py",
+            "content": "from database import SessionLocal\nfrom models.checkout import Checkout\nfrom schemas.checkout import CheckoutSchema, CheckoutResponseSchema\n\ndef checkout(checkout_schema: CheckoutSchema):\n    db = SessionLocal()\n    checkout_item = Checkout(cart_id=checkout_schema.cart_id, payment_method=checkout_schema.payment_method)\n    db.add(checkout_item)\n    db.commit()\n    db.refresh(checkout_item)\n    return CheckoutResponseSchema.from_orm(checkout_item)"
+        },
+        {
+            "path": "models/checkout.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom database import engine\n\nBase = declarative_base()\n\nclass Checkout(Base):\n    __tablename__ = 'checkouts'\n    id = Column(Integer, primary_key=True)\n    cart_id = Column(Integer)\n    payment_method = Column(String)"
+        },
+        {
+            "path": "routes/order.py",
+            "content": "from fastapi import APIRouter\nfrom pydantic import BaseModel\nfrom schemas.order import OrderSchema, OrderResponseSchema\nfrom services.order import place_order\n\nrouter = APIRouter()\n\n@router.post(\"/order\")\nasync def place_order_endpoint(order_schema: OrderSchema):\n    return place_order(order_schema)"
+        },
+        {
+            "path": "schemas/order.py",
+            "content": "from pydantic import BaseModel\n\nclass OrderSchema(BaseModel):\n    cart_id: int\n    payment_method: str\n\nclass OrderResponseSchema(BaseModel):\n    id: int\n    cart_id: int\n    payment_method: str\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "services/order.py",
+            "content": "from database import SessionLocal\nfrom models.order import Order\nfrom schemas.order import OrderSchema, OrderResponseSchema\n\ndef place_order(order_schema: OrderSchema):\n    db = SessionLocal()\n    order_item = Order(cart_id=order_schema.cart_id, payment_method=order_schema.payment_method)\n    db.add(order_item)\n    db.commit()\n    db.refresh(order_item)\n    return OrderResponseSchema.from_orm(order_item)"
+        },
+        {
+            "path": "models/order.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom database import engine\n\nBase = declarative_base()\n\nclass Order(Base):\n    __tablename__ = 'orders'\n    id = Column(Integer, primary_key=True)\n    cart_id = Column(Integer)\n    payment_method = Column(String)"
+        },
+        {
+            "path": "routes/seller.py",
+            "content": "from fastapi import APIRouter\nfrom pydantic import BaseModel\nfrom schemas.seller import SellerSchema, SellerResponseSchema\nfrom services.seller import get_seller, create_seller\n\nrouter = APIRouter()\n\n@router.get(\"/seller\")\nasync def get_seller_endpoint():\n    return get_seller()\n\n@router.post(\"/seller\")\nasync def create_seller_endpoint(seller_schema: SellerSchema):\n    return create_seller(seller_schema)"
+        },
+        {
+            "path": "schemas/seller.py",
+            "content": "from pydantic import BaseModel\n\nclass SellerSchema(BaseModel):\n    name: str\n    email: str\n\nclass SellerResponseSchema(BaseModel):\n    id: int\n    name: str\n    email: str\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "services/seller.py",
+            "content": "from database import SessionLocal\nfrom models.seller import Seller\nfrom schemas.seller import SellerSchema, SellerResponseSchema\n\ndef get_seller():\n    db = SessionLocal()\n    seller = db.query(Seller).all()\n    return [SellerResponseSchema.from_orm(seller_item) for seller_item in seller]\n\ndef create_seller(seller_schema: SellerSchema):\n    db = SessionLocal()\n    seller_item = Seller(name=seller_schema.name, email=seller_schema.email)\n    db.add(seller_item)\n    db.commit()\n    db.refresh(seller_item)\n    return SellerResponseSchema.from_orm(seller_item)"
+        },
+        {
+            "path": "models/seller.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom database import engine\n\nBase = declarative_base()\n\nclass Seller(Base):\n    __tablename__ = 'sellers'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    email = Column(String)"
+        },
+        {
+            "path": "routes/admin.py",
+            "content": "from fastapi import APIRouter\nfrom pydantic import BaseModel\nfrom schemas.admin import AdminSchema, AdminResponseSchema\nfrom services.admin import get_admin, create_admin\n\nrouter = APIRouter()\n\n@router.get(\"/admin\")\nasync def get_admin_endpoint():\n    return get_admin()\n\n@router.post(\"/admin\")\nasync def create_admin_endpoint(admin_schema: AdminSchema):\n    return create_admin(admin_schema)"
+        },
+        {
+            "path": "schemas/admin.py",
+            "content": "from pydantic import BaseModel\n\nclass AdminSchema(BaseModel):\n    name: str\n    email: str\n\nclass AdminResponseSchema(BaseModel):\n    id: int\n    name: str\n    email: str\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "services/admin.py",
+            "content": "from database import SessionLocal\nfrom models.admin import Admin\nfrom schemas.admin import AdminSchema, AdminResponseSchema\n\ndef get_admin():\n    db = SessionLocal()\n    admin = db.query(Admin).all()\n    return [AdminResponseSchema.from_orm(admin_item) for admin_item in admin]\n\ndef create_admin(admin_schema: AdminSchema):\n    db = SessionLocal()\n    admin_item = Admin(name=admin_schema.name, email=admin_schema.email)\n    db.add(admin_item)\n    db.commit()\n    db.refresh(admin_item)\n    return AdminResponseSchema.from_orm(admin_item)"
+        },
+        {
+            "path": "models/admin.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom database import engine\n\nBase = declarative_base()\n\nclass Admin(Base):\n    __tablename__ = 'admins'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    email = Column(String)"
+        },
+        {
+            "path": "database.py",
+            "content": "from sqlalchemy import create_engine\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\n\nSQLALCHEMY_DATABASE_URL = 'sqlite:///database.db'\n\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\n\nBase = declarative_base()\n\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\n"
+        }
+    ]
+}
+```
+2026-03-18 12:08:42,971 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-18 12:08:42,971 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-18 12:08:42,996 | INFO | {'prd_text': 'Product Requirement Document (PRD)\n\nProject Name: ShopSphere\nProduct Type: Amazon-like E-commerce Web Platform\n\n1. Product Overview\nGoal\n\nBuild a scalable e-commerce platform similar to Amazon where users can browse products, add items to a cart, purchase products, and track orders.\n\nObjectives\n\nProvide a smooth shopping experience\n\nEnable sellers to list and manage products\n\nAllow admins to manage the marketplace\n\nSupport millions of users\n\nPlatform\n\nPrimary platform:\n\nWeb application (desktop + mobile responsive)\n\n2. Target Users\nCustomer\n\nCustomers should be able to:\n\nBrowse products\n\nSearch products\n\nAdd items to cart\n\nPlace orders\n\nTrack orders\n\nLeave reviews\n\nSeller\n\nSellers should be able to:\n\nAdd products\n\nUpdate product information\n\nManage inventory\n\nView sales analytics\n\nTrack orders\n\nAdmin\n\nAdmins should be able to:\n\nManage users\n\nRemove products\n\nMonitor platform activity\n\nManage orders\n\nView platform analytics\n\n3. Core Features\n3.1 Authentication System\n\nUsers should be able to:\n\nSign up\n\nLog in\n\nLog out\n\nReset password\n\nRoles\n\nCustomer\nSeller\nAdmin\n\nSecurity\n\nJWT authentication\n\nPassword hashing\n\nEmail verification\n\n3.2 Product Catalog\n\nUsers should be able to:\n\nBrowse categories\n\nSearch products\n\nFilter products\n\nView product details\n\nProduct Fields\n\ntitle\ndescription\nprice\nrating\nimages\nseller_id\ncategory_id\nstock_quantity\n\n3.3 Product Categories\n\nExample categories:\n\nElectronics\nClothing\nBooks\nHome Appliances\nBeauty\nToys\n\nUsers can filter products by:\n\ncategory\n\nprice\n\nrating\n\npopularity\n\n3.4 Product Detail Page\n\nEach product page should display:\n\nproduct images\n\ntitle\n\nprice\n\ndescription\n\nrating\n\nreviews\n\nseller information\n\nActions available:\n\nAdd to cart\nBuy now\n\n3.5 Shopping Cart\n\nUsers can:\n\nAdd product to cart\n\nRemove product\n\nUpdate quantity\n\nView total price\n\nCart must persist per user account.\n\n3.6 Checkout System\n\nUser checkout flow:\n\nCart → Address → Payment → Order Confirmation\n\nUsers must be able to:\n\nadd shipping address\n\nchoose payment method\n\nconfirm purchase\n\n3.7 Order Management\n\nEach order includes:\n\norder_id\nuser_id\nproducts\ntotal_price\npayment_status\nshipping_status\ncreated_at\n\nOrder Status\n\nOrder placed\nProcessing\nShipped\nOut for delivery\nDelivered\n\n3.8 Order History\n\nUsers can view:\n\nprevious orders\n\norder details\n\norder status\n\n3.9 Seller Dashboard\n\nSellers should be able to:\n\nadd product\n\nedit product\n\ndelete product\n\nmanage stock\n\nview orders\n\nview sales analytics\n\nAnalytics examples:\n\ntotal sales\ntotal orders\ntop selling products\n\n3.10 Admin Panel\n\nAdmins should be able to:\n\nremove inappropriate products\n\nmanage sellers\n\nmanage users\n\nmonitor orders\n\nview platform analytics\n\n4. Non-Functional Requirements\nPerformance\n\nPage load time < 2 seconds.\n\nScalability\n\nSystem must support 1 million users.\n\nSecurity\n\nHTTPS required\nInput validation\nSecure authentication\n\nReliability\n\nSystem uptime target:\n\n99.9%\n\n5. Suggested Tech Stack\nFrontend\n\nReact\nNext.js\nTailwind CSS\n\nBackend\n\nPython\nFastAPI\n\nDatabase\n\nPostgreSQL\n\nSearch\n\nElasticsearch\n\nCaching\n\nRedis\n\nDeployment\n\nDocker\nKubernetes (optional)\n\n6. API Examples\nGet products\n\nGET /products\n\nGet product details\n\nGET /products/{id}\n\nAdd to cart\n\nPOST /cart/add\n\nRemove from cart\n\nDELETE /cart/remove\n\nPlace order\n\nPOST /orders\n\nGet orders\n\nGET /orders\n\n7. Database Entities\n\nMain tables:\n\nusers\nproducts\norders\ncart_items\ncategories\nreviews\n\nExample Schema\nUsers\n\nid\nname\nemail\npassword_hash\nrole\ncreated_at\n\nProducts\n\nid\ntitle\ndescription\nprice\nstock\ncategory_id\nseller_id\ncreated_at\n\nOrders\n\nid\nuser_id\ntotal_price\npayment_status\nshipping_status\ncreated_at\n\n8. Figma Design Specification\n\nThis defines the UI layout that the Figma MCP integration will provide.\n\nHomepage Layout\n\nSections:\n\nNavbar\nSearch Bar\nCategory Sidebar\nFeatured Banner\nProduct Grid\nFooter\n\nLayout Structure\n---------------------------------\n| Logo | Search | Cart | Profile |\n---------------------------------\n| Category Menu                 |\n---------------------------------\n| Featured Banner               |\n---------------------------------\n| Product Grid                  |\n---------------------------------\n| Footer                        |\n---------------------------------\nProduct Card Component\n\nEach product card contains:\n\nProduct image\nProduct title\nPrice\nRating\nAdd to cart button\n\nLayout\n+------------------+\n| Product Image    |\n|                  |\n+------------------+\n| Product Title    |\n| $Price           |\n| ⭐ Rating        |\n| Add to Cart      |\n+------------------+\nProduct Detail Page\n\nSections:\n\nImage gallery\nProduct title\nPrice\nRating\nDescription\nAdd to cart\nBuy now\nReviews\n\nLayout\n---------------------------------\n| Images | Product Title        |\n|        | Price                |\n|        | Rating               |\n|        | Add to Cart          |\n---------------------------------\n| Product Description           |\n---------------------------------\n| Reviews                       |\n---------------------------------\nCart Page\n--------------------------------\n| Product | Qty | Price | Remove|\n--------------------------------\n| Order Summary                |\n| Total Price                  |\n| Checkout Button              |\n--------------------------------\nSeller Dashboard Layout\n\nSections:\n\nProduct list\nAdd product\nEdit product\nSales analytics\nOrder management\n\nDesign System\nColors\n\nUse the same couls as the mastercard colour paterns from graphit componennt.\n\nFonts\n\nPrimary Font: Inter\n\nHeadings: Bold\nBody Text: Regular\n\nFigma Components\n\nThe following components must exist in the Figma file for MCP extraction:\n\nNavbar\nProductCard\nProductGrid\nCategorySidebar\nCartItem\nOrderSummary\nFooter', 'figma_image_path': 'inputs/figma.png', 'system_spec': {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}, 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer'], 'architecture_plan': {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Shopping Cart', 'Checkout System', 'Order Management', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'product_categories']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard']}, 'apis': ['Authentication API', 'Product API', 'Category API', 'Cart API', 'Order API', 'Seller Dashboard API', 'Admin Panel API']}, 'task_plan': {'backend_tasks': ['Implement Authentication System module using FastAPI', 'Develop Product Catalog module using FastAPI', 'Create Shopping Cart module using FastAPI', 'Design Checkout System module using FastAPI', 'Build Order Management module using FastAPI', 'Develop Seller Dashboard module using FastAPI', 'Create Admin Panel module using FastAPI'], 'database_tasks': ['Create users table', 'Create products table', 'Create categories table', 'Create orders table', 'Create order_items table', 'Create cart_items table', 'Create product_categories table'], 'frontend_tasks': ['Design and implement Homepage using Next.js', 'Develop Product Detail Page using Next.js', 'Create Cart Page using Next.js', 'Build Seller Dashboard using Next.js'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with Product Catalog module', 'Integrate Category API with Product Catalog module', 'Integrate Cart API with Shopping Cart module', 'Integrate Order API with Checkout System module', 'Integrate Seller Dashboard API with Seller Dashboard module', 'Integrate Admin Panel API with Admin Panel module']}}
+2026-03-18 12:08:42,997 | INFO | FILE_WRITER_AGENT | Started
+2026-03-18 12:08:42,997 | ERROR | FILE_WRITER_AGENT | ERROR: code_key not provided in state
+2026-03-18 12:08:43,067 | ERROR | Error in main: code_key not provided in state
+2026-03-18 12:12:57,510 | INFO | Starting AI coding pipeline
+2026-03-18 12:12:57,518 | INFO | Invoking LangGraph workflow
+2026-03-18 12:12:58,302 | INFO | Starting requirement_agent
+2026-03-18 12:12:58,322 | INFO | No figma image provided
+2026-03-18 12:12:59,337 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 12:12:59,368 | INFO | Completed requirement_agent
+2026-03-18 12:12:59,375 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 12:13:01,134 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Product Categories",
+            "Shopping Cart",
+            "Checkout System",
+            "Order Management",
+            "Order History",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "sellers"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Category API",
+        "Cart API",
+        "Checkout API",
+        "Order API",
+        "Seller API",
+        "Admin API"
+    ]
+}
+```
+2026-03-18 12:13:01,151 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Product Categories', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'sellers']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard']}, 'apis': ['Authentication API', 'Product API', 'Category API', 'Cart API', 'Checkout API', 'Order API', 'Seller API', 'Admin API']}
+2026-03-18 12:13:01,152 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 12:13:01,156 | INFO | TASK_AGENT | Started
+2026-03-18 12:13:03,076 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System using FastAPI",
+        "Develop Product Catalog module",
+        "Create Product Categories module",
+        "Design and implement Shopping Cart functionality",
+        "Build Checkout System with payment gateway integration",
+        "Develop Order Management system",
+        "Create Order History feature",
+        "Design and implement Seller Dashboard",
+        "Develop Admin Panel with user management"
+    ],
+    "database_tasks": [
+        "Create users table with relevant fields",
+        "Design and create products table",
+        "Create categories table with category hierarchy",
+        "Develop orders table with order status tracking",
+        "Create order_items table for order item management",
+        "Design and implement cart_items table",
+        "Create sellers table with seller profile management"
+    ],
+    "frontend_tasks": [
+        "Develop Homepage with product showcase",
+        "Create Product Detail Page with product information and reviews",
+        "Design and implement Cart Page with cart item management",
+        "Build Seller Dashboard with sales and order tracking"
+    ],
+    "integration_tasks": [
+        "Integrate Authentication API with frontend",
+        "Integrate Product API with Product Catalog module",
+        "Integrate Category API with Product Categories module",
+        "Integrate Cart API with Shopping Cart functionality",
+        "Integrate Checkout API with Checkout System",
+        "Integrate Order API with Order Management system",
+        "Integrate Seller API with Seller Dashboard",
+        "Integrate Admin API with Admin Panel"
+    ]
+}
+```
+2026-03-18 12:13:03,080 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System using FastAPI', 'Develop Product Catalog module', 'Create Product Categories module', 'Design and implement Shopping Cart functionality', 'Build Checkout System with payment gateway integration', 'Develop Order Management system', 'Create Order History feature', 'Design and implement Seller Dashboard', 'Develop Admin Panel with user management'], 'database_tasks': ['Create users table with relevant fields', 'Design and create products table', 'Create categories table with category hierarchy', 'Develop orders table with order status tracking', 'Create order_items table for order item management', 'Design and implement cart_items table', 'Create sellers table with seller profile management'], 'frontend_tasks': ['Develop Homepage with product showcase', 'Create Product Detail Page with product information and reviews', 'Design and implement Cart Page with cart item management', 'Build Seller Dashboard with sales and order tracking'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with Product Catalog module', 'Integrate Category API with Product Categories module', 'Integrate Cart API with Shopping Cart functionality', 'Integrate Checkout API with Checkout System', 'Integrate Order API with Order Management system', 'Integrate Seller API with Seller Dashboard', 'Integrate Admin API with Admin Panel']}
+2026-03-18 12:13:03,089 | INFO | TASK_AGENT | Completed
+2026-03-18 12:13:03,104 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-18 12:13:06,441 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom routes import router\n\napp = FastAPI()\n\napp.include_router(router)\n\norigins = [\n    \"*\"\n]\n\napp.add_middleware(\n    CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=[\"*\"], allow_headers=[\"*\"]\n)\n"
+        },
+        {
+            "path": "routes.py",
+            "content": "from fastapi import APIRouter\nfrom routes.auth import auth_router\nfrom routes.products import products_router\nfrom routes.categories import categories_router\nfrom routes.cart import cart_router\nfrom routes.checkout import checkout_router\nfrom routes.orders import orders_router\nfrom routes.sellers import sellers_router\nfrom routes.admin import admin_router\n\nrouter = APIRouter()\n\nrouter.include_router(auth_router, prefix=\"/auth\")\nrouter.include_router(products_router, prefix=\"/products\")\nrouter.include_router(categories_router, prefix=\"/categories\")\nrouter.include_router(cart_router, prefix=\"/cart\")\nrouter.include_router(checkout_router, prefix=\"/checkout\")\nrouter.include_router(orders_router, prefix=\"/orders\")\nrouter.include_router(sellers_router, prefix=\"/sellers\")\nrouter.include_router(admin_router, prefix=\"/admin\")\n"
+        },
+        {
+            "path": "models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n"
+        },
+        {
+            "path": "models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Integer)\n"
+        },
+        {
+            "path": "models/category.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Category(Base):\n    __tablename__ = 'categories'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n"
+        },
+        {
+            "path": "schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass User(BaseModel):\n    id: int\n    username: str\n    email: str\n    password: str\n\nclass UserCreate(BaseModel):\n    username: str\n    email: str\n    password: str\n"
+        },
+        {
+            "path": "schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass Product(BaseModel):\n    id: int\n    name: str\n    description: str\n    price: int\n\nclass ProductCreate(BaseModel):\n    name: str\n    description: str\n    price: int\n"
+        },
+        {
+            "path": "schemas/category.py",
+            "content": "from pydantic import BaseModel\n\nclass Category(BaseModel):\n    id: int\n    name: str\n\nclass CategoryCreate(BaseModel):\n    name: str\n"
+        },
+        {
+            "path": "routes/auth.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.user import UserCreate\nfrom services.auth import authenticate_user\n\nauth_router = APIRouter()\n\n@auth_router.post(\"/login\")\ndef login(user: UserCreate):\n    return authenticate_user(user.username, user.password)\n"
+        },
+        {
+            "path": "routes/products.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.product import ProductCreate\nfrom services.products import create_product\n\nproducts_router = APIRouter()\n\n@products_router.post(\"/\")\ndef create_product_endpoint(product: ProductCreate):\n    return create_product(product)\n"
+        },
+        {
+            "path": "routes/categories.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.category import CategoryCreate\nfrom services.categories import create_category\n\ncategories_router = APIRouter()\n\n@categories_router.post(\"/\")\ndef create_category_endpoint(category: CategoryCreate):\n    return create_category(category)\n"
+        },
+        {
+            "path": "services/auth.py",
+            "content": "from models.user import User\nfrom sqlalchemy.orm import Session\n\ndef authenticate_user(username: str, password: str, db: Session):\n    user = db.query(User).filter(User.username == username).first()\n    if user and user.password == password:\n        return user\n    return None\n"
+        },
+        {
+            "path": "services/products.py",
+            "content": "from models.product import Product\nfrom sqlalchemy.orm import Session\n\ndef create_product(product: ProductCreate, db: Session):\n    db_product = Product(name=product.name, description=product.description, price=product.price)\n    db.add(db_product)\n    db.commit()\n    db.refresh(db_product)\n    return db_product\n"
+        },
+        {
+            "path": "services/categories.py",
+            "content": "from models.category import Category\nfrom sqlalchemy.orm import Session\n\ndef create_category(category: CategoryCreate, db: Session):\n    db_category = Category(name=category.name)\n    db.add(db_category)\n    db.commit()\n    db.refresh(db_category)\n    return db_category\n"
+        }
+    ]
+}
+```
+2026-03-18 12:13:06,441 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-18 12:13:06,464 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-18 12:13:06,494 | INFO | {'prd_text': 'Product Requirement Document (PRD)\n\nProject Name: ShopSphere\nProduct Type: Amazon-like E-commerce Web Platform\n\n1. Product Overview\nGoal\n\nBuild a scalable e-commerce platform similar to Amazon where users can browse products, add items to a cart, purchase products, and track orders.\n\nObjectives\n\nProvide a smooth shopping experience\n\nEnable sellers to list and manage products\n\nAllow admins to manage the marketplace\n\nSupport millions of users\n\nPlatform\n\nPrimary platform:\n\nWeb application (desktop + mobile responsive)\n\n2. Target Users\nCustomer\n\nCustomers should be able to:\n\nBrowse products\n\nSearch products\n\nAdd items to cart\n\nPlace orders\n\nTrack orders\n\nLeave reviews\n\nSeller\n\nSellers should be able to:\n\nAdd products\n\nUpdate product information\n\nManage inventory\n\nView sales analytics\n\nTrack orders\n\nAdmin\n\nAdmins should be able to:\n\nManage users\n\nRemove products\n\nMonitor platform activity\n\nManage orders\n\nView platform analytics\n\n3. Core Features\n3.1 Authentication System\n\nUsers should be able to:\n\nSign up\n\nLog in\n\nLog out\n\nReset password\n\nRoles\n\nCustomer\nSeller\nAdmin\n\nSecurity\n\nJWT authentication\n\nPassword hashing\n\nEmail verification\n\n3.2 Product Catalog\n\nUsers should be able to:\n\nBrowse categories\n\nSearch products\n\nFilter products\n\nView product details\n\nProduct Fields\n\ntitle\ndescription\nprice\nrating\nimages\nseller_id\ncategory_id\nstock_quantity\n\n3.3 Product Categories\n\nExample categories:\n\nElectronics\nClothing\nBooks\nHome Appliances\nBeauty\nToys\n\nUsers can filter products by:\n\ncategory\n\nprice\n\nrating\n\npopularity\n\n3.4 Product Detail Page\n\nEach product page should display:\n\nproduct images\n\ntitle\n\nprice\n\ndescription\n\nrating\n\nreviews\n\nseller information\n\nActions available:\n\nAdd to cart\nBuy now\n\n3.5 Shopping Cart\n\nUsers can:\n\nAdd product to cart\n\nRemove product\n\nUpdate quantity\n\nView total price\n\nCart must persist per user account.\n\n3.6 Checkout System\n\nUser checkout flow:\n\nCart → Address → Payment → Order Confirmation\n\nUsers must be able to:\n\nadd shipping address\n\nchoose payment method\n\nconfirm purchase\n\n3.7 Order Management\n\nEach order includes:\n\norder_id\nuser_id\nproducts\ntotal_price\npayment_status\nshipping_status\ncreated_at\n\nOrder Status\n\nOrder placed\nProcessing\nShipped\nOut for delivery\nDelivered\n\n3.8 Order History\n\nUsers can view:\n\nprevious orders\n\norder details\n\norder status\n\n3.9 Seller Dashboard\n\nSellers should be able to:\n\nadd product\n\nedit product\n\ndelete product\n\nmanage stock\n\nview orders\n\nview sales analytics\n\nAnalytics examples:\n\ntotal sales\ntotal orders\ntop selling products\n\n3.10 Admin Panel\n\nAdmins should be able to:\n\nremove inappropriate products\n\nmanage sellers\n\nmanage users\n\nmonitor orders\n\nview platform analytics\n\n4. Non-Functional Requirements\nPerformance\n\nPage load time < 2 seconds.\n\nScalability\n\nSystem must support 1 million users.\n\nSecurity\n\nHTTPS required\nInput validation\nSecure authentication\n\nReliability\n\nSystem uptime target:\n\n99.9%\n\n5. Suggested Tech Stack\nFrontend\n\nReact\nNext.js\nTailwind CSS\n\nBackend\n\nPython\nFastAPI\n\nDatabase\n\nPostgreSQL\n\nSearch\n\nElasticsearch\n\nCaching\n\nRedis\n\nDeployment\n\nDocker\nKubernetes (optional)\n\n6. API Examples\nGet products\n\nGET /products\n\nGet product details\n\nGET /products/{id}\n\nAdd to cart\n\nPOST /cart/add\n\nRemove from cart\n\nDELETE /cart/remove\n\nPlace order\n\nPOST /orders\n\nGet orders\n\nGET /orders\n\n7. Database Entities\n\nMain tables:\n\nusers\nproducts\norders\ncart_items\ncategories\nreviews\n\nExample Schema\nUsers\n\nid\nname\nemail\npassword_hash\nrole\ncreated_at\n\nProducts\n\nid\ntitle\ndescription\nprice\nstock\ncategory_id\nseller_id\ncreated_at\n\nOrders\n\nid\nuser_id\ntotal_price\npayment_status\nshipping_status\ncreated_at\n\n8. Figma Design Specification\n\nThis defines the UI layout that the Figma MCP integration will provide.\n\nHomepage Layout\n\nSections:\n\nNavbar\nSearch Bar\nCategory Sidebar\nFeatured Banner\nProduct Grid\nFooter\n\nLayout Structure\n---------------------------------\n| Logo | Search | Cart | Profile |\n---------------------------------\n| Category Menu                 |\n---------------------------------\n| Featured Banner               |\n---------------------------------\n| Product Grid                  |\n---------------------------------\n| Footer                        |\n---------------------------------\nProduct Card Component\n\nEach product card contains:\n\nProduct image\nProduct title\nPrice\nRating\nAdd to cart button\n\nLayout\n+------------------+\n| Product Image    |\n|                  |\n+------------------+\n| Product Title    |\n| $Price           |\n| ⭐ Rating        |\n| Add to Cart      |\n+------------------+\nProduct Detail Page\n\nSections:\n\nImage gallery\nProduct title\nPrice\nRating\nDescription\nAdd to cart\nBuy now\nReviews\n\nLayout\n---------------------------------\n| Images | Product Title        |\n|        | Price                |\n|        | Rating               |\n|        | Add to Cart          |\n---------------------------------\n| Product Description           |\n---------------------------------\n| Reviews                       |\n---------------------------------\nCart Page\n--------------------------------\n| Product | Qty | Price | Remove|\n--------------------------------\n| Order Summary                |\n| Total Price                  |\n| Checkout Button              |\n--------------------------------\nSeller Dashboard Layout\n\nSections:\n\nProduct list\nAdd product\nEdit product\nSales analytics\nOrder management\n\nDesign System\nColors\n\nUse the same couls as the mastercard colour paterns from graphit componennt.\n\nFonts\n\nPrimary Font: Inter\n\nHeadings: Bold\nBody Text: Regular\n\nFigma Components\n\nThe following components must exist in the Figma file for MCP extraction:\n\nNavbar\nProductCard\nProductGrid\nCategorySidebar\nCartItem\nOrderSummary\nFooter', 'figma_image_path': 'inputs/figma.png', 'system_spec': {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}, 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer'], 'architecture_plan': {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Product Categories', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'sellers']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard']}, 'apis': ['Authentication API', 'Product API', 'Category API', 'Cart API', 'Checkout API', 'Order API', 'Seller API', 'Admin API']}, 'task_plan': {'backend_tasks': ['Implement Authentication System using FastAPI', 'Develop Product Catalog module', 'Create Product Categories module', 'Design and implement Shopping Cart functionality', 'Build Checkout System with payment gateway integration', 'Develop Order Management system', 'Create Order History feature', 'Design and implement Seller Dashboard', 'Develop Admin Panel with user management'], 'database_tasks': ['Create users table with relevant fields', 'Design and create products table', 'Create categories table with category hierarchy', 'Develop orders table with order status tracking', 'Create order_items table for order item management', 'Design and implement cart_items table', 'Create sellers table with seller profile management'], 'frontend_tasks': ['Develop Homepage with product showcase', 'Create Product Detail Page with product information and reviews', 'Design and implement Cart Page with cart item management', 'Build Seller Dashboard with sales and order tracking'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with Product Catalog module', 'Integrate Category API with Product Categories module', 'Integrate Cart API with Shopping Cart functionality', 'Integrate Checkout API with Checkout System', 'Integrate Order API with Order Management system', 'Integrate Seller API with Seller Dashboard', 'Integrate Admin API with Admin Panel']}, 'backend_code': {'files': [{'path': 'main.py', 'content': 'from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom routes import router\n\napp = FastAPI()\n\napp.include_router(router)\n\norigins = [\n    "*"\n]\n\napp.add_middleware(\n    CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=["*"], allow_headers=["*"]\n)\n'}, {'path': 'routes.py', 'content': 'from fastapi import APIRouter\nfrom routes.auth import auth_router\nfrom routes.products import products_router\nfrom routes.categories import categories_router\nfrom routes.cart import cart_router\nfrom routes.checkout import checkout_router\nfrom routes.orders import orders_router\nfrom routes.sellers import sellers_router\nfrom routes.admin import admin_router\n\nrouter = APIRouter()\n\nrouter.include_router(auth_router, prefix="/auth")\nrouter.include_router(products_router, prefix="/products")\nrouter.include_router(categories_router, prefix="/categories")\nrouter.include_router(cart_router, prefix="/cart")\nrouter.include_router(checkout_router, prefix="/checkout")\nrouter.include_router(orders_router, prefix="/orders")\nrouter.include_router(sellers_router, prefix="/sellers")\nrouter.include_router(admin_router, prefix="/admin")\n'}, {'path': 'models/user.py', 'content': "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n"}, {'path': 'models/product.py', 'content': "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Integer)\n"}, {'path': 'models/category.py', 'content': "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Category(Base):\n    __tablename__ = 'categories'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n"}, {'path': 'schemas/user.py', 'content': 'from pydantic import BaseModel\n\nclass User(BaseModel):\n    id: int\n    username: str\n    email: str\n    password: str\n\nclass UserCreate(BaseModel):\n    username: str\n    email: str\n    password: str\n'}, {'path': 'schemas/product.py', 'content': 'from pydantic import BaseModel\n\nclass Product(BaseModel):\n    id: int\n    name: str\n    description: str\n    price: int\n\nclass ProductCreate(BaseModel):\n    name: str\n    description: str\n    price: int\n'}, {'path': 'schemas/category.py', 'content': 'from pydantic import BaseModel\n\nclass Category(BaseModel):\n    id: int\n    name: str\n\nclass CategoryCreate(BaseModel):\n    name: str\n'}, {'path': 'routes/auth.py', 'content': 'from fastapi import APIRouter, Depends\nfrom schemas.user import UserCreate\nfrom services.auth import authenticate_user\n\nauth_router = APIRouter()\n\n@auth_router.post("/login")\ndef login(user: UserCreate):\n    return authenticate_user(user.username, user.password)\n'}, {'path': 'routes/products.py', 'content': 'from fastapi import APIRouter, Depends\nfrom schemas.product import ProductCreate\nfrom services.products import create_product\n\nproducts_router = APIRouter()\n\n@products_router.post("/")\ndef create_product_endpoint(product: ProductCreate):\n    return create_product(product)\n'}, {'path': 'routes/categories.py', 'content': 'from fastapi import APIRouter, Depends\nfrom schemas.category import CategoryCreate\nfrom services.categories import create_category\n\ncategories_router = APIRouter()\n\n@categories_router.post("/")\ndef create_category_endpoint(category: CategoryCreate):\n    return create_category(category)\n'}, {'path': 'services/auth.py', 'content': 'from models.user import User\nfrom sqlalchemy.orm import Session\n\ndef authenticate_user(username: str, password: str, db: Session):\n    user = db.query(User).filter(User.username == username).first()\n    if user and user.password == password:\n        return user\n    return None\n'}, {'path': 'services/products.py', 'content': 'from models.product import Product\nfrom sqlalchemy.orm import Session\n\ndef create_product(product: ProductCreate, db: Session):\n    db_product = Product(name=product.name, description=product.description, price=product.price)\n    db.add(db_product)\n    db.commit()\n    db.refresh(db_product)\n    return db_product\n'}, {'path': 'services/categories.py', 'content': 'from models.category import Category\nfrom sqlalchemy.orm import Session\n\ndef create_category(category: CategoryCreate, db: Session):\n    db_category = Category(name=category.name)\n    db.add(db_category)\n    db.commit()\n    db.refresh(db_category)\n    return db_category\n'}]}, 'code_key': 'backend_code', 'output_dir': 'generated_backend'}
+2026-03-18 12:13:06,501 | INFO | FILE_WRITER_AGENT | Started
+2026-03-18 12:13:06,511 | INFO | FILE_WRITER_AGENT | Files created: 14
+2026-03-18 12:13:06,525 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-18 12:13:06,613 | INFO | LangGraph workflow completed
+2026-03-18 12:17:30,061 | INFO | Starting AI coding pipeline
+2026-03-18 12:17:30,079 | INFO | Invoking LangGraph workflow
+2026-03-18 12:17:30,893 | INFO | Starting requirement_agent
+2026-03-18 12:17:30,914 | INFO | No figma image provided
+2026-03-18 12:17:31,437 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 12:17:31,462 | INFO | Completed requirement_agent
+2026-03-18 12:17:31,483 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 12:17:33,025 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Product Categories",
+            "Shopping Cart",
+            "Checkout System",
+            "Order Management",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "cart_items",
+            "order_items",
+            "sellers",
+            "admins"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        {
+            "name": "Authentication API",
+            "endpoints": [
+                "/login",
+                "/register",
+                "/logout"
+            ]
+        },
+        {
+            "name": "Product API",
+            "endpoints": [
+                "/products",
+                "/products/{id}",
+                "/categories",
+                "/categories/{id}"
+            ]
+        },
+        {
+            "name": "Cart API",
+            "endpoints": [
+                "/cart",
+                "/cart/add",
+                "/cart/remove"
+            ]
+        },
+        {
+            "name": "Order API",
+            "endpoints": [
+                "/orders",
+                "/orders/{id}",
+                "/checkout"
+            ]
+        },
+        {
+            "name": "Seller API",
+            "endpoints": [
+                "/sellers",
+                "/sellers/{id}",
+                "/sellers/orders"
+            ]
+        },
+        {
+            "name": "Admin API",
+            "endpoints": [
+                "/admins",
+                "/admins/{id}",
+                "/admins/orders",
+                "/admins/products"
+            ]
+        }
+    ]
+}
+```
+2026-03-18 12:17:33,036 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Product Categories', 'Shopping Cart', 'Checkout System', 'Order Management', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'cart_items', 'order_items', 'sellers', 'admins']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': [{'name': 'Authentication API', 'endpoints': ['/login', '/register', '/logout']}, {'name': 'Product API', 'endpoints': ['/products', '/products/{id}', '/categories', '/categories/{id}']}, {'name': 'Cart API', 'endpoints': ['/cart', '/cart/add', '/cart/remove']}, {'name': 'Order API', 'endpoints': ['/orders', '/orders/{id}', '/checkout']}, {'name': 'Seller API', 'endpoints': ['/sellers', '/sellers/{id}', '/sellers/orders']}, {'name': 'Admin API', 'endpoints': ['/admins', '/admins/{id}', '/admins/orders', '/admins/products']}]}
+2026-03-18 12:17:33,036 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 12:17:33,052 | INFO | TASK_AGENT | Started
+2026-03-18 12:17:34,393 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System module using FastAPI",
+        "Develop Product Catalog module using FastAPI",
+        "Create Product Categories module using FastAPI",
+        "Design and implement Shopping Cart module using FastAPI",
+        "Build Checkout System module using FastAPI",
+        "Develop Order Management module using FastAPI",
+        "Create Seller Dashboard module using FastAPI",
+        "Implement Admin Panel module using FastAPI",
+        "Integrate all backend modules"
+    ],
+    "database_tasks": [
+        "Design and create users table",
+        "Design and create products table",
+        "Design and create categories table",
+        "Design and create orders table",
+        "Design and create cart_items table",
+        "Design and create order_items table",
+        "Design and create sellers table",
+        "Design and create admins table",
+        "Establish relationships between tables"
+    ],
+    "frontend_tasks": [
+        "Develop Homepage using Next.js",
+        "Create Product Detail Page using Next.js",
+        "Design and implement Cart Page using Next.js",
+        "Build Seller Dashboard using Next.js",
+        "Implement Admin Panel using Next.js",
+        "Integrate frontend pages with backend APIs"
+    ],
+    "integration_tasks": [
+        "Integrate Authentication API with frontend",
+        "Integrate Product API with frontend",
+        "Integrate Cart API with frontend",
+        "Integrate Order API with frontend",
+        "Integrate Seller API with frontend",
+        "Integrate Admin API with frontend",
+        "Test and validate all API integrations"
+    ]
+}
+```
+2026-03-18 12:17:34,395 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System module using FastAPI', 'Develop Product Catalog module using FastAPI', 'Create Product Categories module using FastAPI', 'Design and implement Shopping Cart module using FastAPI', 'Build Checkout System module using FastAPI', 'Develop Order Management module using FastAPI', 'Create Seller Dashboard module using FastAPI', 'Implement Admin Panel module using FastAPI', 'Integrate all backend modules'], 'database_tasks': ['Design and create users table', 'Design and create products table', 'Design and create categories table', 'Design and create orders table', 'Design and create cart_items table', 'Design and create order_items table', 'Design and create sellers table', 'Design and create admins table', 'Establish relationships between tables'], 'frontend_tasks': ['Develop Homepage using Next.js', 'Create Product Detail Page using Next.js', 'Design and implement Cart Page using Next.js', 'Build Seller Dashboard using Next.js', 'Implement Admin Panel using Next.js', 'Integrate frontend pages with backend APIs'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with frontend', 'Integrate Cart API with frontend', 'Integrate Order API with frontend', 'Integrate Seller API with frontend', 'Integrate Admin API with frontend', 'Test and validate all API integrations']}
+2026-03-18 12:17:34,405 | INFO | TASK_AGENT | Completed
+2026-03-18 12:17:34,418 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-18 12:17:38,764 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom routes import router\n\napp = FastAPI()\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=['*'],\n    allow_credentials=True,\n    allow_methods=['*'],\n    allow_headers=['*'],\n)\n\napp.include_router(router)"
+        },
+        {
+            "path": "routes.py",
+            "content": "from fastapi import APIRouter\nfrom authentication.routes import authentication_router\nfrom product.routes import product_router\nfrom cart.routes import cart_router\nfrom order.routes import order_router\nfrom seller.routes import seller_router\nfrom admin.routes import admin_router\n\nrouter = APIRouter()\n\nrouter.include_router(authentication_router, prefix='/auth')\nrouter.include_router(product_router, prefix='/products')\nrouter.include_router(cart_router, prefix='/cart')\nrouter.include_router(order_router, prefix='/orders')\nrouter.include_router(seller_router, prefix='/sellers')\nrouter.include_router(admin_router, prefix='/admins')"
+        },
+        {
+            "path": "models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n    cart_items = relationship('CartItem', backref='user')"
+        },
+        {
+            "path": "models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Integer)\n    category_id = Column(Integer)\n    category = relationship('Category', backref='products')"
+        },
+        {
+            "path": "models/category.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\n\nBase = declarative_base()\n\nclass Category(Base):\n    __tablename__ = 'categories'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)"
+        },
+        {
+            "path": "models/cart_item.py",
+            "content": "from sqlalchemy import Column, Integer, String, ForeignKey\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass CartItem(Base):\n    __tablename__ = 'cart_items'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer, ForeignKey('users.id'))\n    product_id = Column(Integer, ForeignKey('products.id'))\n    product = relationship('Product', backref='cart_items')"
+        },
+        {
+            "path": "models/order.py",
+            "content": "from sqlalchemy import Column, Integer, String, ForeignKey\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Order(Base):\n    __tablename__ = 'orders'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer, ForeignKey('users.id'))\n    user = relationship('User', backref='orders')"
+        },
+        {
+            "path": "models/order_item.py",
+            "content": "from sqlalchemy import Column, Integer, String, ForeignKey\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass OrderItem(Base):\n    __tablename__ = 'order_items'\n    id = Column(Integer, primary_key=True)\n    order_id = Column(Integer, ForeignKey('orders.id'))\n    product_id = Column(Integer, ForeignKey('products.id'))\n    product = relationship('Product', backref='order_items')"
+        },
+        {
+            "path": "schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass User(BaseModel):\n    id: int\n    username: str\n    email: str\n    password: str\n\nclass UserCreate(BaseModel):\n    username: str\n    email: str\n    password: str"
+        },
+        {
+            "path": "schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass Product(BaseModel):\n    id: int\n    name: str\n    description: str\n    price: int\n\nclass ProductCreate(BaseModel):\n    name: str\n    description: str\n    price: int"
+        },
+        {
+            "path": "schemas/category.py",
+            "content": "from pydantic import BaseModel\n\nclass Category(BaseModel):\n    id: int\n    name: str\n\nclass CategoryCreate(BaseModel):\n    name: str"
+        },
+        {
+            "path": "schemas/cart_item.py",
+            "content": "from pydantic import BaseModel\n\nclass CartItem(BaseModel):\n    id: int\n    user_id: int\n    product_id: int\n\nclass CartItemCreate(BaseModel):\n    user_id: int\n    product_id: int"
+        },
+        {
+            "path": "schemas/order.py",
+            "content": "from pydantic import BaseModel\n\nclass Order(BaseModel):\n    id: int\n    user_id: int\n\nclass OrderCreate(BaseModel):\n    user_id: int"
+        },
+        {
+            "path": "schemas/order_item.py",
+            "content": "from pydantic import BaseModel\n\nclass OrderItem(BaseModel):\n    id: int\n    order_id: int\n    product_id: int\n\nclass OrderItemCreate(BaseModel):\n    order_id: int\n    product_id: int"
+        },
+        {
+            "path": "services/user_service.py",
+            "content": "from models.user import User\nfrom schemas.user import UserCreate\n\nclass UserService:\n    def create_user(self, user: UserCreate):\n        new_user = User(username=user.username, email=user.email, password=user.password)\n        return new_user"
+        },
+        {
+            "path": "services/product_service.py",
+            "content": "from models.product import Product\nfrom schemas.product import ProductCreate\n\nclass ProductService:\n    def create_product(self, product: ProductCreate):\n        new_product = Product(name=product.name, description=product.description, price=product.price)\n        return new_product"
+        },
+        {
+            "path": "services/category_service.py",
+            "content": "from models.category import Category\nfrom schemas.category import CategoryCreate\n\nclass CategoryService:\n    def create_category(self, category: CategoryCreate):\n        new_category = Category(name=category.name)\n        return new_category"
+        },
+        {
+            "path": "services/cart_service.py",
+            "content": "from models.cart_item import CartItem\nfrom schemas.cart_item import CartItemCreate\n\nclass CartService:\n    def create_cart_item(self, cart_item: CartItemCreate):\n        new_cart_item = CartItem(user_id=cart_item.user_id, product_id=cart_item.product_id)\n        return new_cart_item"
+        },
+        {
+            "path": "services/order_service.py",
+            "content": "from models.order import Order\nfrom schemas.order import OrderCreate\n\nclass OrderService:\n    def create_order(self, order: OrderCreate):\n        new_order = Order(user_id=order.user_id)\n        return new_order"
+        },
+        {
+            "path": "services/order_item_service.py",
+            "content": "from models.order_item import OrderItem\nfrom schemas.order_item import OrderItemCreate\n\nclass OrderItemService:\n    def create_order_item(self, order_item: OrderItemCreate):\n        new_order_item = OrderItem(order_id=order_item.order_id, product_id=order_item.product_id)\n        return new_order_item"
+        },
+        {
+            "path": "authentication/routes.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.user import UserCreate\nfrom services.user_service import UserService\n\nrouter = APIRouter()\n\n@router.post('/register')\ndef register_user(user: UserCreate):\n    user_service = UserService()\n    new_user = user_service.create_user(user)\n    return new_user"
+        },
+        {
+            "path": "product/routes.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.product import ProductCreate\nfrom services.product_service import ProductService\n\nrouter = APIRouter()\n\n@router.post('/')\ndef create_product(product: ProductCreate):\n    product_service = ProductService()\n    new_product = product_service.create_product(product)\n    return new_product"
+        },
+        {
+            "path": "category/routes.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.category import CategoryCreate\nfrom services.category_service import CategoryService\n\nrouter = APIRouter()\n\n@router.post('/')\ndef create_category(category: CategoryCreate):\n    category_service = CategoryService()\n    new_category = category_service.create_category(category)\n    return new_category"
+        },
+        {
+            "path": "cart/routes.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.cart_item import CartItemCreate\nfrom services.cart_service import CartService\n\nrouter = APIRouter()\n\n@router.post('/add')\ndef add_to_cart(cart_item: CartItemCreate):\n    cart_service = CartService()\n    new_cart_item = cart_service.create_cart_item(cart_item)\n    return new_cart_item"
+        },
+        {
+            "path": "order/routes.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom schemas.order import OrderCreate\nfrom services.order_service import OrderService\n\nrouter = APIRouter()\n\n@router.post('/')\ndef create_order(order: OrderCreate):\n    order_service = OrderService()\n    new_order = order_service.create_order(order)\n    return new_order"
+        },
+        {
+            "path": "seller/routes.py",
+            "content": "from fastapi import APIRouter, Depends\n\router = APIRouter()"
+        },
+        {
+            "path": "admin/routes.py",
+            "content": "from fastapi import APIRouter, Depends\n\router = APIRouter()"
+        }
+    ]
+}
+```
+2026-03-18 12:17:38,779 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-18 12:17:38,788 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-18 12:17:38,805 | INFO | FILE_WRITER_AGENT | Started
+2026-03-18 12:17:38,817 | INFO | FILE_WRITER_AGENT | Files created: 27
+2026-03-18 12:17:38,827 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-18 12:17:38,882 | INFO | LangGraph workflow completed
