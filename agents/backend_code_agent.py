@@ -30,8 +30,6 @@ def backend_code_agent(state: AgentState):
         logger.info("BACKEND_CODE_AGENT | Started")
 
         llm = get_llm()
-
-        architecture = state["architecture_plan"]
         backend_tasks = state["task_plan"]["backend_tasks"]
 
         log_param("backend_code_model", "llama-3.3-70b-versatile")
@@ -41,20 +39,26 @@ def backend_code_agent(state: AgentState):
 
             Generate production-ready FastAPI backend code.
 
-            ARCHITECTURE:
-            {architecture}
+            SYSTEM SPEC:
+            {state["system_spec"]}
 
-            TASKS:
+            ARCHITECTURE:
+            {state["architecture_plan"]}
+
+            BACKEND TASKS:
             {backend_tasks}
 
             Requirements:
             - Use FastAPI best practices
-            - Use modular structure
+            - Use modular architecture
+            - Follow the architecture strictly
             - Include:
-                - models
-                - schemas
-                - routes
+                - models (SQLAlchemy)
+                - schemas (Pydantic)
+                - routes (APIs)
                 - service layer
+            - Ensure all modules are connected properly
+            - Use clean folder structure
 
             Return ONLY valid JSON:
 

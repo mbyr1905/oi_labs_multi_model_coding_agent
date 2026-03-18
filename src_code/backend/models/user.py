@@ -1,13 +1,13 @@
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-
-Base = declarative_base()
+from models import Base
 
 class User(Base):
     __tablename__ = 'users'
+
     id = Column(Integer, primary_key=True)
-    username = Column(String)
-    email = Column(String)
+    username = Column(String, unique=True)
+    email = Column(String, unique=True)
     password = Column(String)
-    cart_items = relationship('CartItem', backref='user')
+
+    products = relationship('Product', back_populates='user')

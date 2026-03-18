@@ -1,14 +1,14 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship
-
-Base = declarative_base()
+from models import Base
 
 class Product(Base):
     __tablename__ = 'products'
+
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    title = Column(String)
     description = Column(String)
-    price = Column(Integer)
-    category_id = Column(Integer)
-    category = relationship('Category', backref='products')
+    price = Column(Float)
+    user_id = Column(Integer, ForeignKey('users.id'))
+
+    user = relationship('User', back_populates='products')

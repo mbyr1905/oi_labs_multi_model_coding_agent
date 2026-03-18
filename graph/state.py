@@ -10,5 +10,6 @@ class AgentState(TypedDict):
     architecture_plan: dict
     task_plan: dict
     backend_code: dict
+    frontend_code: dict
     code_key: str
     output_dir: str
