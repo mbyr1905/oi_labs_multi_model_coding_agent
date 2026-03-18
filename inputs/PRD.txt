@@ -1,0 +1,487 @@
+Product Requirement Document (PRD)
+
+Project Name: ShopSphere
+Product Type: Amazon-like E-commerce Web Platform
+
+1. Product Overview
+Goal
+
+Build a scalable e-commerce platform similar to Amazon where users can browse products, add items to a cart, purchase products, and track orders.
+
+Objectives
+
+Provide a smooth shopping experience
+
+Enable sellers to list and manage products
+
+Allow admins to manage the marketplace
+
+Support millions of users
+
+Platform
+
+Primary platform:
+
+Web application (desktop + mobile responsive)
+
+2. Target Users
+Customer
+
+Customers should be able to:
+
+Browse products
+
+Search products
+
+Add items to cart
+
+Place orders
+
+Track orders
+
+Leave reviews
+
+Seller
+
+Sellers should be able to:
+
+Add products
+
+Update product information
+
+Manage inventory
+
+View sales analytics
+
+Track orders
+
+Admin
+
+Admins should be able to:
+
+Manage users
+
+Remove products
+
+Monitor platform activity
+
+Manage orders
+
+View platform analytics
+
+3. Core Features
+3.1 Authentication System
+
+Users should be able to:
+
+Sign up
+
+Log in
+
+Log out
+
+Reset password
+
+Roles
+
+Customer
+Seller
+Admin
+
+Security
+
+JWT authentication
+
+Password hashing
+
+Email verification
+
+3.2 Product Catalog
+
+Users should be able to:
+
+Browse categories
+
+Search products
+
+Filter products
+
+View product details
+
+Product Fields
+
+title
+description
+price
+rating
+images
+seller_id
+category_id
+stock_quantity
+
+3.3 Product Categories
+
+Example categories:
+
+Electronics
+Clothing
+Books
+Home Appliances
+Beauty
+Toys
+
+Users can filter products by:
+
+category
+
+price
+
+rating
+
+popularity
+
+3.4 Product Detail Page
+
+Each product page should display:
+
+product images
+
+title
+
+price
+
+description
+
+rating
+
+reviews
+
+seller information
+
+Actions available:
+
+Add to cart
+Buy now
+
+3.5 Shopping Cart
+
+Users can:
+
+Add product to cart
+
+Remove product
+
+Update quantity
+
+View total price
+
+Cart must persist per user account.
+
+3.6 Checkout System
+
+User checkout flow:
+
+Cart → Address → Payment → Order Confirmation
+
+Users must be able to:
+
+add shipping address
+
+choose payment method
+
+confirm purchase
+
+3.7 Order Management
+
+Each order includes:
+
+order_id
+user_id
+products
+total_price
+payment_status
+shipping_status
+created_at
+
+Order Status
+
+Order placed
+Processing
+Shipped
+Out for delivery
+Delivered
+
+3.8 Order History
+
+Users can view:
+
+previous orders
+
+order details
+
+order status
+
+3.9 Seller Dashboard
+
+Sellers should be able to:
+
+add product
+
+edit product
+
+delete product
+
+manage stock
+
+view orders
+
+view sales analytics
+
+Analytics examples:
+
+total sales
+total orders
+top selling products
+
+3.10 Admin Panel
+
+Admins should be able to:
+
+remove inappropriate products
+
+manage sellers
+
+manage users
+
+monitor orders
+
+view platform analytics
+
+4. Non-Functional Requirements
+Performance
+
+Page load time < 2 seconds.
+
+Scalability
+
+System must support 1 million users.
+
+Security
+
+HTTPS required
+Input validation
+Secure authentication
+
+Reliability
+
+System uptime target:
+
+99.9%
+
+5. Suggested Tech Stack
+Frontend
+
+React
+Next.js
+Tailwind CSS
+
+Backend
+
+Python
+FastAPI
+
+Database
+
+PostgreSQL
+
+Search
+
+Elasticsearch
+
+Caching
+
+Redis
+
+Deployment
+
+Docker
+Kubernetes (optional)
+
+6. API Examples
+Get products
+
+GET /products
+
+Get product details
+
+GET /products/{id}
+
+Add to cart
+
+POST /cart/add
+
+Remove from cart
+
+DELETE /cart/remove
+
+Place order
+
+POST /orders
+
+Get orders
+
+GET /orders
+
+7. Database Entities
+
+Main tables:
+
+users
+products
+orders
+cart_items
+categories
+reviews
+
+Example Schema
+Users
+
+id
+name
+email
+password_hash
+role
+created_at
+
+Products
+
+id
+title
+description
+price
+stock
+category_id
+seller_id
+created_at
+
+Orders
+
+id
+user_id
+total_price
+payment_status
+shipping_status
+created_at
+
+8. Figma Design Specification
+
+This defines the UI layout that the Figma MCP integration will provide.
+
+Homepage Layout
+
+Sections:
+
+Navbar
+Search Bar
+Category Sidebar
+Featured Banner
+Product Grid
+Footer
+
+Layout Structure
+---------------------------------
+| Logo | Search | Cart | Profile |
+---------------------------------
+| Category Menu                 |
+---------------------------------
+| Featured Banner               |
+---------------------------------
+| Product Grid                  |
+---------------------------------
+| Footer                        |
+---------------------------------
+Product Card Component
+
+Each product card contains:
+
+Product image
+Product title
+Price
+Rating
+Add to cart button
+
+Layout
++------------------+
+| Product Image    |
+|                  |
++------------------+
+| Product Title    |
+| $Price           |
+| ⭐ Rating        |
+| Add to Cart      |
++------------------+
+Product Detail Page
+
+Sections:
+
+Image gallery
+Product title
+Price
+Rating
+Description
+Add to cart
+Buy now
+Reviews
+
+Layout
+---------------------------------
+| Images | Product Title        |
+|        | Price                |
+|        | Rating               |
+|        | Add to Cart          |
+---------------------------------
+| Product Description           |
+---------------------------------
+| Reviews                       |
+---------------------------------
+Cart Page
+--------------------------------
+| Product | Qty | Price | Remove|
+--------------------------------
+| Order Summary                |
+| Total Price                  |
+| Checkout Button              |
+--------------------------------
+Seller Dashboard Layout
+
+Sections:
+
+Product list
+Add product
+Edit product
+Sales analytics
+Order management
+
+Design System
+Colors
+
+Use the same couls as the mastercard colour paterns from graphit componennt.
+
+Fonts
+
+Primary Font: Inter
+
+Headings: Bold
+Body Text: Regular
+
+Figma Components
+
+The following components must exist in the Figma file for MCP extraction:
+
+Navbar
+ProductCard
+ProductGrid
+CategorySidebar
+CartItem
+OrderSummary
+Footer

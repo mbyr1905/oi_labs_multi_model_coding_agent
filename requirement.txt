@@ -1,0 +1,17 @@
+ollama
+langchain
+langgraph
+ipykernel
+pypdf
+phidata
+python-dotenv
+duckduckgo-search
+fastapi
+streamlit
+google-generativeai
+langchain-groq
+pillow
+mlflow
+
+
+-- mlflow ui --backend-store-uri sqlite:///mlflow.db
