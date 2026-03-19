@@ -12,6 +12,8 @@ from agents.task_agent import task_agent
 from agents.backend_code_agent import backend_code_agent
 from agents.file_writer_agent import file_writer_agent
 from agents.frontend_code_agent import frontend_code_agent 
+from agents.integration_agent import integration_agent
+
 def load_prd():
     with open("inputs/PRD.txt", "r", encoding="utf-8") as f:
         return f.read()
@@ -26,6 +28,8 @@ def build_graph():
     builder.add_node("backend_code_writer_agent", file_writer_agent)
     builder.add_node("frontend_code_agent", frontend_code_agent)
     builder.add_node("frontend_code_writer_agent", file_writer_agent)
+    builder.add_node("integration_agent", integration_agent)
+    builder.add_node("integration_code_writer", file_writer_agent)
 
     builder.add_edge(START, "requirement_agent")
     builder.add_edge("requirement_agent", "architecture_agent")
@@ -34,7 +38,9 @@ def build_graph():
     builder.add_edge("backend_code_agent", "backend_code_writer_agent")
     builder.add_edge("backend_code_writer_agent", "frontend_code_agent")
     builder.add_edge("frontend_code_agent", "frontend_code_writer_agent")
-    builder.add_edge("frontend_code_writer_agent", END)
+    builder.add_edge("frontend_code_writer_agent", "integration_agent")
+    builder.add_edge("integration_agent", "integration_code_writer")
+    builder.add_edge("integration_code_writer", END)
     graph = builder.compile()
     return graph
 

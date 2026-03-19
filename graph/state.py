@@ -11,5 +11,8 @@ class AgentState(TypedDict):
     task_plan: dict
     backend_code: dict
     frontend_code: dict
+    integration_code: dict
+    fixed_code : dict
     code_key: str
     output_dir: str
+    write_mode: str

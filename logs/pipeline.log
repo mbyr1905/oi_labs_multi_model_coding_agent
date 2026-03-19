@@ -553,3 +553,1337 @@
 2026-03-18 17:20:10,660 | INFO | FILE_WRITER_AGENT | Files created: 18
 2026-03-18 17:20:10,680 | INFO | FILE_WRITER_AGENT | Completed
 2026-03-18 17:20:10,758 | INFO | LangGraph workflow completed
+2026-03-18 18:23:06,102 | INFO | Starting AI coding pipeline
+2026-03-18 18:23:06,121 | ERROR | Error in main: name 'integration_agent' is not defined
+2026-03-18 18:23:44,186 | INFO | Starting AI coding pipeline
+2026-03-18 18:23:44,209 | INFO | Invoking LangGraph workflow
+2026-03-18 18:23:45,508 | INFO | Starting requirement_agent
+2026-03-18 18:23:45,524 | INFO | No figma image provided
+2026-03-18 18:23:46,173 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-18 18:23:46,225 | INFO | Completed requirement_agent
+2026-03-18 18:23:46,240 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-18 18:23:48,080 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Product Categories",
+            "Shopping Cart",
+            "Checkout System",
+            "Order Management",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "cart_items",
+            "order_items",
+            "sellers",
+            "admins"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        {
+            "name": "Authentication API",
+            "endpoints": [
+                "/login",
+                "/register",
+                "/logout"
+            ]
+        },
+        {
+            "name": "Product API",
+            "endpoints": [
+                "/products",
+                "/products/{product_id}",
+                "/categories",
+                "/categories/{category_id}"
+            ]
+        },
+        {
+            "name": "Cart API",
+            "endpoints": [
+                "/cart",
+                "/cart/add",
+                "/cart/remove"
+            ]
+        },
+        {
+            "name": "Order API",
+            "endpoints": [
+                "/orders",
+                "/orders/{order_id}",
+                "/checkout"
+            ]
+        },
+        {
+            "name": "Seller API",
+            "endpoints": [
+                "/seller/dashboard",
+                "/seller/orders",
+                "/seller/products"
+            ]
+        },
+        {
+            "name": "Admin API",
+            "endpoints": [
+                "/admin/dashboard",
+                "/admin/users",
+                "/admin/orders",
+                "/admin/products"
+            ]
+        }
+    ]
+}
+```
+2026-03-18 18:23:48,096 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Product Categories', 'Shopping Cart', 'Checkout System', 'Order Management', 'Seller Dashboard', 'Admin Panel']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'cart_items', 'order_items', 'sellers', 'admins']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': [{'name': 'Authentication API', 'endpoints': ['/login', '/register', '/logout']}, {'name': 'Product API', 'endpoints': ['/products', '/products/{product_id}', '/categories', '/categories/{category_id}']}, {'name': 'Cart API', 'endpoints': ['/cart', '/cart/add', '/cart/remove']}, {'name': 'Order API', 'endpoints': ['/orders', '/orders/{order_id}', '/checkout']}, {'name': 'Seller API', 'endpoints': ['/seller/dashboard', '/seller/orders', '/seller/products']}, {'name': 'Admin API', 'endpoints': ['/admin/dashboard', '/admin/users', '/admin/orders', '/admin/products']}]}
+2026-03-18 18:23:48,099 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-18 18:23:48,120 | INFO | TASK_AGENT | Started
+2026-03-18 18:23:50,218 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System module using FastAPI",
+        "Develop Product Catalog module using FastAPI",
+        "Create Product Categories module using FastAPI",
+        "Design Shopping Cart module using FastAPI",
+        "Build Checkout System module using FastAPI",
+        "Develop Order Management module using FastAPI",
+        "Create Seller Dashboard module using FastAPI",
+        "Implement Admin Panel module using FastAPI",
+        "Define API endpoints for Authentication API",
+        "Define API endpoints for Product API",
+        "Define API endpoints for Cart API",
+        "Define API endpoints for Order API",
+        "Define API endpoints for Seller API",
+        "Define API endpoints for Admin API"
+    ],
+    "database_tasks": [
+        "Create users table in database",
+        "Create products table in database",
+        "Create categories table in database",
+        "Create orders table in database",
+        "Create cart_items table in database",
+        "Create order_items table in database",
+        "Create sellers table in database",
+        "Create admins table in database",
+        "Define relationships between database tables"
+    ],
+    "frontend_tasks": [
+        "Design and implement Homepage using Next.js",
+        "Develop Product Detail Page using Next.js",
+        "Create Cart Page using Next.js",
+        "Implement Seller Dashboard page using Next.js",
+        "Implement Admin Panel page using Next.js",
+        "Integrate frontend with backend API endpoints"
+    ],
+    "integration_tasks": [
+        "Integrate Authentication API with frontend",
+        "Integrate Product API with frontend",
+        "Integrate Cart API with frontend",
+        "Integrate Order API with frontend",
+        "Integrate Seller API with frontend",
+        "Integrate Admin API with frontend",
+        "Test API endpoint integrations"
+    ]
+}
+```
+2026-03-18 18:23:50,225 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System module using FastAPI', 'Develop Product Catalog module using FastAPI', 'Create Product Categories module using FastAPI', 'Design Shopping Cart module using FastAPI', 'Build Checkout System module using FastAPI', 'Develop Order Management module using FastAPI', 'Create Seller Dashboard module using FastAPI', 'Implement Admin Panel module using FastAPI', 'Define API endpoints for Authentication API', 'Define API endpoints for Product API', 'Define API endpoints for Cart API', 'Define API endpoints for Order API', 'Define API endpoints for Seller API', 'Define API endpoints for Admin API'], 'database_tasks': ['Create users table in database', 'Create products table in database', 'Create categories table in database', 'Create orders table in database', 'Create cart_items table in database', 'Create order_items table in database', 'Create sellers table in database', 'Create admins table in database', 'Define relationships between database tables'], 'frontend_tasks': ['Design and implement Homepage using Next.js', 'Develop Product Detail Page using Next.js', 'Create Cart Page using Next.js', 'Implement Seller Dashboard page using Next.js', 'Implement Admin Panel page using Next.js', 'Integrate frontend with backend API endpoints'], 'integration_tasks': ['Integrate Authentication API with frontend', 'Integrate Product API with frontend', 'Integrate Cart API with frontend', 'Integrate Order API with frontend', 'Integrate Seller API with frontend', 'Integrate Admin API with frontend', 'Test API endpoint integrations']}
+2026-03-18 18:23:50,238 | INFO | TASK_AGENT | Completed
+2026-03-18 18:23:50,264 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-18 18:23:55,758 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "fastapi\nsqlalchemy\npydantic\npasslib\npython-jose\n"
+        },
+        {
+            "path": "backend/main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom backend.routers import auth, products, cart, orders, seller, admin\n\napp = FastAPI()\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=['*'],\n    allow_credentials=True,\n    allow_methods=['*'],\n    allow_headers=['*'],\n)\n\napp.include_router(auth.router)\napp.include_router(products.router)\napp.include_router(cart.router)\napp.include_router(orders.router)\napp.include_router(seller.router)\napp.include_router(admin.router)\n"
+        },
+        {
+            "path": "backend/models/__init__.py",
+            "content": "from .user import User\nfrom .product import Product\nfrom .category import Category\nfrom .order import Order\nfrom .cart_item import CartItem\nfrom .order_item import OrderItem\nfrom .seller import Seller\nfrom .admin import Admin\n"
+        },
+        {
+            "path": "backend/models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n"
+        },
+        {
+            "path": "backend/models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    description = Column(String)\n    price = Column(Integer)\n"
+        },
+        {
+            "path": "backend/models/category.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Category(Base):\n    __tablename__ = 'categories'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n"
+        },
+        {
+            "path": "backend/models/order.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Order(Base):\n    __tablename__ = 'orders'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer)\n    total = Column(Integer)\n"
+        },
+        {
+            "path": "backend/models/cart_item.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass CartItem(Base):\n    __tablename__ = 'cart_items'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer)\n    product_id = Column(Integer)\n    quantity = Column(Integer)\n"
+        },
+        {
+            "path": "backend/models/order_item.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass OrderItem(Base):\n    __tablename__ = 'order_items'\n    id = Column(Integer, primary_key=True)\n    order_id = Column(Integer)\n    product_id = Column(Integer)\n    quantity = Column(Integer)\n"
+        },
+        {
+            "path": "backend/models/seller.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Seller(Base):\n    __tablename__ = 'sellers'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    email = Column(String)\n"
+        },
+        {
+            "path": "backend/models/admin.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Admin(Base):\n    __tablename__ = 'admins'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    email = Column(String)\n"
+        },
+        {
+            "path": "backend/schemas/__init__.py",
+            "content": "from .user import UserSchema\nfrom .product import ProductSchema\nfrom .category import CategorySchema\nfrom .order import OrderSchema\nfrom .cart_item import CartItemSchema\nfrom .order_item import OrderItemSchema\nfrom .seller import SellerSchema\nfrom .admin import AdminSchema\n"
+        },
+        {
+            "path": "backend/schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass UserSchema(BaseModel):\n    id: int\n    username: str\n    email: str\n    password: str\n"
+        },
+        {
+            "path": "backend/schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass ProductSchema(BaseModel):\n    id: int\n    name: str\n    description: str\n    price: int\n"
+        },
+        {
+            "path": "backend/schemas/category.py",
+            "content": "from pydantic import BaseModel\n\nclass CategorySchema(BaseModel):\n    id: int\n    name: str\n"
+        },
+        {
+            "path": "backend/schemas/order.py",
+            "content": "from pydantic import BaseModel\n\nclass OrderSchema(BaseModel):\n    id: int\n    user_id: int\n    total: int\n"
+        },
+        {
+            "path": "backend/schemas/cart_item.py",
+            "content": "from pydantic import BaseModel\n\nclass CartItemSchema(BaseModel):\n    id: int\n    user_id: int\n    product_id: int\n    quantity: int\n"
+        },
+        {
+            "path": "backend/schemas/order_item.py",
+            "content": "from pydantic import BaseModel\n\nclass OrderItemSchema(BaseModel):\n    id: int\n    order_id: int\n    product_id: int\n    quantity: int\n"
+        },
+        {
+            "path": "backend/schemas/seller.py",
+            "content": "from pydantic import BaseModel\n\nclass SellerSchema(BaseModel):\n    id: int\n    name: str\n    email: str\n"
+        },
+        {
+            "path": "backend/schemas/admin.py",
+            "content": "from pydantic import BaseModel\n\nclass AdminSchema(BaseModel):\n    id: int\n    name: str\n    email: str\n"
+        },
+        {
+            "path": "backend/services/__init__.py",
+            "content": "from .user import UserService\nfrom .product import ProductService\nfrom .category import CategoryService\nfrom .order import OrderService\nfrom .cart_item import CartItemService\nfrom .order_item import OrderItemService\nfrom .seller import SellerService\nfrom .admin import AdminService\n"
+        },
+        {
+            "path": "backend/services/user.py",
+            "content": "from backend.models import User\nfrom backend.schemas import UserSchema\n\nclass UserService:\n    def get_user(self, user_id: int):\n        return User.query.get(user_id)\n"
+        },
+        {
+            "path": "backend/services/product.py",
+            "content": "from backend.models import Product\nfrom backend.schemas import ProductSchema\n\nclass ProductService:\n    def get_product(self, product_id: int):\n        return Product.query.get(product_id)\n"
+        },
+        {
+            "path": "backend/services/category.py",
+            "content": "from backend.models import Category\nfrom backend.schemas import CategorySchema\n\nclass CategoryService:\n    def get_category(self, category_id: int):\n        return Category.query.get(category_id)\n"
+        },
+        {
+            "path": "backend/services/order.py",
+            "content": "from backend.models import Order\nfrom backend.schemas import OrderSchema\n\nclass OrderService:\n    def get_order(self, order_id: int):\n        return Order.query.get(order_id)\n"
+        },
+        {
+            "path": "backend/services/cart_item.py",
+            "content": "from backend.models import CartItem\nfrom backend.schemas import CartItemSchema\n\nclass CartItemService:\n    def get_cart_item(self, cart_item_id: int):\n        return CartItem.query.get(cart_item_id)\n"
+        },
+        {
+            "path": "backend/services/order_item.py",
+            "content": "from backend.models import OrderItem\nfrom backend.schemas import OrderItemSchema\n\nclass OrderItemService:\n    def get_order_item(self, order_item_id: int):\n        return OrderItem.query.get(order_item_id)\n"
+        },
+        {
+            "path": "backend/services/seller.py",
+            "content": "from backend.models import Seller\nfrom backend.schemas import SellerSchema\n\nclass SellerService:\n    def get_seller(self, seller_id: int):\n        return Seller.query.get(seller_id)\n"
+        },
+        {
+            "path": "backend/services/admin.py",
+            "content": "from backend.models import Admin\nfrom backend.schemas import AdminSchema\n\nclass AdminService:\n    def get_admin(self, admin_id: int):\n        return Admin.query.get(admin_id)\n"
+        },
+        {
+            "path": "backend/routers/__init__.py",
+            "content": "from .auth import auth_router\nfrom .products import products_router\nfrom .cart import cart_router\nfrom .orders import orders_router\nfrom .seller import seller_router\nfrom .admin import admin_router\n"
+        },
+        {
+            "path": "backend/routers/auth.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import UserService\nfrom backend.schemas import UserSchema\n\nauth_router = APIRouter()\n\n@auth_router.post('/login')\ndef login(user: UserSchema):\n    user_service = UserService()\n    return user_service.get_user(user.id)\n"
+        },
+        {
+            "path": "backend/routers/products.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import ProductService\nfrom backend.schemas import ProductSchema\n\nproducts_router = APIRouter()\n\n@products_router.get('/products')\ndef get_products():\n    product_service = ProductService()\n    return product_service.get_product(1)\n"
+        },
+        {
+            "path": "backend/routers/cart.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import CartItemService\nfrom backend.schemas import CartItemSchema\n\ncart_router = APIRouter()\n\n@cart_router.get('/cart')\ndef get_cart():\n    cart_item_service = CartItemService()\n    return cart_item_service.get_cart_item(1)\n"
+        },
+        {
+            "path": "backend/routers/orders.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import OrderService\nfrom backend.schemas import OrderSchema\n\norders_router = APIRouter()\n\n@orders_router.get('/orders')\ndef get_orders():\n    order_service = OrderService()\n    return order_service.get_order(1)\n"
+        },
+        {
+            "path": "backend/routers/seller.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import SellerService\nfrom backend.schemas import SellerSchema\n\nseller_router = APIRouter()\n\n@seller_router.get('/seller/dashboard')\ndef get_seller_dashboard():\n    seller_service = SellerService()\n    return seller_service.get_seller(1)\n"
+        },
+        {
+            "path": "backend/routers/admin.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import AdminService\nfrom backend.schemas import AdminSchema\n\nadmin_router = APIRouter()\n\n@admin_router.get('/admin/dashboard')\ndef get_admin_dashboard():\n    admin_service = AdminService()\n    return admin_service.get_admin(1)\n"
+        }
+    ]
+}
+```
+2026-03-18 18:23:55,769 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-18 18:23:55,783 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-18 18:23:55,810 | INFO | FILE_WRITER_AGENT | Started
+2026-03-18 18:23:55,853 | INFO | FILE_WRITER_AGENT | Files created: 36
+2026-03-18 18:23:55,872 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-18 18:23:55,902 | INFO | FRONTEND_CODE_AGENT | Started
+2026-03-18 18:24:02,522 | DEBUG | FRONTEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "next\nreact\ntypescript\ntailwindcss\n"
+        },
+        {
+            "path": "frontend/tsconfig.json",
+            "content": "{\"compilerOptions\":{\"target\":\"es6\",\"lib\":[\"dom\",\"dom.iterable\",\"esnext\"],\"allowJs\":true,\"skipLibCheck\":true,\"strict\":false,\"forceConsistentCasingInFileNames\":true,\"noEmit\":true,\"esModuleInterop\":true,\"module\":\"esnext\",\"moduleResolution\":\"node\",\"resolveJsonModule\":true,\"isolatedModules\":true,\"jsx\":\"preserve\"}}"
+        },
+        {
+            "path": "frontend/next.config.js",
+            "content": "module.exports = {\n  reactStrictMode: true,\n};"
+        },
+        {
+            "path": "frontend/tailwind.config.js",
+            "content": "module.exports = {\n  content: [\n    './pages/**/*.{js,ts,jsx,tsx}',\n    './components/**/*.{js,ts,jsx,tsx}',\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};"
+        },
+        {
+            "path": "frontend/pages/_app.tsx",
+            "content": "import '../styles/globals.css';\nimport type { AppProps } from 'next/app';\nimport Navbar from '../components/Navbar';\n\nfunction MyApp({ Component, pageProps }: AppProps) {\n  return (\n    <>\n      <Navbar />\n      <Component {...pageProps} />\n    </>\n  );\n}\n\nexport default MyApp;"
+        },
+        {
+            "path": "frontend/pages/_document.tsx",
+            "content": "import Document, { Html, Head, Main, NextScript } from 'next/document';\n\nclass MyDocument extends Document {\n  render() {\n    return (\n      <Html>\n        <Head>\n          <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css\" />\n        </Head>\n        <body>\n          <Main />\n          <NextScript />\n        </body>\n      </Html>\n    );\n  }\n}\n\nexport default MyDocument;"
+        },
+        {
+            "path": "frontend/pages/index.tsx",
+            "content": "import type { NextPage } from 'next';\nimport ProductGrid from '../components/ProductGrid';\n\nconst HomePage: NextPage = () => {\n  return (\n    <>\n      <h1 className=\"text-3xl font-bold\">Welcome to our store!</h1>\n      <ProductGrid />\n    </>\n  );\n};\n\nexport default HomePage;"
+        },
+        {
+            "path": "frontend/pages/product/[id].tsx",
+            "content": "import type { NextPage, GetServerSideProps } from 'next';\nimport { useState, useEffect } from 'react';\nimport axios from 'axios';\n\ninterface Product {\n  id: number;\n  name: string;\n  description: string;\n  price: number;\n}\n\nconst ProductPage: NextPage<{ product: Product }> = ({ product }) => {\n  return (\n    <>\n      <h1 className=\"text-3xl font-bold\">{product.name}</h1>\n      <p className=\"text-lg\">{product.description}</p>\n      <p className=\"text-lg\">${product.price}</p>\n    </>\n  );\n};\n\nexport const getServerSideProps: GetServerSideProps = async (context) => {\n  const id = context.params.id;\n  const response = await axios.get(`http://localhost:8000/products/${id}`);\n  const product = response.data;\n\n  return {\n    props: {\n      product,\n    },\n  };\n};\n\nexport default ProductPage;"
+        },
+        {
+            "path": "frontend/pages/cart.tsx",
+            "content": "import type { NextPage } from 'next';\nimport CartItem from '../components/CartItem';\n\nconst CartPage: NextPage = () => {\n  const [cartItems, setCartItems] = useState([]);\n\n  useEffect(() => {\n    const fetchCartItems = async () => {\n      const response = await axios.get('http://localhost:8000/cart');\n      setCartItems(response.data);\n    };\n    fetchCartItems();\n  }, []);\n\n  return (\n    <>\n      <h1 className=\"text-3xl font-bold\">Your Cart</h1>\n      {cartItems.map((item) => (\n        <CartItem key={item.id} item={item} />\n      ))}\n    </>\n  );\n};\n\nexport default CartPage;"
+        },
+        {
+            "path": "frontend/pages/seller-dashboard.tsx",
+            "content": "import type { NextPage } from 'next';\n\nconst SellerDashboardPage: NextPage = () => {\n  return (\n    <>\n      <h1 className=\"text-3xl font-bold\">Seller Dashboard</h1>\n    </>\n  );\n};\n\nexport default SellerDashboardPage;"
+        },
+        {
+            "path": "frontend/pages/admin-panel.tsx",
+            "content": "import type { NextPage } from 'next';\n\nconst AdminPanelPage: NextPage = () => {\n  return (\n    <>\n      <h1 className=\"text-3xl font-bold\">Admin Panel</h1>\n    </>\n  );\n};\n\nexport default AdminPanelPage;"
+        },
+        {
+            "path": "frontend/components/Navbar.tsx",
+            "content": "import Link from 'next/link';\n\nconst Navbar = () => {\n  return (\n    <nav className=\"flex justify-between bg-gray-800 text-white p-4\">\n      <Link href=\"/\">\n        <a>Home</a>\n      </Link>\n      <Link href=\"/cart\">\n        <a>Cart</a>\n      </Link>\n    </nav>\n  );\n};\n\nexport default Navbar;"
+        },
+        {
+            "path": "frontend/components/ProductCard.tsx",
+            "content": "import Link from 'next/link';\n\ninterface Product {\n  id: number;\n  name: string;\n  description: string;\n  price: number;\n}\n\nconst ProductCard = ({ product }: { product: Product }) => {\n  return (\n    <div className=\"max-w-sm mx-auto mt-10 bg-white rounded-xl shadow-md p-4\">\n      <h2 className=\"text-lg font-bold\">{product.name}</h2>\n      <p className=\"text-lg\">{product.description}</p>\n      <p className=\"text-lg\">${product.price}</p>\n      <Link href={`/product/${product.id}`}\n        ><a className=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded\">\n          View Details\n        </a>\n      </Link>\n    </div>\n  );\n};\n\nexport default ProductCard;"
+        },
+        {
+            "path": "frontend/components/ProductGrid.tsx",
+            "content": "import ProductCard from './ProductCard';\nimport axios from 'axios';\nimport { useState, useEffect } from 'react';\n\nconst ProductGrid = () => {\n  const [products, setProducts] = useState([]);\n\n  useEffect(() => {\n    const fetchProducts = async () => {\n      const response = await axios.get('http://localhost:8000/products');\n      setProducts(response.data);\n    };\n    fetchProducts();\n  }, []);\n\n  return (\n    <div className=\"grid grid-cols-3 gap-4\">\n      {products.map((product) => (\n        <ProductCard key={product.id} product={product} />\n      ))}\n    </div>\n  );\n};\n\nexport default ProductGrid;"
+        },
+        {
+            "path": "frontend/components/CategorySidebar.tsx",
+            "content": "import Link from 'next/link';\n\nconst CategorySidebar = () => {\n  return (\n    <div className=\"max-w-sm mx-auto mt-10 bg-white rounded-xl shadow-md p-4\">\n      <h2 className=\"text-lg font-bold\">Categories</h2>\n      <ul>\n        <li>\n          <Link href=\"/category/1\">\n            <a>Category 1</a>\n          </Link>\n        </li>\n        <li>\n          <Link href=\"/category/2\">\n            <a>Category 2</a>\n          </Link>\n        </li>\n      </ul>\n    </div>\n  );\n};\n\nexport default CategorySidebar;"
+        },
+        {
+            "path": "frontend/components/CartItem.tsx",
+            "content": "interface CartItem {\n  id: number;\n  product: {\n    id: number;\n    name: string;\n    price: number;\n  };\n  quantity: number;\n}\n\nconst CartItemComponent = ({ item }: { item: CartItem }) => {\n  return (\n    <div className=\"max-w-sm mx-auto mt-10 bg-white rounded-xl shadow-md p-4\">\n      <h2 className=\"text-lg font-bold\">{item.product.name}</h2>\n      <p className=\"text-lg\">Quantity: {item.quantity}</p>\n      <p className=\"text-lg\">Total: ${item.product.price * item.quantity}</p>\n    </div>\n  );\n};\n\nexport default CartItemComponent;"
+        },
+        {
+            "path": "frontend/components/OrderSummary.tsx",
+            "content": "interface Order {\n  id: number;\n  total: number;\n}\n\nconst OrderSummary = ({ order }: { order: Order }) => {\n  return (\n    <div className=\"max-w-sm mx-auto mt-10 bg-white rounded-xl shadow-md p-4\">\n      <h2 className=\"text-lg font-bold\">Order Summary</h2>\n      <p className=\"text-lg\">Order ID: {order.id}</p>\n      <p className=\"text-lg\">Total: ${order.total}</p>\n    </div>\n  );\n};\n\nexport default OrderSummary;"
+        },
+        {
+            "path": "frontend/components/Footer.tsx",
+            "content": "const Footer = () => {\n  return (\n    <footer className=\"bg-gray-800 text-white p-4\">\n      <p>&copy; 2024 My Store</p>\n    </footer>\n  );\n};\n\nexport default Footer;"
+        }
+    ]
+}
+```
+2026-03-18 18:24:02,546 | INFO | FRONTEND_CODE_AGENT | Completed
+2026-03-18 18:24:02,576 | INFO | FILE_WRITER_AGENT | Started
+2026-03-18 18:24:02,602 | INFO | FILE_WRITER_AGENT | Files created: 18
+2026-03-18 18:24:02,636 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-18 18:24:02,672 | INFO | INTEGRATION_AGENT | Started
+2026-03-18 18:24:19,622 | DEBUG | INTEGRATION_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "frontend/lib/api.ts",
+            "content": "export const api = (endpoint: string) => `http://localhost:8000${endpoint}`;\nexport const fetchApi = async (endpoint: string) => {\n    try {\n        const response = await fetch(api(endpoint));\n        if (!response.ok) {\n            throw new Error(response.statusText);\n        }\n        return await response.json();\n    } catch (error) {\n        console.error(error);\n        throw error;\n    }\n};"
+        },
+        {
+            "path": "frontend/pages/index.tsx",
+            "content": "import type { NextPage } from 'next';\nimport ProductGrid from '../components/ProductGrid';\nimport { fetchApi } from '../lib/api';\n\nconst HomePage: NextPage = () => {\n    return (\n        <>\n            <h1 className=\"text-3xl font-bold\">Welcome to our store!</h1>\n            <ProductGrid />\n        </>\n    );\n};\n\nexport default HomePage;"
+        },
+        {
+            "path": "frontend/pages/product/[id].tsx",
+            "content": "import type { NextPage, GetServerSideProps } from 'next';\nimport { useState, useEffect } from 'react';\nimport { fetchApi } from '../lib/api';\n\ninterface Product {\n    id: number;\n    name: string;\n    description: string;\n    price: number;\n}\n\nconst ProductPage: NextPage<{ product: Product }> = ({ product }) => {\n    return (\n        <>\n            <h1 className=\"text-3xl font-bold\">{product.name}</h1>\n            <p className=\"text-lg\">{product.description}</p>\n            <p className=\"text-lg\">${product.price}</p>\n        </>\n    );\n};\n\nexport const getServerSideProps: GetServerSideProps = async (context) => {\n    const id = context.params.id;\n    const product = await fetchApi(`/products/${id}`);\n    return {\n        props: {\n            product,\n        },\n    };\n};\n\nexport default ProductPage;"
+        },
+        {
+            "path": "frontend/pages/cart.tsx",
+            "content": "import type { NextPage } from 'next';\nimport CartItem from '../components/CartItem';\nimport { useState, useEffect } from 'react';\nimport { fetchApi } from '../lib/api';\n\nconst CartPage: NextPage = () => {\n    const [cartItems, setCartItems] = useState([]);\n    const [loading, setLoading] = useState(false);\n    const [error, setError] = useState(null);\n\n    useEffect(() => {\n        const fetchCartItems = async () => {\n            setLoading(true);\n            try {\n                const response = await fetchApi('/cart');\n                setCartItems(response);\n            } catch (error) {\n                setError(error.message);\n            } finally {\n                setLoading(false);\n            }\n        };\n        fetchCartItems();\n    }, []);\n\n    if (loading) {\n        return <div>Loading...</div>;\n    }\n\n    if (error) {\n        return <div>Error: {error}</div>;\n    }\n\n    return (\n        <>\n            <h1 className=\"text-3xl font-bold\">Your Cart</h1>\n            {cartItems.map((item) => (\n                <CartItem key={item.id} item={item} />\n            ))}\n        </>\n    );\n};\n\nexport default CartPage;"
+        },
+        {
+            "path": "frontend/components/ProductGrid.tsx",
+            "content": "import ProductCard from './ProductCard';\nimport { useState, useEffect } from 'react';\nimport { fetchApi } from '../lib/api';\n\nconst ProductGrid = () => {\n    const [products, setProducts] = useState([]);\n    const [loading, setLoading] = useState(false);\n    const [error, setError] = useState(null);\n\n    useEffect(() => {\n        const fetchProducts = async () => {\n            setLoading(true);\n            try {\n                const response = await fetchApi('/products');\n                setProducts(response);\n            } catch (error) {\n                setError(error.message);\n            } finally {\n                setLoading(false);\n            }\n        };\n        fetchProducts();\n    }, []);\n\n    if (loading) {\n        return <div>Loading...</div>;\n    }\n\n    if (error) {\n        return <div>Error: {error}</div>;\n    }\n\n    return (\n        <div className=\"grid grid-cols-3 gap-4\">\n            {products.map((product) => (\n                <ProductCard key={product.id} product={product} />\n            ))}\n        </div>\n    );\n};\n\nexport default ProductGrid;"
+        }
+    ]
+}
+```
+2026-03-18 18:24:19,630 | ERROR | INTEGRATION_AGENT | ERROR: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-03-18 18:24:20,025 | ERROR | Error in main: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-03-19 10:05:53,471 | INFO | Starting AI coding pipeline
+2026-03-19 10:05:53,550 | INFO | Invoking LangGraph workflow
+2026-03-19 10:05:54,559 | INFO | Starting requirement_agent
+2026-03-19 10:05:54,589 | INFO | No figma image provided
+2026-03-19 10:05:55,376 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-19 10:05:55,429 | INFO | Completed requirement_agent
+2026-03-19 10:05:55,454 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-19 10:05:57,148 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Order Management",
+            "Admin Panel",
+            "Seller Dashboard"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "product_categories"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Order API",
+        "Cart API",
+        "Category API"
+    ]
+}
+```
+2026-03-19 10:05:57,155 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Order Management', 'Admin Panel', 'Seller Dashboard']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'product_categories']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API', 'Category API']}
+2026-03-19 10:05:57,155 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-19 10:05:57,180 | INFO | TASK_AGENT | Started
+2026-03-19 10:05:59,196 | DEBUG | TASK_AGENT | Raw output: ```
+{
+  "backend_tasks": [
+    "Implement Authentication System module using FastAPI",
+    "Develop Product Catalog module using FastAPI",
+    "Design and implement Order Management module using FastAPI",
+    "Create Admin Panel module using FastAPI",
+    "Build Seller Dashboard module using FastAPI",
+    "Integrate Authentication API with backend modules",
+    "Integrate Product API with Product Catalog module",
+    "Integrate Order API with Order Management module",
+    "Implement API endpoints for Cart API",
+    "Develop API endpoints for Category API"
+  ],
+  "database_tasks": [
+    "Design and create users table",
+    "Design and create products table",
+    "Design and create categories table",
+    "Design and create orders table",
+    "Design and create order_items table",
+    "Design and create cart_items table",
+    "Design and create product_categories table",
+    "Establish relationships between tables"
+  ],
+  "frontend_tasks": [
+    "Develop Homepage using Next.js",
+    "Create Product Detail Page using Next.js",
+    "Design and implement Cart Page using Next.js",
+    "Build Seller Dashboard page using Next.js",
+    "Integrate frontend pages with backend API endpoints"
+  ],
+  "integration_tasks": [
+    "Integrate frontend with backend using APIs",
+    "Implement authentication and authorization across frontend and backend",
+    "Test and validate API integrations",
+    "Ensure data consistency across frontend and backend",
+    "Implement error handling and logging for integrations"
+  ]
+}
+```
+2026-03-19 10:05:59,200 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System module using FastAPI', 'Develop Product Catalog module using FastAPI', 'Design and implement Order Management module using FastAPI', 'Create Admin Panel module using FastAPI', 'Build Seller Dashboard module using FastAPI', 'Integrate Authentication API with backend modules', 'Integrate Product API with Product Catalog module', 'Integrate Order API with Order Management module', 'Implement API endpoints for Cart API', 'Develop API endpoints for Category API'], 'database_tasks': ['Design and create users table', 'Design and create products table', 'Design and create categories table', 'Design and create orders table', 'Design and create order_items table', 'Design and create cart_items table', 'Design and create product_categories table', 'Establish relationships between tables'], 'frontend_tasks': ['Develop Homepage using Next.js', 'Create Product Detail Page using Next.js', 'Design and implement Cart Page using Next.js', 'Build Seller Dashboard page using Next.js', 'Integrate frontend pages with backend API endpoints'], 'integration_tasks': ['Integrate frontend with backend using APIs', 'Implement authentication and authorization across frontend and backend', 'Test and validate API integrations', 'Ensure data consistency across frontend and backend', 'Implement error handling and logging for integrations']}
+2026-03-19 10:05:59,211 | INFO | TASK_AGENT | Completed
+2026-03-19 10:05:59,231 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-19 10:06:04,940 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "fastapi\nsqlalchemy\npsycopg2\npython-dotenv\npydantic\n"
+        },
+        {
+            "path": "backend/main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom backend.routers import auth, products, orders, cart, categories, seller, admin\n\napp = FastAPI()\n\napp.include_router(auth.router)\napp.include_router(products.router)\napp.include_router(orders.router)\napp.include_router(cart.router)\napp.include_router(categories.router)\napp.include_router(seller.router)\napp.include_router(admin.router)\n\norigins = [\n    \"http://localhost:3000\",\n    \"http://localhost:8000\",\n]\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n"
+        },
+        {
+            "path": "backend/models/__init__.py",
+            "content": "from .user import User\nfrom .product import Product\nfrom .category import Category\nfrom .order import Order\nfrom .cart import Cart\n"
+        },
+        {
+            "path": "backend/models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n    products = relationship('Product', back_populates='user')\n"
+        },
+        {
+            "path": "backend/models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String, Float\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    price = Column(Float)\n    description = Column(String)\n    user_id = Column(Integer)\n    user = relationship('User', back_populates='products')\n"
+        },
+        {
+            "path": "backend/models/category.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Category(Base):\n    __tablename__ = 'categories'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    products = relationship('Product', back_populates='category')\n"
+        },
+        {
+            "path": "backend/models/order.py",
+            "content": "from sqlalchemy import Column, Integer, String, Float, DateTime\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Order(Base):\n    __tablename__ = 'orders'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer)\n    total = Column(Float)\n    created_at = Column(DateTime)\n    products = relationship('OrderItem', back_populates='order')\n"
+        },
+        {
+            "path": "backend/models/cart.py",
+            "content": "from sqlalchemy import Column, Integer, String, Float\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Cart(Base):\n    __tablename__ = 'cart_items'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer)\n    product_id = Column(Integer)\n    quantity = Column(Integer)\n"
+        },
+        {
+            "path": "backend/schemas/__init__.py",
+            "content": "from .user import UserSchema\nfrom .product import ProductSchema\nfrom .category import CategorySchema\nfrom .order import OrderSchema\nfrom .cart import CartSchema\n"
+        },
+        {
+            "path": "backend/schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass UserSchema(BaseModel):\n    id: int\n    username: str\n    email: str\n    password: str\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "backend/schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass ProductSchema(BaseModel):\n    id: int\n    name: str\n    price: float\n    description: str\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "backend/schemas/category.py",
+            "content": "from pydantic import BaseModel\n\nclass CategorySchema(BaseModel):\n    id: int\n    name: str\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "backend/schemas/order.py",
+            "content": "from pydantic import BaseModel\nfrom typing import List\n\nclass OrderSchema(BaseModel):\n    id: int\n    user_id: int\n    total: float\n    created_at: str\n    products: List[int]\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "backend/schemas/cart.py",
+            "content": "from pydantic import BaseModel\n\nclass CartSchema(BaseModel):\n    id: int\n    user_id: int\n    product_id: int\n    quantity: int\n    class Config:\n        orm_mode = True\n"
+        },
+        {
+            "path": "backend/services/__init__.py",
+            "content": "from .user import UserService\nfrom .product import ProductService\nfrom .category import CategoryService\nfrom .order import OrderService\nfrom .cart import CartService\n"
+        },
+        {
+            "path": "backend/services/user.py",
+            "content": "from backend.models import User\nfrom backend.schemas import UserSchema\n\nclass UserService:\n    def get_user(self, user_id: int):\n        return User.query.get(user_id)\n    def create_user(self, user: UserSchema):\n        new_user = User(username=user.username, email=user.email, password=user.password)\n        db.session.add(new_user)\n        db.session.commit()\n        return new_user\n"
+        },
+        {
+            "path": "backend/services/product.py",
+            "content": "from backend.models import Product\nfrom backend.schemas import ProductSchema\n\nclass ProductService:\n    def get_product(self, product_id: int):\n        return Product.query.get(product_id)\n    def create_product(self, product: ProductSchema):\n        new_product = Product(name=product.name, price=product.price, description=product.description)\n        db.session.add(new_product)\n        db.session.commit()\n        return new_product\n"
+        },
+        {
+            "path": "backend/services/category.py",
+            "content": "from backend.models import Category\nfrom backend.schemas import CategorySchema\n\nclass CategoryService:\n    def get_category(self, category_id: int):\n        return Category.query.get(category_id)\n    def create_category(self, category: CategorySchema):\n        new_category = Category(name=category.name)\n        db.session.add(new_category)\n        db.session.commit()\n        return new_category\n"
+        },
+        {
+            "path": "backend/services/order.py",
+            "content": "from backend.models import Order\nfrom backend.schemas import OrderSchema\n\nclass OrderService:\n    def get_order(self, order_id: int):\n        return Order.query.get(order_id)\n    def create_order(self, order: OrderSchema):\n        new_order = Order(user_id=order.user_id, total=order.total, created_at=order.created_at)\n        db.session.add(new_order)\n        db.session.commit()\n        return new_order\n"
+        },
+        {
+            "path": "backend/services/cart.py",
+            "content": "from backend.models import Cart\nfrom backend.schemas import CartSchema\n\nclass CartService:\n    def get_cart(self, cart_id: int):\n        return Cart.query.get(cart_id)\n    def create_cart(self, cart: CartSchema):\n        new_cart = Cart(user_id=cart.user_id, product_id=cart.product_id, quantity=cart.quantity)\n        db.session.add(new_cart)\n        db.session.commit()\n        return new_cart\n"
+        },
+        {
+            "path": "backend/routers/__init__.py",
+            "content": "from .auth import auth_router\nfrom .products import products_router\nfrom .orders import orders_router\nfrom .cart import cart_router\nfrom .categories import categories_router\nfrom .seller import seller_router\nfrom .admin import admin_router\n"
+        },
+        {
+            "path": "backend/routers/auth.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import UserService\nfrom backend.schemas import UserSchema\n\nauth_router = APIRouter()\n\n@auth_router.post('/login')\ndef login(user: UserSchema):\n    user_service = UserService()\n    return user_service.get_user(user.id)\n\n@auth_router.post('/register')\ndef register(user: UserSchema):\n    user_service = UserService()\n    return user_service.create_user(user)\n"
+        },
+        {
+            "path": "backend/routers/products.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import ProductService\nfrom backend.schemas import ProductSchema\n\nproducts_router = APIRouter()\n\n@products_router.get('/products')\ndef get_products():\n    product_service = ProductService()\n    return product_service.get_product(1)\n\n@products_router.post('/products')\ndef create_product(product: ProductSchema):\n    product_service = ProductService()\n    return product_service.create_product(product)\n"
+        },
+        {
+            "path": "backend/routers/orders.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import OrderService\nfrom backend.schemas import OrderSchema\n\norders_router = APIRouter()\n\n@orders_router.get('/orders')\ndef get_orders():\n    order_service = OrderService()\n    return order_service.get_order(1)\n\n@orders_router.post('/orders')\ndef create_order(order: OrderSchema):\n    order_service = OrderService()\n    return order_service.create_order(order)\n"
+        },
+        {
+            "path": "backend/routers/cart.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import CartService\nfrom backend.schemas import CartSchema\n\ncart_router = APIRouter()\n\n@cart_router.get('/cart')\ndef get_cart():\n    cart_service = CartService()\n    return cart_service.get_cart(1)\n\n@cart_router.post('/cart')\ndef create_cart(cart: CartSchema):\n    cart_service = CartService()\n    return cart_service.create_cart(cart)\n"
+        },
+        {
+            "path": "backend/routers/categories.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import CategoryService\nfrom backend.schemas import CategorySchema\ncategories_router = APIRouter()\n\n@categories_router.get('/categories')\ndef get_categories():\n    category_service = CategoryService()\n    return category_service.get_category(1)\n\n@categories_router.post('/categories')\ndef create_category(category: CategorySchema):\n    category_service = CategoryService()\n    return category_service.create_category(category)\n"
+        },
+        {
+            "path": "backend/routers/seller.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import UserService\nfrom backend.schemas import UserSchema\nseller_router = APIRouter()\n\n@seller_router.get('/seller')\ndef get_seller():\n    user_service = UserService()\n    return user_service.get_user(1)\n"
+        },
+        {
+            "path": "backend/routers/admin.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services import UserService\nfrom backend.schemas import UserSchema\nadmin_router = APIRouter()\n\n@admin_router.get('/admin')\ndef get_admin():\n    user_service = UserService()\n    return user_service.get_user(1)\n"
+        }
+    ]
+}
+```
+2026-03-19 10:06:04,952 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-19 10:06:04,967 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-19 10:06:04,994 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 10:06:05,018 | INFO | FILE_WRITER_AGENT | Files created: 28
+2026-03-19 10:06:05,039 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 10:06:05,064 | INFO | FRONTEND_CODE_AGENT | Started
+2026-03-19 10:06:10,077 | DEBUG | FRONTEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "next\nreact\ntypescript\ntailwindcss\npostcss\nautoprefixer"
+        },
+        {
+            "path": "frontend/tsconfig.json",
+            "content": "{\"compilerOptions\":{\"target\":\"es6\",\"lib\":[\"dom\",\"dom.iterable\",\"esnext\"],\"allowJs\":true,\"skipLibCheck\":true,\"strict\":false,\"forceConsistentCasingInFileNames\":true,\"noEmit\":true,\"esModuleInterop\":true,\"module\":\"esnext\",\"moduleResolution\":\"node\",\"resolveJsonModule\":true,\"isolatedModules\":true,\"jsx\":\"preserve\"}}"
+        },
+        {
+            "path": "frontend/next.config.js",
+            "content": "module.exports = {\n  reactStrictMode: true,\n  experimental: {\n    appDir: true,\n  },\n};"
+        },
+        {
+            "path": "frontend/app/layout.tsx",
+            "content": "import Navbar from '../components/Navbar';\nimport Footer from '../components/Footer';\n\nexport default function RootLayout({ children }) {\n  return (\n    <html>\n      <head></head>\n      <body>\n        <Navbar />\n        {children}\n        <Footer />\n      </body>\n    </html>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/page.tsx",
+            "content": "export default function HomePage() {\n  return <h1>Welcome to the homepage</h1>;\n}"
+        },
+        {
+            "path": "frontend/components/Navbar.tsx",
+            "content": "import Link from 'next/link';\n\nexport default function Navbar() {\n  return (\n    <nav className=\"navbar\">\n      <Link href=\"/\">Home</Link>\n      <Link href=\"/products\">Products</Link>\n      <Link href=\"/cart\">Cart</Link>\n    </nav>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/ProductCard.tsx",
+            "content": "import Link from 'next/link';\n\nexport default function ProductCard({ product }) {\n  return (\n    <div className=\"product-card\">\n      <h2>{product.name}</h2>\n      <p>{product.description}</p>\n      <p>{product.price}</p>\n      <Link href={`/products/${product.id}`}>View Product</Link>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/ProductGrid.tsx",
+            "content": "import ProductCard from './ProductCard';\n\nexport default function ProductGrid({ products }) {\n  return (\n    <div className=\"product-grid\">\n      {products.map((product) => (\n        <ProductCard key={product.id} product={product} />\n      ))}\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/CategorySidebar.tsx",
+            "content": "import Link from 'next/link';\n\nexport default function CategorySidebar({ categories }) {\n  return (\n    <div className=\"category-sidebar\">\n      <h2>Categories</h2>\n      <ul>\n        {categories.map((category) => (\n          <li key={category.id}><Link href={`/categories/${category.id}`}>{category.name}</Link></li>\n        ))}\n      </ul>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/CartItem.tsx",
+            "content": "export default function CartItem({ item }) {\n  return (\n    <div className=\"cart-item\">\n      <h2>{item.product.name}</h2>\n      <p>Quantity: {item.quantity}</p>\n      <p>Subtotal: {item.product.price * item.quantity}</p>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/OrderSummary.tsx",
+            "content": "export default function OrderSummary({ order }) {\n  return (\n    <div className=\"order-summary\">\n      <h2>Order Summary</h2>\n      <p>Total: {order.total}</p>\n      <p>Created At: {order.created_at}</p>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/Footer.tsx",
+            "content": "export default function Footer() {\n  return (\n    <footer className=\"footer\">\n      <p>&copy; 2024 My E-commerce Website</p>\n    </footer>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/products/page.tsx",
+            "content": "import ProductGrid from '../../components/ProductGrid';\n\nexport default function ProductsPage() {\n  const products = [\n    { id: 1, name: 'Product 1', description: 'This is product 1', price: 10.99 },\n    { id: 2, name: 'Product 2', description: 'This is product 2', price: 9.99 },\n    { id: 3, name: 'Product 3', description: 'This is product 3', price: 12.99 },\n  ];\n\n  return (\n    <div>\n      <h1>Products</h1>\n      <ProductGrid products={products} />\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/products/[id]/page.tsx",
+            "content": "import ProductCard from '../../../components/ProductCard';\n\nexport default function ProductDetailPage() {\n  const product = { id: 1, name: 'Product 1', description: 'This is product 1', price: 10.99 };\n\n  return (\n    <div>\n      <h1>Product Detail</h1>\n      <ProductCard product={product} />\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/cart/page.tsx",
+            "content": "import CartItem from '../../../components/CartItem';\n\nexport default function CartPage() {\n  const cartItems = [\n    { id: 1, product: { id: 1, name: 'Product 1', price: 10.99 }, quantity: 2 },\n    { id: 2, product: { id: 2, name: 'Product 2', price: 9.99 }, quantity: 1 },\n  ];\n\n  return (\n    <div>\n      <h1>Cart</h1>\n      {cartItems.map((item) => (\n        <CartItem key={item.id} item={item} />\n      ))}\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/seller/page.tsx",
+            "content": "export default function SellerDashboardPage() {\n  return (\n    <div>\n      <h1>Seller Dashboard</h1>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/styles/globals.css",
+            "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;"
+        },
+        {
+            "path": "frontend/tailwind.config.js",
+            "content": "module.exports = {\n  content: [\n    './app/**/*.{js,ts,jsx,tsx}',\n    './components/**/*.{js,ts,jsx,tsx}',\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};"
+        }
+    ]
+}
+```
+2026-03-19 10:06:10,092 | INFO | FRONTEND_CODE_AGENT | Completed
+2026-03-19 10:06:10,119 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 10:06:10,133 | INFO | FILE_WRITER_AGENT | Files created: 18
+2026-03-19 10:06:10,144 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 10:06:10,155 | INFO | INTEGRATION_AGENT | Started
+2026-03-19 10:06:15,282 | DEBUG | INTEGRATION_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "frontend/lib/api.ts",
+            "content": "export const api = (endpoint: string) => `http://localhost:8000/${endpoint}`;\n\nexport const fetchApi = async (endpoint: string) => {\n    try {\n        const response = await fetch(api(endpoint));\n        if (!response.ok) {\n            throw new Error(response.statusText);\n        }\n        return await response.json();\n    } catch (error) {\n        console.error(error);\n        throw error;\n    }\n};"
+        },
+        {
+            "path": "frontend/app/products/page.tsx",
+            "content": "import { fetchApi } from '../../lib/api';\nimport ProductGrid from '../../components/ProductGrid';\n\nexport default function ProductsPage() {\n    const [products, setProducts] = React.useState([]);\n    const [loading, setLoading] = React.useState(false);\n    const [error, setError] = React.useState(null);\n\n    React.useEffect(() => {\n        const fetchProducts = async () => {\n            setLoading(true);\n            try {\n                const data = await fetchApi('products');\n                setProducts(data);\n            } catch (error) {\n                setError(error.message);\n            } finally {\n                setLoading(false);\n            }\n        };\n        fetchProducts();\n    }, []);\n\n    if (loading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error}</div>;\n\n    return (\n        <div>\n            <h1>Products</h1>\n            <ProductGrid products={products} />\n        </div>\n    );\n};"
+        },
+        {
+            "path": "frontend/app/products/[id]/page.tsx",
+            "content": "import { fetchApi } from '../../../lib/api';\nimport ProductCard from '../../../components/ProductCard';\n\nexport default function ProductDetailPage({ id }) {\n    const [product, setProduct] = React.useState({});\n    const [loading, setLoading] = React.useState(false);\n    const [error, setError] = React.useState(null);\n\n    React.useEffect(() => {\n        const fetchProduct = async () => {\n            setLoading(true);\n            try {\n                const data = await fetchApi(`products/${id}`);\n                setProduct(data);\n            } catch (error) {\n                setError(error.message);\n            } finally {\n                setLoading(false);\n            }\n        };\n        fetchProduct();\n    }, [id]);\n\n    if (loading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error}</div>;\n\n    return (\n        <div>\n            <h1>Product Detail</h1>\n            <ProductCard product={product} />\n        </div>\n    );\n};"
+        },
+        {
+            "path": "frontend/app/cart/page.tsx",
+            "content": "import { fetchApi } from '../../../lib/api';\nimport CartItem from '../../../components/CartItem';\n\nexport default function CartPage() {\n    const [cartItems, setCartItems] = React.useState([]);\n    const [loading, setLoading] = React.useState(false);\n    const [error, setError] = React.useState(null);\n\n    React.useEffect(() => {\n        const fetchCart = async () => {\n            setLoading(true);\n            try {\n                const data = await fetchApi('cart');\n                setCartItems(data);\n            } catch (error) {\n                setError(error.message);\n            } finally {\n                setLoading(false);\n            }\n        };\n        fetchCart();\n    }, []);\n\n    if (loading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error}</div>;\n\n    return (\n        <div>\n            <h1>Cart</h1>\n            {cartItems.map((item) => (\n                <CartItem key={item.id} item={item} />\n            ))}\n        </div>\n    );\n};"
+        }
+    ]
+}
+```
+2026-03-19 10:06:15,292 | ERROR | INTEGRATION_AGENT | ERROR: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-03-19 10:06:15,438 | ERROR | Error in main: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-03-19 10:14:36,707 | INFO | Starting AI coding pipeline
+2026-03-19 10:14:36,734 | INFO | Invoking LangGraph workflow
+2026-03-19 10:14:38,617 | INFO | Starting requirement_agent
+2026-03-19 10:14:38,641 | INFO | No figma image provided
+2026-03-19 10:14:39,351 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-19 10:14:39,406 | INFO | Completed requirement_agent
+2026-03-19 10:14:39,429 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-19 10:14:41,458 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication System",
+            "Product Catalog",
+            "Order Management",
+            "Admin Panel",
+            "Seller Dashboard"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items",
+            "seller_info"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Order API",
+        "Cart API",
+        "Seller API",
+        "Admin API"
+    ]
+}
+```
+2026-03-19 10:14:41,474 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication System', 'Product Catalog', 'Order Management', 'Admin Panel', 'Seller Dashboard']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items', 'seller_info']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API', 'Seller API', 'Admin API']}
+2026-03-19 10:14:41,474 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-19 10:14:41,507 | INFO | TASK_AGENT | Started
+2026-03-19 10:14:43,733 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication System using FastAPI",
+        "Develop Product Catalog module",
+        "Create Order Management module",
+        "Design and implement Admin Panel",
+        "Develop Seller Dashboard",
+        "Integrate Authentication System with other modules",
+        "Implement API endpoints for Authentication API",
+        "Implement API endpoints for Product API",
+        "Implement API endpoints for Order API",
+        "Implement API endpoints for Cart API",
+        "Implement API endpoints for Seller API",
+        "Implement API endpoints for Admin API"
+    ],
+    "database_tasks": [
+        "Design and create users table",
+        "Design and create products table",
+        "Design and create categories table",
+        "Design and create orders table",
+        "Design and create order_items table",
+        "Design and create cart_items table",
+        "Design and create seller_info table",
+        "Establish relationships between tables"
+    ],
+    "frontend_tasks": [
+        "Develop Homepage using Next.js",
+        "Create Product Detail Page",
+        "Design and implement Cart Page",
+        "Develop Seller Dashboard",
+        "Develop Admin Panel",
+        "Implement client-side authentication using Next.js"
+    ],
+    "integration_tasks": [
+        "Integrate Next.js frontend with FastAPI backend",
+        "Consume Authentication API in frontend",
+        "Consume Product API in frontend",
+        "Consume Order API in frontend",
+        "Consume Cart API in frontend",
+        "Consume Seller API in frontend",
+        "Consume Admin API in frontend"
+    ]
+}
+```
+2026-03-19 10:14:43,739 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication System using FastAPI', 'Develop Product Catalog module', 'Create Order Management module', 'Design and implement Admin Panel', 'Develop Seller Dashboard', 'Integrate Authentication System with other modules', 'Implement API endpoints for Authentication API', 'Implement API endpoints for Product API', 'Implement API endpoints for Order API', 'Implement API endpoints for Cart API', 'Implement API endpoints for Seller API', 'Implement API endpoints for Admin API'], 'database_tasks': ['Design and create users table', 'Design and create products table', 'Design and create categories table', 'Design and create orders table', 'Design and create order_items table', 'Design and create cart_items table', 'Design and create seller_info table', 'Establish relationships between tables'], 'frontend_tasks': ['Develop Homepage using Next.js', 'Create Product Detail Page', 'Design and implement Cart Page', 'Develop Seller Dashboard', 'Develop Admin Panel', 'Implement client-side authentication using Next.js'], 'integration_tasks': ['Integrate Next.js frontend with FastAPI backend', 'Consume Authentication API in frontend', 'Consume Product API in frontend', 'Consume Order API in frontend', 'Consume Cart API in frontend', 'Consume Seller API in frontend', 'Consume Admin API in frontend']}
+2026-03-19 10:14:43,752 | INFO | TASK_AGENT | Completed
+2026-03-19 10:14:43,781 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-19 10:14:48,319 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "fastapi\nsqlalchemy\npsycopg2\npydantic\npython-jose\npasslib"
+        },
+        {
+            "path": "backend/main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom backend.routers import authentication, products, orders, cart, seller, admin\n\napp = FastAPI()\n\norigins = [\n    \"*\"\n]\n\napp.add_middleware(\n    CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=[\"*\"], allow_headers=[\"*\"]\n)\n\napp.include_router(authentication.router)\napp.include_router(products.router)\napp.include_router(orders.router)\napp.include_router(cart.router)\napp.include_router(seller.router)\napp.include_router(admin.router)"
+        },
+        {
+            "path": "backend/models/__init__.py",
+            "content": "from sqlalchemy import create_engine\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\nfrom backend.config import SQLALCHEMY_DATABASE_URL\n\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()"
+        },
+        {
+            "path": "backend/models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.orm import relationship\nfrom backend.models import Base\n\nclass User(Base):\n    __tablename__ = \"users\"\n\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)"
+        },
+        {
+            "path": "backend/schemas/__init__.py",
+            "content": ""
+        },
+        {
+            "path": "backend/schemas/user.py",
+            "content": "from pydantic import BaseModel\nfrom typing import Optional\n\nclass UserBase(BaseModel):\n    username: str\n    email: str\n\nclass UserCreate(UserBase):\n    password: str\n\nclass User(UserBase):\n    id: int\n    class Config:\n        orm_mode = True"
+        },
+        {
+            "path": "backend/services/__init__.py",
+            "content": ""
+        },
+        {
+            "path": "backend/services/user_service.py",
+            "content": "from backend.models import SessionLocal\nfrom backend.schemas import UserCreate\nfrom backend.models.user import User\n\nsession = SessionLocal()\n\ndef create_user(user: UserCreate):\n    db_user = User(username=user.username, email=user.email, password=user.password)\n    session.add(db_user)\n    session.commit()\n    session.refresh(db_user)\n    return db_user"
+        },
+        {
+            "path": "backend/routers/__init__.py",
+            "content": ""
+        },
+        {
+            "path": "backend/routers/authentication.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm\nfrom backend.services import user_service\nfrom backend.schemas import UserCreate\n\nrouter = APIRouter()\n\n@router.post(\"/token\")\nasync def login(form_data: OAuth2PasswordRequestForm = Depends()):\n    user = user_service.get_user(form_data.username)\n    if not user:\n        return {\n            \"error\": \"Invalid username or password\"\n        }\n    return {\n        \"access_token\": user.username,\n        \"token_type\": \"bearer\"\n    }"
+        },
+        {
+            "path": "backend/routers/products.py",
+            "content": "from fastapi import APIRouter\nfrom backend.models import SessionLocal\nfrom backend.schemas import ProductCreate\n\nrouter = APIRouter()\n\nsession = SessionLocal()\n\n@router.post(\"/products\")\nasync def create_product(product: ProductCreate):\n    db_product = Product(name=product.name, description=product.description, price=product.price)\n    session.add(db_product)\n    session.commit()\n    session.refresh(db_product)\n    return db_product"
+        },
+        {
+            "path": "backend/routers/orders.py",
+            "content": "from fastapi import APIRouter\nfrom backend.models import SessionLocal\nfrom backend.schemas import OrderCreate\n\nrouter = APIRouter()\n\nsession = SessionLocal()\n\n@router.post(\"/orders\")\nasync def create_order(order: OrderCreate):\n    db_order = Order(total=order.total)\n    session.add(db_order)\n    session.commit()\n    session.refresh(db_order)\n    return db_order"
+        },
+        {
+            "path": "backend/routers/cart.py",
+            "content": "from fastapi import APIRouter\nfrom backend.models import SessionLocal\nfrom backend.schemas import CartItemCreate\n\nrouter = APIRouter()\n\nsession = SessionLocal()\n\n@router.post(\"/cart\")\nasync def add_to_cart(cart_item: CartItemCreate):\n    db_cart_item = CartItem(product_id=cart_item.product_id, quantity=cart_item.quantity)\n    session.add(db_cart_item)\n    session.commit()\n    session.refresh(db_cart_item)\n    return db_cart_item"
+        },
+        {
+            "path": "backend/routers/seller.py",
+            "content": "from fastapi import APIRouter\nfrom backend.models import SessionLocal\nfrom backend.schemas import SellerCreate\n\nrouter = APIRouter()\n\nsession = SessionLocal()\n\n@router.post(\"/sellers\")\nasync def create_seller(seller: SellerCreate):\n    db_seller = Seller(name=seller.name, email=seller.email)\n    session.add(db_seller)\n    session.commit()\n    session.refresh(db_seller)\n    return db_seller"
+        },
+        {
+            "path": "backend/routers/admin.py",
+            "content": "from fastapi import APIRouter\nfrom backend.models import SessionLocal\nfrom backend.schemas import AdminCreate\n\nrouter = APIRouter()\n\nsession = SessionLocal()\n\n@router.post(\"/admins\")\nasync def create_admin(admin: AdminCreate):\n    db_admin = Admin(name=admin.name, email=admin.email)\n    session.add(db_admin)\n    session.commit()\n    session.refresh(db_admin)\n    return db_admin"
+        },
+        {
+            "path": "backend/config.py",
+            "content": "SQLALCHEMY_DATABASE_URL = \"postgresql://user:password@localhost/dbname\""
+        }
+    ]
+}
+```
+2026-03-19 10:14:48,323 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-19 10:14:48,333 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-19 10:14:48,348 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 10:14:48,362 | INFO | FILE_WRITER_AGENT | Files created: 16
+2026-03-19 10:14:48,371 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 10:14:48,387 | INFO | FRONTEND_CODE_AGENT | Started
+2026-03-19 10:14:52,800 | DEBUG | FRONTEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "next\nreact\ntypescript\ntailwindcss"
+        },
+        {
+            "path": "frontend/tsconfig.json",
+            "content": "{\"compilerOptions\":{\"target\":\"es6\",\"lib\":[\"dom\",\"dom.iterable\",\"esnext\"],\"allowJs\":true,\"skipLibCheck\":true,\"strict\":false,\"forceConsistentCasingInFileNames\":true,\"noEmit\":true,\"esModuleInterop\":true,\"module\":\"esnext\",\"moduleResolution\":\"node\",\"resolveJsonModule\":true,\"outDir\":\"build\",\"jsx\":\"preserve\"}}"
+        },
+        {
+            "path": "frontend/next.config.js",
+            "content": "module.exports = {\n  reactStrictMode: true,\n  experimental: {\n    appDir: true,\n  },\n};"
+        },
+        {
+            "path": "frontend/app/layout.tsx",
+            "content": "import Navbar from '../components/Navbar';\nimport Footer from '../components/Footer';\n\nexport default function RootLayout({ children }) {\n  return (\n    <html>\n      <head>\n        <title>My App</title>\n      </head>\n      <body>\n        <Navbar />\n        {children}\n        <Footer />\n      </body>\n    </html>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/page.tsx",
+            "content": "export default function HomePage() {\n  return <h1>Welcome to my app</h1>;\n}"
+        },
+        {
+            "path": "frontend/components/Navbar.tsx",
+            "content": "import Link from 'next/link';\n\nexport default function Navbar() {\n  return (\n    <nav>\n      <ul>\n        <li>\n          <Link href=\"/\">Home</Link>\n        </li>\n        <li>\n          <Link href=\"/products\">Products</Link>\n        </li>\n        <li>\n          <Link href=\"/cart\">Cart</Link>\n        </li>\n      </ul>\n    </nav>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/ProductCard.tsx",
+            "content": "import Link from 'next/link';\n\nexport default function ProductCard({ product }) {\n  return (\n    <div>\n      <h2>{product.name}</h2>\n      <p>{product.description}</p>\n      <p>{product.price}</p>\n      <Link href={`/products/${product.id}`}>View</Link>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/ProductGrid.tsx",
+            "content": "import ProductCard from './ProductCard';\n\nexport default function ProductGrid({ products }) {\n  return (\n    <div>\n      {products.map((product) => (\n        <ProductCard key={product.id} product={product} />\n      ))}\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/CategorySidebar.tsx",
+            "content": "import Link from 'next/link';\n\nexport default function CategorySidebar({ categories }) {\n  return (\n    <div>\n      <h2>Categories</h2>\n      <ul>\n        {categories.map((category) => (\n          <li key={category.id}>\n            <Link href={`/categories/${category.id}`}>{category.name}</Link>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/CartItem.tsx",
+            "content": "export default function CartItem({ item }) {\n  return (\n    <div>\n      <h2>{item.product.name}</h2>\n      <p>Quantity: {item.quantity}</p>\n      <p>Subtotal: {item.subtotal}</p>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/OrderSummary.tsx",
+            "content": "export default function OrderSummary({ order }) {\n  return (\n    <div>\n      <h2>Order Summary</h2>\n      <p>Total: {order.total}</p>\n      <p>Status: {order.status}</p>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/components/Footer.tsx",
+            "content": "export default function Footer() {\n  return (\n    <footer>\n      <p>&copy; 2024 My App</p>\n    </footer>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/product/page.tsx",
+            "content": "import ProductCard from '../../components/ProductCard';\n\nexport default function ProductPage() {\n  const product = {\n    id: 1,\n    name: 'Product 1',\n    description: 'This is product 1',\n    price: 19.99,\n  };\n\n  return (\n    <div>\n      <ProductCard product={product} />\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/cart/page.tsx",
+            "content": "import CartItem from '../../components/CartItem';\n\nexport default function CartPage() {\n  const cartItems = [\n    {\n      id: 1,\n      product: {\n        id: 1,\n        name: 'Product 1',\n      },\n      quantity: 2,\n      subtotal: 39.98,\n    },\n  ];\n\n  return (\n    <div>\n      <h1>Cart</h1>\n      {cartItems.map((item) => (\n        <CartItem key={item.id} item={item} />\n      ))}\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/seller/page.tsx",
+            "content": "export default function SellerPage() {\n  return (\n    <div>\n      <h1>Seller Dashboard</h1>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/admin/page.tsx",
+            "content": "export default function AdminPage() {\n  return (\n    <div>\n      <h1>Admin Panel</h1>\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/styles/globals.css",
+            "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;"
+        },
+        {
+            "path": "frontend/tailwind.config.js",
+            "content": "module.exports = {\n  content: [\n    './app/**/*.{js,ts,jsx,tsx}',\n    './components/**/*.{js,ts,jsx,tsx}',\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};"
+        }
+    ]
+}
+```
+2026-03-19 10:14:52,817 | INFO | FRONTEND_CODE_AGENT | Completed
+2026-03-19 10:14:52,832 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 10:14:52,842 | INFO | FILE_WRITER_AGENT | Files created: 18
+2026-03-19 10:14:52,853 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 10:14:52,874 | INFO | INTEGRATION_AGENT | Started
+2026-03-19 10:14:56,372 | DEBUG | INTEGRATION_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "frontend/lib/api.ts",
+            "content": "export const api = async (endpoint, method, data) => {\n  const response = await fetch(endpoint, {\n    method: method,\n    headers: {\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify(data)\n  });\n  if (!response.ok) {\n    throw new Error(response.statusText);\n  }\n  return await response.json();\n};"
+        },
+        {
+            "path": "frontend/app/product/page.tsx",
+            "content": "import { api } from '../../lib/api';\n\nexport default function ProductPage() {\n  const [product, setProduct] = React.useState(null);\n  const [error, setError] = React.useState(null);\n  const [loading, setLoading] = React.useState(false);\n\n  React.useEffect(() => {\n    const fetchProduct = async () => {\n      setLoading(true);\n      try {\n        const data = await api('/api/products/1', 'GET');\n        setProduct(data);\n      } catch (error) {\n        setError(error.message);\n      } finally {\n        setLoading(false);\n      }\n    };\n    fetchProduct();\n  }, []);\n\n  if (loading) return <div>Loading...</div>;\n  if (error) return <div>Error: {error}</div>;\n\n  return (\n    <div>\n      {product && (\n        <div>\n          <h2>{product.name}</h2>\n          <p>{product.description}</p>\n          <p>{product.price}</p>\n        </div>\n      )}\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/cart/page.tsx",
+            "content": "import { api } from '../../lib/api';\n\nexport default function CartPage() {\n  const [cartItems, setCartItems] = React.useState(null);\n  const [error, setError] = React.useState(null);\n  const [loading, setLoading] = React.useState(false);\n\n  React.useEffect(() => {\n    const fetchCart = async () => {\n      setLoading(true);\n      try {\n        const data = await api('/api/cart', 'GET');\n        setCartItems(data);\n      } catch (error) {\n        setError(error.message);\n      } finally {\n        setLoading(false);\n      }\n    };\n    fetchCart();\n  }, []);\n\n  if (loading) return <div>Loading...</div>;\n  if (error) return <div>Error: {error}</div>;\n\n  return (\n    <div>\n      <h1>Cart</h1>\n      {cartItems && cartItems.map((item) => (\n        <div key={item.id}>\n          <h2>{item.product.name}</h2>\n          <p>Quantity: {item.quantity}</p>\n          <p>Subtotal: {item.subtotal}</p>\n        </div>\n      ))}\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/seller/page.tsx",
+            "content": "import { api } from '../../lib/api';\n\nexport default function SellerPage() {\n  const [seller, setSeller] = React.useState(null);\n  const [error, setError] = React.useState(null);\n  const [loading, setLoading] = React.useState(false);\n\n  React.useEffect(() => {\n    const fetchSeller = async () => {\n      setLoading(true);\n      try {\n        const data = await api('/api/sellers/1', 'GET');\n        setSeller(data);\n      } catch (error) {\n        setError(error.message);\n      } finally {\n        setLoading(false);\n      }\n    };\n    fetchSeller();\n  }, []);\n\n  if (loading) return <div>Loading...</div>;\n  if (error) return <div>Error: {error}</div>;\n\n  return (\n    <div>\n      <h1>Seller Dashboard</h1>\n      {seller && (\n        <div>\n          <h2>{seller.name}</h2>\n          <p>{seller.email}</p>\n        </div>\n      )}\n    </div>\n  );\n}"
+        },
+        {
+            "path": "frontend/app/admin/page.tsx",
+            "content": "import { api } from '../../lib/api';\n\nexport default function AdminPage() {\n  const [admin, setAdmin] = React.useState(null);\n  const [error, setError] = React.useState(null);\n  const [loading, setLoading] = React.useState(false);\n\n  React.useEffect(() => {\n    const fetchAdmin = async () => {\n      setLoading(true);\n      try {\n        const data = await api('/api/admins/1', 'GET');\n        setAdmin(data);\n      } catch (error) {\n        setError(error.message);\n      } finally {\n        setLoading(false);\n      }\n    };\n    fetchAdmin();\n  }, []);\n\n  if (loading) return <div>Loading...</div>;\n  if (error) return <div>Error: {error}</div>;\n\n  return (\n    <div>\n      <h1>Admin Panel</h1>\n      {admin && (\n        <div>\n          <h2>{admin.name}</h2>\n          <p>{admin.email}</p>\n        </div>\n      )}\n    </div>\n  );\n}"
+        }
+    ]
+}
+```
+2026-03-19 10:14:56,393 | INFO | INTEGRATION_AGENT | Completed
+2026-03-19 10:14:56,409 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 10:14:56,413 | INFO | FILE_WRITER_AGENT | Files created: 5
+2026-03-19 10:14:56,425 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 10:14:56,485 | INFO | LangGraph workflow completed
+2026-03-19 12:12:26,947 | INFO | Starting AI coding pipeline
+2026-03-19 12:12:26,982 | INFO | Invoking LangGraph workflow
+2026-03-19 12:12:28,388 | INFO | Starting requirement_agent
+2026-03-19 12:12:28,416 | INFO | No figma image provided
+2026-03-19 12:12:29,101 | DEBUG | Parsed system_spec: {'frontend': 'React, Next.js, Tailwind CSS', 'backend': 'Python, FastAPI', 'database': 'PostgreSQL', 'features': ['Authentication System', 'Product Catalog', 'Product Categories', 'Product Detail Page', 'Shopping Cart', 'Checkout System', 'Order Management', 'Order History', 'Seller Dashboard', 'Admin Panel'], 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel'], 'components': ['Navbar', 'ProductCard', 'ProductGrid', 'CategorySidebar', 'CartItem', 'OrderSummary', 'Footer']}
+2026-03-19 12:12:29,146 | INFO | Completed requirement_agent
+2026-03-19 12:12:29,167 | INFO | ARCHITECTURE_AGENT | Started
+2026-03-19 12:12:30,514 | DEBUG | Architecture Plan| Raw output: ```json
+{
+    "architecture_type": "Monolithic",
+    "backend": {
+        "framework": "FastAPI",
+        "modules": [
+            "Authentication Module",
+            "Product Module",
+            "Order Module",
+            "Admin Module"
+        ]
+    },
+    "database": {
+        "tables": [
+            "users",
+            "products",
+            "categories",
+            "orders",
+            "order_items",
+            "cart_items"
+        ]
+    },
+    "frontend": {
+        "framework": "Next.js",
+        "pages": [
+            "Homepage",
+            "Product Detail Page",
+            "Cart Page",
+            "Seller Dashboard",
+            "Admin Panel"
+        ]
+    },
+    "apis": [
+        "Authentication API",
+        "Product API",
+        "Order API",
+        "Cart API"
+    ]
+}
+```
+2026-03-19 12:12:30,542 | DEBUG | Architecture Plan: {'architecture_type': 'Monolithic', 'backend': {'framework': 'FastAPI', 'modules': ['Authentication Module', 'Product Module', 'Order Module', 'Admin Module']}, 'database': {'tables': ['users', 'products', 'categories', 'orders', 'order_items', 'cart_items']}, 'frontend': {'framework': 'Next.js', 'pages': ['Homepage', 'Product Detail Page', 'Cart Page', 'Seller Dashboard', 'Admin Panel']}, 'apis': ['Authentication API', 'Product API', 'Order API', 'Cart API']}
+2026-03-19 12:12:30,542 | INFO | ARCHITECTURE_AGENT | Completed
+2026-03-19 12:12:30,563 | INFO | TASK_AGENT | Started
+2026-03-19 12:12:32,049 | DEBUG | TASK_AGENT | Raw output: ```json
+{
+    "backend_tasks": [
+        "Implement Authentication Module using FastAPI",
+        "Develop Product Module using FastAPI",
+        "Create Order Module using FastAPI",
+        "Design Admin Module using FastAPI",
+        "Integrate Authentication Module with other modules",
+        "Implement API endpoints for Authentication API",
+        "Implement API endpoints for Product API",
+        "Implement API endpoints for Order API",
+        "Implement API endpoints for Cart API"
+    ],
+    "database_tasks": [
+        "Create users table in database",
+        "Create products table in database",
+        "Create categories table in database",
+        "Create orders table in database",
+        "Create order_items table in database",
+        "Create cart_items table in database",
+        "Define relationships between tables"
+    ],
+    "frontend_tasks": [
+        "Design and implement Homepage using Next.js",
+        "Develop Product Detail Page using Next.js",
+        "Create Cart Page using Next.js",
+        "Implement Seller Dashboard using Next.js",
+        "Implement Admin Panel using Next.js",
+        "Integrate frontend pages with API endpoints"
+    ],
+    "integration_tasks": [
+        "Integrate frontend with backend using APIs",
+        "Test and validate Authentication API integration",
+        "Test and validate Product API integration",
+        "Test and validate Order API integration",
+        "Test and validate Cart API integration"
+    ]
+}
+```
+2026-03-19 12:12:32,070 | DEBUG | TASK_AGENT | Parsed task_plan: {'backend_tasks': ['Implement Authentication Module using FastAPI', 'Develop Product Module using FastAPI', 'Create Order Module using FastAPI', 'Design Admin Module using FastAPI', 'Integrate Authentication Module with other modules', 'Implement API endpoints for Authentication API', 'Implement API endpoints for Product API', 'Implement API endpoints for Order API', 'Implement API endpoints for Cart API'], 'database_tasks': ['Create users table in database', 'Create products table in database', 'Create categories table in database', 'Create orders table in database', 'Create order_items table in database', 'Create cart_items table in database', 'Define relationships between tables'], 'frontend_tasks': ['Design and implement Homepage using Next.js', 'Develop Product Detail Page using Next.js', 'Create Cart Page using Next.js', 'Implement Seller Dashboard using Next.js', 'Implement Admin Panel using Next.js', 'Integrate frontend pages with API endpoints'], 'integration_tasks': ['Integrate frontend with backend using APIs', 'Test and validate Authentication API integration', 'Test and validate Product API integration', 'Test and validate Order API integration', 'Test and validate Cart API integration']}
+2026-03-19 12:12:32,081 | INFO | TASK_AGENT | Completed
+2026-03-19 12:12:32,107 | INFO | BACKEND_CODE_AGENT | Started
+2026-03-19 12:12:35,648 | DEBUG | BACKEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "fastapi\nsqlalchemy\npydantic\npasslib\npython-jose\n"
+        },
+        {
+            "path": "backend/main.py",
+            "content": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom backend.routers import auth, products, orders, cart, admin\n\napp = FastAPI()\n\norigins = [\n    \"http://localhost:3000\",\n    \"http://localhost:8000\",\n]\n\napp.add_middleware(\n    CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=\"*\", allow_headers=\"*\"\n)\n\napp.include_router(auth.router)\napp.include_router(products.router)\napp.include_router(orders.router)\napp.include_router(cart.router)\napp.include_router(admin.router)\n"
+        },
+        {
+            "path": "backend/models/__init__.py",
+            "content": ""
+        },
+        {
+            "path": "backend/models/user.py",
+            "content": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    username = Column(String)\n    email = Column(String)\n    password = Column(String)\n"
+        },
+        {
+            "path": "backend/models/product.py",
+            "content": "from sqlalchemy import Column, Integer, String, Float\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Product(Base):\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    price = Column(Float)\n    description = Column(String)\n"
+        },
+        {
+            "path": "backend/models/order.py",
+            "content": "from sqlalchemy import Column, Integer, String, Float, DateTime\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import relationship\n\nBase = declarative_base()\n\nclass Order(Base):\n    __tablename__ = 'orders'\n    id = Column(Integer, primary_key=True)\n    user_id = Column(Integer)\n    order_date = Column(DateTime)\n    total = Column(Float)\n"
+        },
+        {
+            "path": "backend/schemas/__init__.py",
+            "content": ""
+        },
+        {
+            "path": "backend/schemas/user.py",
+            "content": "from pydantic import BaseModel\n\nclass User(BaseModel):\n    id: int\n    username: str\n    email: str\n    password: str\n\nclass UserCreate(BaseModel):\n    username: str\n    email: str\n    password: str\n"
+        },
+        {
+            "path": "backend/schemas/product.py",
+            "content": "from pydantic import BaseModel\n\nclass Product(BaseModel):\n    id: int\n    name: str\n    price: float\n    description: str\n\nclass ProductCreate(BaseModel):\n    name: str\n    price: float\n    description: str\n"
+        },
+        {
+            "path": "backend/schemas/order.py",
+            "content": "from pydantic import BaseModel\nfrom datetime import datetime\n\nclass Order(BaseModel):\n    id: int\n    user_id: int\n    order_date: datetime\n    total: float\n\nclass OrderCreate(BaseModel):\n    user_id: int\n    total: float\n"
+        },
+        {
+            "path": "backend/services/__init__.py",
+            "content": ""
+        },
+        {
+            "path": "backend/services/user_service.py",
+            "content": "from backend.models.user import User\nfrom backend.schemas.user import UserCreate\n\nclass UserService:\n    def create_user(self, user: UserCreate):\n        new_user = User(username=user.username, email=user.email, password=user.password)\n        # save to database\n        return new_user\n"
+        },
+        {
+            "path": "backend/services/product_service.py",
+            "content": "from backend.models.product import Product\nfrom backend.schemas.product import ProductCreate\n\nclass ProductService:\n    def create_product(self, product: ProductCreate):\n        new_product = Product(name=product.name, price=product.price, description=product.description)\n        # save to database\n        return new_product\n"
+        },
+        {
+            "path": "backend/services/order_service.py",
+            "content": "from backend.models.order import Order\nfrom backend.schemas.order import OrderCreate\n\nclass OrderService:\n    def create_order(self, order: OrderCreate):\n        new_order = Order(user_id=order.user_id, total=order.total)\n        # save to database\n        return new_order\n"
+        },
+        {
+            "path": "backend/routers/__init__.py",
+            "content": ""
+        },
+        {
+            "path": "backend/routers/auth.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services.user_service import UserService\n\router = APIRouter()\n\n@router.post(\"/register\")\ndef register(user: UserCreate):\n    user_service = UserService()\n    new_user = user_service.create_user(user)\n    return new_user\n"
+        },
+        {
+            "path": "backend/routers/products.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services.product_service import ProductService\n\router = APIRouter()\n\n@router.post(\"/products\")\ndef create_product(product: ProductCreate):\n    product_service = ProductService()\n    new_product = product_service.create_product(product)\n    return new_product\n"
+        },
+        {
+            "path": "backend/routers/orders.py",
+            "content": "from fastapi import APIRouter, Depends\nfrom backend.services.order_service import OrderService\n\router = APIRouter()\n\n@router.post(\"/orders\")\ndef create_order(order: OrderCreate):\n    order_service = OrderService()\n    new_order = order_service.create_order(order)\n    return new_order\n"
+        },
+        {
+            "path": "backend/routers/cart.py",
+            "content": "from fastapi import APIRouter, Depends\n\router = APIRouter()\n\n@router.post(\"/cart\")\ndef add_to_cart():\n    # add to cart logic\n    pass\n"
+        },
+        {
+            "path": "backend/routers/admin.py",
+            "content": "from fastapi import APIRouter, Depends\n\router = APIRouter()\n\n@router.get(\"/admin\")\ndef admin_panel():\n    # admin panel logic\n    pass\n"
+        }
+    ]
+}
+```
+2026-03-19 12:12:35,649 | DEBUG | BACKEND_CODE_AGENT | Parsed backend_code
+2026-03-19 12:12:35,665 | INFO | BACKEND_CODE_AGENT | Completed
+2026-03-19 12:12:35,686 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 12:12:35,705 | INFO | FILE_WRITER_AGENT | Files created: 20
+2026-03-19 12:12:35,713 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 12:12:35,738 | INFO | FRONTEND_CODE_AGENT | Started
+2026-03-19 12:12:40,658 | DEBUG | FRONTEND_CODE_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "../requirements.txt",
+            "content": "next\nreact\ntypescript\ntailwindcss\n"
+        },
+        {
+            "path": "frontend/tsconfig.json",
+            "content": "{\"compilerOptions\":{\"target\":\"es6\",\"lib\":[\"dom\",\"dom.iterable\",\"esnext\"],\"allowJs\":true,\"skipLibCheck\":true,\"strict\":false,\"forceConsistentCasingInFileNames\":true,\"noEmit\":true,\"esModuleInterop\":true,\"module\":\"esnext\",\"moduleResolution\":\"node\",\"resolveJsonModule\":true,\"isolatedModules\":true,\"jsx\":\"preserve\"}}"
+        },
+        {
+            "path": "frontend/next.config.js",
+            "content": "module.exports = {\n  reactStrictMode: true,\n};"
+        },
+        {
+            "path": "frontend/tailwind.config.js",
+            "content": "module.exports = {\n  content: [\n    './pages/**/*.{js,ts,jsx,tsx}',\n    './components/**/*.{js,ts,jsx,tsx}',\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};"
+        },
+        {
+            "path": "frontend/pages/_app.tsx",
+            "content": "import '../styles/globals.css';\nimport type { AppProps } from 'next/app';\nimport Navbar from '../components/Navbar';\n\nfunction MyApp({ Component, pageProps }: AppProps) {\n  return (\n    <>\n      <Navbar />\n      <Component {...pageProps} />\n    </>\n  );\n}\n\nexport default MyApp;"
+        },
+        {
+            "path": "frontend/pages/_document.tsx",
+            "content": "import Document, { Html, Head, Main, NextScript } from 'next/document';\n\nclass MyDocument extends Document {\n  render() {\n    return (\n      <Html>\n        <Head>\n          <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css\" />\n        </Head>\n        <body>\n          <Main />\n          <NextScript />\n        </body>\n      </Html>\n    );\n  }\n}\n\nexport default MyDocument;"
+        },
+        {
+            "path": "frontend/pages/index.tsx",
+            "content": "import type { NextPage } from 'next';\nimport ProductGrid from '../components/ProductGrid';\nimport CategorySidebar from '../components/CategorySidebar';\n\nconst HomePage: NextPage = () => {\n  return (\n    <>\n      <h1>Home Page</h1>\n      <div className=\"flex\">\n        <CategorySidebar />\n        <ProductGrid />\n      </div>\n    </>\n  );\n};\n\nexport default HomePage;"
+        },
+        {
+            "path": "frontend/pages/product/[id].tsx",
+            "content": "import type { NextPage, GetServerSideProps } from 'next';\nimport { useState, useEffect } from 'react';\nimport axios from 'axios';\n\ninterface Product {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n}\n\nconst ProductPage: NextPage<{ product: Product }> = ({ product }) => {\n  return (\n    <>\n      <h1>{product.name}</h1>\n      <p>{product.description}</p>\n      <p>Price: {product.price}</p>\n    </>\n  );\n};\n\nexport const getServerSideProps: GetServerSideProps = async (context) => {\n  const id = context.params.id;\n  const response = await axios.get(`http://localhost:8000/products/${id}`);\n  const product = response.data;\n\n  return {\n    props: {\n      product,\n    },\n  };\n};\n\nexport default ProductPage;"
+        },
+        {
+            "path": "frontend/pages/cart.tsx",
+            "content": "import type { NextPage } from 'next';\nimport CartItem from '../components/CartItem';\n\nconst CartPage: NextPage = () => {\n  const [cartItems, setCartItems] = useState([]);\n\n  return (\n    <>\n      <h1>Cart</h1>\n      {cartItems.map((item) => (\n        <CartItem key={item.id} item={item} />\n      ))}\n    </>\n  );\n};\n\nexport default CartPage;"
+        },
+        {
+            "path": "frontend/pages/seller-dashboard.tsx",
+            "content": "import type { NextPage } from 'next';\n\nconst SellerDashboardPage: NextPage = () => {\n  return (\n    <>\n      <h1>Seller Dashboard</h1>\n    </>\n  );\n};\n\nexport default SellerDashboardPage;"
+        },
+        {
+            "path": "frontend/pages/admin-panel.tsx",
+            "content": "import type { NextPage } from 'next';\n\nconst AdminPanelPage: NextPage = () => {\n  return (\n    <>\n      <h1>Admin Panel</h1>\n    </>\n  );\n};\n\nexport default AdminPanelPage;"
+        },
+        {
+            "path": "frontend/components/Navbar.tsx",
+            "content": "import Link from 'next/link';\n\nconst Navbar = () => {\n  return (\n    <nav>\n      <ul>\n        <li>\n          <Link href=\"/\">Home</Link>\n        </li>\n        <li>\n          <Link href=\"/cart\">Cart</Link>\n        </li>\n      </ul>\n    </nav>\n  );\n};\n\nexport default Navbar;"
+        },
+        {
+            "path": "frontend/components/ProductCard.tsx",
+            "content": "import Link from 'next/link';\n\ninterface Product {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n}\n\nconst ProductCard = ({ product }: { product: Product }) => {\n  return (\n    <div>\n      <h2>{product.name}</h2>\n      <p>{product.description}</p>\n      <p>Price: {product.price}</p>\n      <Link href={`/product/${product.id}`}>View Details</Link>\n    </div>\n  );\n};\n\nexport default ProductCard;"
+        },
+        {
+            "path": "frontend/components/ProductGrid.tsx",
+            "content": "import ProductCard from './ProductCard';\n\ninterface Product {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n}\n\nconst ProductGrid = ({ products }: { products: Product[] }) => {\n  return (\n    <div>\n      {products.map((product) => (\n        <ProductCard key={product.id} product={product} />\n      ))}\n    </div>\n  );\n};\n\nexport default ProductGrid;"
+        },
+        {
+            "path": "frontend/components/CategorySidebar.tsx",
+            "content": "import Link from 'next/link';\n\nconst CategorySidebar = () => {\n  return (\n    <div>\n      <h2>Categories</h2>\n      <ul>\n        <li>\n          <Link href=\"/category/electronics\">Electronics</Link>\n        </li>\n        <li>\n          <Link href=\"/category/clothing\">Clothing</Link>\n        </li>\n      </ul>\n    </div>\n  );\n};\n\nexport default CategorySidebar;"
+        },
+        {
+            "path": "frontend/components/CartItem.tsx",
+            "content": "interface CartItemProps {\n  item: {\n    id: number;\n    name: string;\n    price: number;\n    quantity: number;\n  };\n}\n\nconst CartItem = ({ item }: CartItemProps) => {\n  return (\n    <div>\n      <h2>{item.name}</h2>\n      <p>Price: {item.price}</p>\n      <p>Quantity: {item.quantity}</p>\n    </div>\n  );\n};\n\nexport default CartItem;"
+        },
+        {
+            "path": "frontend/components/OrderSummary.tsx",
+            "content": "interface OrderSummaryProps {\n  total: number;\n}\n\nconst OrderSummary = ({ total }: OrderSummaryProps) => {\n  return (\n    <div>\n      <h2>Order Summary</h2>\n      <p>Total: {total}</p>\n    </div>\n  );\n};\n\nexport default OrderSummary;"
+        },
+        {
+            "path": "frontend/components/Footer.tsx",
+            "content": "const Footer = () => {\n  return (\n    <footer>\n      <p>&copy; 2024 E-commerce Website</p>\n    </footer>\n  );\n};\n\nexport default Footer;"
+        }
+    ]
+}
+```
+2026-03-19 12:12:40,679 | INFO | FRONTEND_CODE_AGENT | Completed
+2026-03-19 12:12:40,699 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 12:12:40,720 | INFO | FILE_WRITER_AGENT | Files created: 18
+2026-03-19 12:12:40,739 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 12:12:40,769 | INFO | INTEGRATION_AGENT | Started
+2026-03-19 12:12:44,140 | DEBUG | INTEGRATION_AGENT | Raw output: ```json
+{
+    "files": [
+        {
+            "path": "frontend/lib/api.ts",
+            "content": "export const api = async (endpoint: string, method: string = 'GET', data?: any) => {\n    try {\n        const response = await fetch(`http://localhost:8000/${endpoint}`, {\n            method,\n            headers: {\n                'Content-Type': 'application/json'\n            },\n            body: data ? JSON.stringify(data) : null\n        });\n        if (!response.ok) {\n            throw new Error(response.statusText);\n        }\n        return await response.json();\n    } catch (error) {\n        console.error(error);\n        throw error;\n    }\n};"
+        },
+        {
+            "path": "frontend/pages/index.tsx",
+            "content": "import type { NextPage } from 'next';\nimport { useState, useEffect } from 'react';\nimport ProductGrid from '../components/ProductGrid';\nimport CategorySidebar from '../components/CategorySidebar';\nimport { api } from '../lib/api';\n\nconst HomePage: NextPage = () => {\n    const [products, setProducts] = useState([]);\n    const [loading, setLoading] = useState(false);\n    const [error, setError] = useState(null);\n\n    useEffect(() => {\n        const fetchProducts = async () => {\n            setLoading(true);\n            try {\n                const data = await api('products');\n                setProducts(data);\n            } catch (error) {\n                setError(error.message);\n            } finally {\n                setLoading(false);\n            }\n        };\n        fetchProducts();\n    }, []);\n\n    if (loading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error}</div>;\n\n    return (\n        <>\n            <h1>Home Page</h1>\n            <div className=\"flex\">\n                <CategorySidebar />\n                <ProductGrid products={products} />\n            </div>\n        </>\n    );\n};\n\nexport default HomePage;"
+        },
+        {
+            "path": "frontend/pages/product/[id].tsx",
+            "content": "import type { NextPage, GetServerSideProps } from 'next';\nimport { useState, useEffect } from 'react';\nimport { api } from '../lib/api';\n\ninterface Product {\n    id: number;\n    name: string;\n    price: number;\n    description: string;\n}\n\nconst ProductPage: NextPage<{ product: Product }> = ({ product }) => {\n    const [loading, setLoading] = useState(false);\n    const [error, setError] = useState(null);\n\n    if (loading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error}</div>;\n\n    return (\n        <>\n            <h1>{product.name}</h1>\n            <p>{product.description}</p>\n            <p>Price: {product.price}</p>\n        </>\n    );\n};\n\nexport const getServerSideProps: GetServerSideProps = async (context) => {\n    const id = context.params.id;\n    const response = await api(`products/${id}`);\n    const product = response;\n\n    return {\n        props: {\n            product,\n        },\n    };\n};\n\nexport default ProductPage;"
+        },
+        {
+            "path": "frontend/pages/cart.tsx",
+            "content": "import type { NextPage } from 'next';\nimport { useState, useEffect } from 'react';\nimport CartItem from '../components/CartItem';\nimport { api } from '../lib/api';\n\nconst CartPage: NextPage = () => {\n    const [cartItems, setCartItems] = useState([]);\n    const [loading, setLoading] = useState(false);\n    const [error, setError] = useState(null);\n\n    useEffect(() => {\n        const fetchCartItems = async () => {\n            setLoading(true);\n            try {\n                const data = await api('cart');\n                setCartItems(data);\n            } catch (error) {\n                setError(error.message);\n            } finally {\n                setLoading(false);\n            }\n        };\n        fetchCartItems();\n    }, []);\n\n    if (loading) return <div>Loading...</div>;\n    if (error) return <div>Error: {error}</div>;\n\n    return (\n        <>\n            <h1>Cart</h1>\n            {cartItems.map((item) => (\n                <CartItem key={item.id} item={item} />\n            ))}\n        </>\n    );\n};\n\nexport default CartPage;"
+        }
+    ]
+}
+```
+2026-03-19 12:12:44,156 | INFO | INTEGRATION_AGENT | Completed
+2026-03-19 12:12:44,175 | INFO | FILE_WRITER_AGENT | Started
+2026-03-19 12:12:44,182 | INFO | FILE_WRITER_AGENT | Files created: 4
+2026-03-19 12:12:44,191 | INFO | FILE_WRITER_AGENT | Completed
+2026-03-19 12:12:44,259 | INFO | LangGraph workflow completed

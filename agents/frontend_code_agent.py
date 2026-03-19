@@ -77,7 +77,7 @@ def frontend_code_agent(state: AgentState):
             ========================
             - Use Next.js (App Router structure)
             - Use TypeScript (.tsx files)
-            - Use Tailwind CSS for styling
+            - Use Tailwind CSS for styling, also refer to mastercard design system for reference
             - Follow modular and scalable folder structure
 
             ========================
@@ -87,6 +87,7 @@ def frontend_code_agent(state: AgentState):
             - Each page must be properly structured and functional
             - Use realistic dummy data where backend integration is not available
             - Maintain consistency with backend APIs (naming, routes, structure)
+            - Check the backend code and create the UI so that they should be able to integrate seamlessly later
             - Keep components clean and separated
             - Use proper imports and exports
             - Avoid hardcoding everything in one file

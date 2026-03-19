@@ -14,7 +14,7 @@ def file_writer_agent(state: AgentState):
 
         code_key = state.get("code_key") 
         base_dir = state.get("output_dir", "generated_code")
-
+        mode = state.get("write_mode", "overwrite")
         if not code_key:
             raise ValueError("code_key not provided in state")
 
@@ -23,15 +23,11 @@ def file_writer_agent(state: AgentState):
         if not code_data or "files" not in code_data:
             raise ValueError(f"No valid files found in {code_key}")
 
-        created_files = write_files(base_dir, code_data["files"])
-
-        logger.info(f"FILE_WRITER_AGENT | Files created: {len(created_files)}")
-
+        created_files = write_files(base_dir, code_data["files"], mode=mode)
+        logger.info(f"FILE_WRITER_AGENT | Created: {len(result['created'])}, Updated: {len(result['updated'])}, Mode: {mode}")
         runtime = time.time() - start_time
         log_metric("file_writer_runtime", runtime)
-
         logger.info(f"FILE_WRITER_AGENT | Completed")
-
         return state
 
     except Exception as e:
