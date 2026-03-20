@@ -13,6 +13,17 @@ from agents.backend_code_agent import backend_code_agent
 from agents.file_writer_agent import file_writer_agent
 from agents.frontend_code_agent import frontend_code_agent 
 from agents.integration_agent import integration_agent
+from agents.debug_agent import debug_agent
+from agents.evaluation_agent import evaluation_agent
+
+def evaluation_router(state):
+    decision = state["evaluation"]["decision"]
+    retry_count = state.get("retry_count", 0)
+    if decision == "good":
+        return "end"
+    if retry_count >= 2:
+        return "end"
+    return "retry"
 
 def load_prd():
     with open("inputs/PRD.txt", "r", encoding="utf-8") as f:
@@ -30,7 +41,10 @@ def build_graph():
     builder.add_node("frontend_code_writer_agent", file_writer_agent)
     builder.add_node("integration_agent", integration_agent)
     builder.add_node("integration_code_writer", file_writer_agent)
-
+    builder.add_node("debug_agent", debug_agent)
+    builder.add_node("debug_code_writer", file_writer_agent)
+    builder.add_node("evaluation_agent", evaluation_agent)
+    
     builder.add_edge(START, "requirement_agent")
     builder.add_edge("requirement_agent", "architecture_agent")
     builder.add_edge("architecture_agent", "task_agent")
@@ -40,7 +54,10 @@ def build_graph():
     builder.add_edge("frontend_code_agent", "frontend_code_writer_agent")
     builder.add_edge("frontend_code_writer_agent", "integration_agent")
     builder.add_edge("integration_agent", "integration_code_writer")
-    builder.add_edge("integration_code_writer", END)
+    builder.add_edge("integration_code_writer", "debug_agent")
+    builder.add_edge("debug_agent", "debug_code_writer")
+    builder.add_edge("debug_code_writer", "evaluation_agent")
+    builder.add_conditional_edges("evaluation_agent",evaluation_router,{"retry": "backend_code_agent","end": END})
     graph = builder.compile()
     return graph
 

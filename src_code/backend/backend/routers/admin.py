@@ -1,7 +1,10 @@
 from fastapi import APIRouter, Depends
-outer = APIRouter()
+from backend.services import UserService
+
+router = APIRouter()
 
 @router.get("/admin")
-def admin_panel():
-    # admin panel logic
-    pass
+def get_admin():
+    user_service = UserService()
+    admin = user_service.get_admin()
+    return admin

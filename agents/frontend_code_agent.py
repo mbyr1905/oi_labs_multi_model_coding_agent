@@ -5,23 +5,7 @@ from graph.state import AgentState
 from llm.groq_llm import get_llm
 from utils.logger import logger
 from utils.mlflow_tracker import log_param, log_metric, log_text, log_error
-
-
-def extract_json(text):
-    try:
-        return json.loads(text)
-    except:
-        pass
-
-    match = re.search(r"```json(.*?)```", text, re.DOTALL)
-    if match:
-        return json.loads(match.group(1).strip())
-
-    match = re.search(r"\{.*?\}", text, re.DOTALL)
-    if match:
-        return json.loads(match.group())
-
-    raise ValueError(f"No valid JSON found. Output:\n{text}")
+from utils.extract_json import extract_json
 
 
 def frontend_code_agent(state: AgentState):

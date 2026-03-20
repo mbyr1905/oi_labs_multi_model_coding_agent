@@ -1,16 +1,13 @@
-import Link from 'next/link';
+import type { Category } from '../types';
 
-const CategorySidebar = () => {
+const CategorySidebar = ({ categories }: { categories: Category[] }) => {
   return (
     <div>
       <h2>Categories</h2>
       <ul>
-        <li>
-          <Link href="/category/electronics">Electronics</Link>
-        </li>
-        <li>
-          <Link href="/category/clothing">Clothing</Link>
-        </li>
+        {categories.map((category) => (
+          <li key={category.id}>{category.name}</li>
+        ))}
       </ul>
     </div>
   );

@@ -1,6 +1,8 @@
 from fastapi import APIRouter, Depends
-from backend.services.product_service import ProductService
-outer = APIRouter()
+from backend.services import ProductService
+from backend.schemas import ProductCreate
+
+router = APIRouter()
 
 @router.post("/products")
 def create_product(product: ProductCreate):

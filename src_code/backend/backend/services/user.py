@@ -1,5 +1,5 @@
-from backend.models.user import User
-from backend.schemas.user import UserCreate
+from backend.models import User
+from backend.schemas import UserCreate
 
 class UserService:
     def create_user(self, user: UserCreate):

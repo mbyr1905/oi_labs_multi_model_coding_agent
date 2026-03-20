@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-const SellerDashboardPage: NextPage = () => {
+const SellerDashboard: NextPage = () => {
   return (
     <>
       <h1>Seller Dashboard</h1>
@@ -8,4 +8,4 @@ const SellerDashboardPage: NextPage = () => {
   );
 };
 
-export default SellerDashboardPage;
+export default SellerDashboard;

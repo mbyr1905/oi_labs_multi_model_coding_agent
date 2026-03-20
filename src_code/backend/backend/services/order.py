@@ -1,5 +1,5 @@
-from backend.models.order import Order
-from backend.schemas.order import OrderCreate
+from backend.models import Order
+from backend.schemas import OrderCreate
 
 class OrderService:
     def create_order(self, order: OrderCreate):

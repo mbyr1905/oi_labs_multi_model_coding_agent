@@ -1,11 +1,5 @@
+import type { Product } from '../types';
 import ProductCard from './ProductCard';
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-}
 
 const ProductGrid = ({ products }: { products: Product[] }) => {
   return (

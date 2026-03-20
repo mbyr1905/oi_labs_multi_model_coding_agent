@@ -6,48 +6,7 @@ from graph.state import AgentState
 from llm.groq_llm import get_llm
 from utils.logger import logger
 from utils.mlflow_tracker import log_param, log_metric, log_text, log_error
-
-def _normalize_json_like(text: str) -> str:
-    """Try to normalize common non-strict JSON output into valid JSON."""
-    # Remove trailing commas (e.g., after the last item in objects/arrays)
-    text = re.sub(r",\s*([}\]])", r"\1", text)
-
-    # Quote unquoted object keys: {key: ...} -> {"key": ...}
-    text = re.sub(r"(?P<prefix>[{,\s])(?P<key>[A-Za-z_][A-Za-z0-9_]*)\s*:\s*", r"\g<prefix>\"\g<key>\": ", text)
-
-    # Convert single-quoted strings to double-quoted strings.
-    # This is a best-effort transformation and may not be perfect for all edge cases.
-    text = re.sub(r"(?<![\\\"])'((?:\\.|[^'\\])*)'", r'"\1"', text)
-
-    return text
-
-
-def extract_json(text):
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        pass
-
-    match = re.search(r"```json(.*?)```", text, re.DOTALL)
-    if match:
-        text = match.group(1).strip()
-
-    match = re.search(r"\{.*\}", text, re.DOTALL)
-    if not match:
-        raise ValueError(f"No JSON found. Output:\n{text}")
-
-    json_str = match.group().strip()
-
-    # First try parsing pretty-printed JSON as-is.
-    try:
-        return json.loads(json_str)
-    except json.JSONDecodeError:
-        pass
-
-    # Try to normalize common non-strict JSON output from LLMs.
-    normalized = _normalize_json_like(json_str)
-    return json.loads(normalized)
-
+from utils.extract_json import extract_json
 
 def integration_agent(state: AgentState):
     try:

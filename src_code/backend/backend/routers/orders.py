@@ -1,9 +1,10 @@
 from fastapi import APIRouter, Depends
-from backend.services.order_service import OrderService
-outer = APIRouter()
+from backend.services import OrderService
 
-@router.post("/orders")
-def create_order(order: OrderCreate):
+router = APIRouter()
+
+@router.get("/orders")
+def get_orders():
     order_service = OrderService()
-    new_order = order_service.create_order(order)
-    return new_order
+    orders = order_service.get_orders()
+    return orders

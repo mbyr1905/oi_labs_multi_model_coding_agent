@@ -9,23 +9,7 @@ from graph.state import AgentState
 from utils.logger import logger 
 from utils.mlflow_tracker import log_param, log_metric, log_text, log_error
 from llm.groq_llm import get_llm
-
-
-def extract_json(text):
-    try:
-        return json.loads(text)
-    except:
-        pass
-
-    match = re.search(r"```json(.*?)```", text, re.DOTALL)
-    if match:
-        return json.loads(match.group(1).strip())
-
-    match = re.search(r"\{.*?\}", text, re.DOTALL)
-    if match:
-        return json.loads(match.group())
-
-    raise ValueError("No valid JSON found in LLM output")
+from utils.extract_json import extract_json
 
 def requirement_agent(state: AgentState):
     try:

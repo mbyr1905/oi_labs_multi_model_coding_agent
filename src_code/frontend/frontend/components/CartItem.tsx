@@ -1,20 +1,12 @@
-interface CartItemProps {
-  item: {
-    id: number;
-    name: string;
-    price: number;
-    quantity: number;
-  };
-}
+import type { CartItem } from '../types';
 
-const CartItem = ({ item }: CartItemProps) => {
+const CartItemComponent = ({ item }: { item: CartItem }) => {
   return (
     <div>
       <h2>{item.name}</h2>
-      <p>Price: {item.price}</p>
-      <p>Quantity: {item.quantity}</p>
+      <p>{item.price}</p>
     </div>
   );
 };
 
-export default CartItem;
+export default CartItemComponent;

@@ -23,7 +23,7 @@ def file_writer_agent(state: AgentState):
         if not code_data or "files" not in code_data:
             raise ValueError(f"No valid files found in {code_key}")
 
-        created_files = write_files(base_dir, code_data["files"], mode=mode)
+        result = write_files(base_dir, code_data["files"], mode=mode)
         logger.info(f"FILE_WRITER_AGENT | Created: {len(result['created'])}, Updated: {len(result['updated'])}, Mode: {mode}")
         runtime = time.time() - start_time
         log_metric("file_writer_runtime", runtime)

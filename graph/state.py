@@ -16,3 +16,5 @@ class AgentState(TypedDict):
     code_key: str
     output_dir: str
     write_mode: str
+    retry_count: int
+    evaluation: dict

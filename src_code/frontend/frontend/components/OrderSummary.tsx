@@ -1,12 +1,10 @@
-interface OrderSummaryProps {
-  total: number;
-}
+import type { Order } from '../types';
 
-const OrderSummary = ({ total }: OrderSummaryProps) => {
+const OrderSummary = ({ order }: { order: Order }) => {
   return (
     <div>
       <h2>Order Summary</h2>
-      <p>Total: {total}</p>
+      <p>Total: {order.total}</p>
     </div>
   );
 };
