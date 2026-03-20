@@ -6,6 +6,7 @@ from graph.state import AgentState
 from llm.groq_llm import get_llm
 from utils.extract_json import extract_json
 from utils.logger import logger
+from utils.guardrails import validate_code_structure
 from utils.mlflow_tracker import log_param, log_metric, log_text, log_error
 
 def backend_code_agent(state: AgentState):
@@ -45,16 +46,6 @@ def backend_code_agent(state: AgentState):
             - Use clean folder structure
             
             Return ONLY valid JSON:
-
-            {{
-            "files": [
-            {{
-                "path": "",
-                "content": ""
-            }}
-            ]
-            }}
-
             Rules:
             - No explanation
             - No markdown
@@ -68,6 +59,20 @@ def backend_code_agent(state: AgentState):
             - The file path MUST be: ../requirements.txt
             - This ensures it is created inside src_code/
             - Do NOT create requirements.txt inside backend folder
+            STRICT VALIDITY RULES:
+            - Do NOT use non-existent libraries
+            - Do NOT invent APIs
+            - Use only real Python / FastAPI / React constructs
+            - Ensure imports are valid
+            
+            {{
+            "files": [
+            {{
+                "path": "",
+                "content": ""
+            }}
+            ]
+            }}
             """
 
         log_text(prompt, "backend_code_prompt.txt")
@@ -83,6 +88,11 @@ def backend_code_agent(state: AgentState):
             raise ValueError("LLM returned empty output")
 
         backend_code = extract_json(output)
+        issues = validate_code_structure(backend_code)
+        if issues:
+            log_error(f"Guardrail issues: {issues} for backend code")
+            logger.error(f"BACKEND_CODE_AGENT | Guardrail issues: {issues} for backend code")
+            raise ValueError(f"Guardrail failed: {issues} for backend code")
         state["backend_code"] = backend_code
         logger.debug(f"BACKEND_CODE_AGENT | Parsed backend_code")
 

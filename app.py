@@ -15,6 +15,7 @@ from agents.frontend_code_agent import frontend_code_agent
 from agents.integration_agent import integration_agent
 from agents.debug_agent import debug_agent
 from agents.evaluation_agent import evaluation_agent
+from agents.execution_agent import execution_agent
 
 def evaluation_router(state):
     decision = state["evaluation"]["decision"]
@@ -43,6 +44,7 @@ def build_graph():
     builder.add_node("integration_code_writer", file_writer_agent)
     builder.add_node("debug_agent", debug_agent)
     builder.add_node("debug_code_writer", file_writer_agent)
+    builder.add_node("execution_agent", execution_agent)
     builder.add_node("evaluation_agent", evaluation_agent)
     
     builder.add_edge(START, "requirement_agent")
@@ -56,7 +58,8 @@ def build_graph():
     builder.add_edge("integration_agent", "integration_code_writer")
     builder.add_edge("integration_code_writer", "debug_agent")
     builder.add_edge("debug_agent", "debug_code_writer")
-    builder.add_edge("debug_code_writer", "evaluation_agent")
+    builder.add_edge("debug_code_writer", "execution_agent")
+    builder.add_edge("execution_agent", "evaluation_agent")
     builder.add_conditional_edges("evaluation_agent",evaluation_router,{"retry": "backend_code_agent","end": END})
     graph = builder.compile()
     return graph

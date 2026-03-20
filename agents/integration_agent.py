@@ -7,6 +7,7 @@ from llm.groq_llm import get_llm
 from utils.logger import logger
 from utils.mlflow_tracker import log_param, log_metric, log_text, log_error
 from utils.extract_json import extract_json
+from utils.guardrails import validate_code_structure
 
 def integration_agent(state: AgentState):
     try:
@@ -69,6 +70,22 @@ def integration_agent(state: AgentState):
         OUTPUT FORMAT
         ========================
         Return ONLY valid JSON:
+        
+        STRICT VALIDITY RULES:
+        - Do NOT use non-existent libraries
+        - Do NOT invent APIs
+        - Use only real Python / FastAPI / React constructs
+        - Ensure imports are valid
+        
+        ========================
+        STRICT RULES
+        ========================
+        - Do NOT include explanations
+        - Do NOT include markdown (no ```json)
+        - Do NOT include text outside JSON
+        - Ensure JSON is valid and parsable
+        - Ensure all files have proper content
+        - Output STRICTLY valid JSON 
 
         {{
         "files": [
@@ -78,16 +95,6 @@ def integration_agent(state: AgentState):
             }}
         ]
         }}
-
-         ========================
-        STRICT RULES
-        ========================
-        - Do NOT include explanations
-        - Do NOT include markdown (no ```json)
-        - Do NOT include text outside JSON
-        - Ensure JSON is valid and parsable
-        - Ensure all files have proper content
-        - Output STRICTLY valid JSON 
         """
 
         log_text(prompt, "integration_prompt.txt")
@@ -102,7 +109,11 @@ def integration_agent(state: AgentState):
             raise ValueError("Empty output")
 
         integration_code = extract_json(output)
-
+        issues = validate_code_structure(integration_code)
+        if issues:
+            log_error(f"Guardrail issues: {issues} for integration code")
+            logger.error(f"INTEGRATION_AGENT | Guardrail issues: {issues} for integration code")
+            raise ValueError(f"Guardrail failed: {issues} for integration code")
         runtime = time.time() - start_time
         log_metric("integration_runtime", runtime)
 

@@ -6,6 +6,7 @@ from llm.groq_llm import get_llm
 from utils.logger import logger
 from utils.mlflow_tracker import log_param, log_metric, log_text, log_error
 from utils.extract_json import extract_json
+from utils.guardrails import validate_code_structure
 
 
 def frontend_code_agent(state: AgentState):
@@ -81,16 +82,6 @@ def frontend_code_agent(state: AgentState):
             OUTPUT FORMAT
             ========================
             Return ONLY valid JSON:
-
-            {{
-            "files": [
-                {{
-                "path": "",
-                "content": ""
-                }}
-            ]
-            }}
-
             ========================
             STRICT RULES
             ========================
@@ -108,6 +99,19 @@ def frontend_code_agent(state: AgentState):
             - The file path MUST be: ../requirements.txt
             - This ensures it is created inside src_code/
             - Do NOT create requirements.txt inside frontend folder
+            STRICT VALIDITY RULES:
+            - Do NOT use non-existent libraries
+            - Do NOT invent APIs
+            - Use only real Python / FastAPI / React constructs
+            - Ensure imports are valid
+            {{
+            "files": [
+                {{
+                "path": "",
+                "content": ""
+                }}
+            ]
+            }}
             """
 
         log_text(prompt, "frontend_code_prompt.txt")
@@ -123,6 +127,11 @@ def frontend_code_agent(state: AgentState):
             raise ValueError("LLM returned empty output")
 
         frontend_code = extract_json(output)
+        issues = validate_code_structure(frontend_code)
+        if issues:
+            log_error(f"Guardrail issues: {issues} for frontend code")
+            logger.error(f"FRONTEND_CODE_AGENT | Guardrail issues: {issues} for frontend code")
+            raise ValueError(f"Guardrail failed: {issues} for frontend code")
         state["frontend_code"] = frontend_code
         runtime = time.time() - start_time
         log_metric("frontend_code_runtime", runtime)

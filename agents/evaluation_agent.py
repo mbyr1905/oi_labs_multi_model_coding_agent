@@ -55,6 +55,11 @@ def evaluation_agent(state: AgentState):
         - Integration correctness
         - Structure quality
 
+        Execution:
+        {state["execution_result"]}
+
+        If execution failed → decision MUST be "bad"
+        
         ========================
         OUTPUT FORMAT
         ========================

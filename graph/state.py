@@ -17,4 +17,5 @@ class AgentState(TypedDict):
     output_dir: str
     write_mode: str
     retry_count: int
+    execution_result: dict
     evaluation: dict
