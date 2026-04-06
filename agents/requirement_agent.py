@@ -18,7 +18,7 @@ def requirement_agent(state: AgentState):
         logger.info("Starting requirement_agent")
         prd_text = state["prd_text"]
         figma_path = state.get("figma_image_path")
-        log_param("requirements_agent_model", "llama-3.3-70b-versatile")
+        log_param("requirements_agent_model", "mistral:latest")
         figma_context = ""
         if figma_path and os.path.exists(figma_path):
             logger.info(f"Figma design detected: {figma_path}")
@@ -56,6 +56,7 @@ def requirement_agent(state: AgentState):
         """
         log_text(prompt, "requirement_agent_prompt.txt")
         res = llm.invoke(prompt)
+        logger.info(res)
         output = res.content
         log_text(output, "requirement_agent_response.txt")
         system_spec = extract_json(output)

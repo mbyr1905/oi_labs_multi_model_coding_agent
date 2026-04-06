@@ -33,4 +33,3 @@ def file_writer_agent(state: AgentState):
     except Exception as e:
         logger.error(f"FILE_WRITER_AGENT | ERROR: {str(e)}")
         log_error(e)
-        raise e

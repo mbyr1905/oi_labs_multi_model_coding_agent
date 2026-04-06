@@ -22,12 +22,12 @@ def evaluation_router(state):
     retry_count = state.get("retry_count", 0)
     if decision == "good":
         return "end"
-    if retry_count >= 2:
+    if retry_count >= 5:
         return "end"
     return "retry"
 
 def load_prd():
-    with open("inputs/PRD.txt", "r", encoding="utf-8") as f:
+    with open("inputs/PRD_BASIC.txt", "r", encoding="utf-8") as f:
         return f.read()
 
 def build_graph():

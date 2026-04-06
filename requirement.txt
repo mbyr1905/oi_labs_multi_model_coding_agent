@@ -12,4 +12,5 @@ google-generativeai
 langchain-groq
 pillow
 mlflow
-react
+langchain_community
+langchain-ollama

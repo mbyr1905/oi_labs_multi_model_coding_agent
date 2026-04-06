@@ -20,12 +20,14 @@ def frontend_code_agent(state: AgentState):
         components = state["components"]
         pages = state["pages"]
 
-        log_param("frontend_code_model", "llama-3.3-70b-versatile")
-
+        log_param("frontend_code_model", "mistral:latest")
+        frontend_previous_code = state.get("frontend_code", "No previous code")
+        evaluation = state.get("evaluation", "No evaluation yet")
+        execution_result = state.get("execution_result", "No execution result yet")
         prompt = f"""
             You are a senior frontend engineer building a production-ready e-commerce web application.
 
-            Your task is to generate a complete frontend using Next.js (App Router), TypeScript, and Tailwind CSS.
+            Your task is to generate a complete frontend using Next.js (App Router), TypeScript, and Tailwind CSS, Code should also be generated.
 
             ========================
             SYSTEM SPECIFICATION
@@ -41,6 +43,21 @@ def frontend_code_agent(state: AgentState):
             BACKEND CODE
             ========================
             {state["backend_code"]}
+            
+            ========================
+            PREVIOUS FRONTEND CODE
+            ========================
+            {frontend_previous_code}
+            
+            ========================
+            EXECUTION RESULT
+            ========================
+            {execution_result}
+
+            ========================
+            EVALUATION FEEDBACK
+            ========================
+            {evaluation}
 
             ========================
             FRONTEND TASKS
@@ -56,6 +73,12 @@ def frontend_code_agent(state: AgentState):
             UI COMPONENTS
             ========================
             {components}
+            
+            IMPORTANT:
+            - If previous code exists:
+                - DO NOT regenerate everything
+                - ONLY fix frontend_code issues based on execution and evaluation and according to the backed_code
+                - Preserve working code
 
             ========================
             REQUIREMENTS
@@ -97,7 +120,7 @@ def frontend_code_agent(state: AgentState):
             ========================
             - Create ONE common requirements.txt file
             - The file path MUST be: ../requirements.txt
-            - This ensures it is created inside src_code/
+            - This ensures it is created inside src_code/frontend folder but can be accessed by both frontend and backend, and no other folders other than this
             - Do NOT create requirements.txt inside frontend folder
             STRICT VALIDITY RULES:
             - Do NOT use non-existent libraries

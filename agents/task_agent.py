@@ -13,7 +13,7 @@ def task_agent(state: AgentState):
         logger.info("TASK_AGENT | Started")
         llm = get_llm()
         architecture_plan = state["architecture_plan"]
-        log_param("task_agent_model", "llama-3.3-70b-versatile")
+        log_param("task_agent_model", "mistral:latest")
         prompt = f"""
         You are a senior software engineer.
 

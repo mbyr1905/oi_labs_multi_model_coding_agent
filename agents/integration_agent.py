@@ -21,12 +21,13 @@ def integration_agent(state: AgentState):
         backend = state["backend_code"]
         frontend = state["frontend_code"]
 
-        log_param("integration_model", "llama-3.3-70b-versatile")
-
+        log_param("integration_model", "mistral:latest")
+        evaluation = state.get("evaluation", "No evaluation yet")
+        execution_result = state.get("execution_result", "No execution result yet")
         prompt = f"""
         You are a senior full-stack engineer.
 
-        Your job is to CONNECT frontend with backend.
+        Your job is to CONNECT frontend with backend, and generated assosiated code.
 
         ========================
         SYSTEM SPEC
@@ -47,6 +48,22 @@ def integration_agent(state: AgentState):
         FRONTEND (REFERENCE)
         ========================
         {frontend}
+        
+        ========================
+        EXECUTION RESULT
+        ========================
+        {execution_result}
+
+        ========================
+        EVALUATION FEEDBACK
+        ========================
+        {evaluation}
+        
+        IMPORTANT:
+            - If previous code exists:
+                - DO NOT regenerate everything
+                - ONLY fix integration code issues based on execution and evaluation and backed anf frontend code
+                - Preserve working code
 
         ========================
         TASK

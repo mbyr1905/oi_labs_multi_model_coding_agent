@@ -21,8 +21,9 @@ def debug_agent(state: AgentState):
         frontend = state.get("frontend_code")
         integration = state.get("integration_code")
 
-        log_param("debug_model", "llama-3.3-70b-versatile")
-
+        log_param("debug_model", "mistral:latest")
+        evaluation = state.get("evaluation", "No evaluation yet")
+        execution_result = state.get("execution_result", "No execution result yet")
         prompt = f"""
         You are a senior software engineer responsible for fixing generated code.
         
@@ -40,6 +41,22 @@ def debug_agent(state: AgentState):
         INTEGRATION CODE
         ========================
         {integration}
+        
+        ========================
+        EXECUTION RESULT
+        ========================
+        {execution_result}
+
+        ========================
+        EVALUATION FEEDBACK
+        ========================
+        {evaluation}
+        
+        IMPORTANT:
+            - If previous code exists:
+                - DO NOT regenerate everything
+                - ONLY fix the existing issues based on execution and evaluation
+                - Preserve working code
         
         ========================
         TASK

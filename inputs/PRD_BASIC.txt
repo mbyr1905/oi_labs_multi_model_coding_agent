@@ -1,0 +1,1 @@
+create a python file to print hello world, no frnt end needed, and execute it and store the output in a csv in the same code directory.

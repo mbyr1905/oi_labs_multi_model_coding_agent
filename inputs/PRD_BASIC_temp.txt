@@ -1,0 +1,189 @@
+Project Name
+
+AuthCalc AI
+
+🧠 Product Type
+
+Authentication-based Web App with:
+
+Calculator
+Question-Answer Generator
+Persistent Chat Sessions
+1️⃣ Product Overview
+🎯 Goal
+
+Build a web application where users can:
+
+Sign up / log in
+Perform calculator operations
+Ask questions (AI-based Q&A)
+Maintain session history tied to user account
+🎯 Objectives
+Provide secure authentication
+Maintain user-specific session history
+Enable stateful AI interaction
+Build a simple but scalable backend
+🖥 Platform
+Web application (desktop + mobile responsive)
+2️⃣ Target Users
+👤 Users
+
+Users should be able to:
+
+Register / login
+Perform calculations
+Ask questions
+View past sessions
+Resume previous conversations
+3️⃣ Core Features
+3.1 Authentication System
+Features:
+Sign up
+Login
+Logout
+Token-based authentication (JWT)
+Fields:
+user_id
+email
+password (hashed)
+3.2 Calculator Module
+Capabilities:
+Basic operations:
+Addition
+Subtraction
+Multiplication
+Division
+Input:
+expression (e.g., "2 + 3 * 4")
+Output:
+result
+3.3 Q&A Generator (AI Module)
+Features:
+User can ask any question
+AI generates answer
+Input:
+question
+Output:
+answer
+3.4 Session / Thread Management (🔥 IMPORTANT)
+Concept:
+
+Each user has multiple threads (sessions)
+
+Each Thread Contains:
+thread_id
+user_id
+title (optional)
+created_at
+Each Message in Thread:
+message_id
+thread_id
+role (user / assistant)
+content
+timestamp
+Behavior:
+On login → user sees previous threads
+User can:
+continue existing thread
+create new thread
+Chat history persists across sessions
+3.5 History Management
+
+Users should be able to:
+
+View past threads
+Open a thread
+See full conversation history
+4️⃣ Non-Functional Requirements
+⚡ Performance
+API response < 1 second (excluding LLM)
+🔐 Security
+Password hashing (bcrypt)
+JWT authentication
+Input validation
+📈 Scalability
+Support multiple users and sessions
+🧠 State Persistence
+Chat history must persist in DB
+5️⃣ Suggested Tech Stack
+Frontend
+React / Next.js
+Tailwind CSS
+Backend
+Python
+FastAPI
+Database
+PostgreSQL (or SQLite for dev)
+AI
+Groq / OpenAI (LLM)
+Storage Design
+Relational DB (for users + sessions)
+Optional: Redis (future caching)
+6️⃣ API Design
+Auth APIs
+POST /auth/signup
+POST /auth/login
+GET /auth/me
+Calculator API
+POST /calculator/evaluate
+
+Request:
+
+{
+  "expression": "2 + 3 * 4"
+}
+Q&A API
+POST /qa/ask
+
+Request:
+
+{
+  "question": "What is AI?"
+}
+Thread APIs
+POST /threads
+GET /threads
+GET /threads/{thread_id}
+POST /threads/{thread_id}/message
+7️⃣ Database Design
+Users Table
+id
+email
+password_hash
+created_at
+Threads Table
+id
+user_id
+title
+created_at
+Messages Table
+id
+thread_id
+role (user/assistant)
+content
+created_at
+8️⃣ System Behavior Flow
+🔐 Login Flow
+Login → JWT → Fetch user threads
+💬 Chat Flow
+User sends question
+→ Save message (user)
+→ LLM generates response
+→ Save message (assistant)
+→ Return response
+🔁 Session Persistence
+Logout → Login → Threads still available ✅
+9️⃣ MVP Scope (VERY IMPORTANT)
+
+Focus ONLY on:
+
+Auth
+Calculator
+Q&A
+Thread persistence
+
+❌ Ignore:
+
+UI polish
+advanced AI memory
+scaling infra

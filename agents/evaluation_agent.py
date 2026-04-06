@@ -22,7 +22,7 @@ def evaluation_agent(state: AgentState):
 
         retry_count = state.get("retry_count", 0)
 
-        log_param("evaluation_model", "llama-3.3-70b-versatile")
+        log_param("evaluation_model", "mistral:latest")
 
         prompt = f"""
         You are a senior code reviewer.

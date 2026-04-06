@@ -17,12 +17,15 @@ def backend_code_agent(state: AgentState):
         llm = get_llm()
         backend_tasks = state["task_plan"]["backend_tasks"]
 
-        log_param("backend_code_model", "llama-3.3-70b-versatile")
-
+        log_param("backend_code_model", "mistral:latest")
+        backend_previous_code = state.get("backend_code", "No previous code")
+        frontend_previous_code = state.get("frontend_code", "No previous code")
+        evaluation = state.get("evaluation", "No evaluation yet")
+        execution_result = state.get("execution_result", "No execution result yet")
         prompt = f"""
             You are a senior backend engineer.
 
-            Generate production-ready FastAPI backend code.
+            Generate production-ready FastAPI backend code, Code should also be generated.
 
             SYSTEM SPEC:
             {state["system_spec"]}
@@ -33,9 +36,37 @@ def backend_code_agent(state: AgentState):
             BACKEND TASKS:
             {backend_tasks}
             
+            ========================
+            PREVIOUS BACKEND CODE
+            ========================
+            {backend_previous_code}
+            
+            ========================
+            PREVIOUS FRONTEND CODE
+            ========================
+            {frontend_previous_code}
+            
+            ========================
+            EXECUTION RESULT
+            ========================
+            {execution_result}
+
+            ========================
+            EVALUATION FEEDBACK
+            ========================
+            {evaluation}
+            
+            IMPORTANT:
+            - If previous code exists:
+                - DO NOT regenerate everything
+                - ONLY fix backed_code issues based on execution and evaluation
+                - Preserve working code
+            
+            
             Requirements:
             - Use FastAPI best practices
             - Use modular architecture
+            - Generate the code in each of the code file that youcreated
             - Follow the architecture strictly
             - Include:
                 - models (SQLAlchemy)
@@ -46,18 +77,22 @@ def backend_code_agent(state: AgentState):
             - Use clean folder structure
             
             Return ONLY valid JSON:
-            Rules:
+            ========================
+            Strict Rules:
+            ========================
             - No explanation
             - No markdown
+            - Do NOT include text outside JSON
             - Ensure JSON is valid and parsable
             - Ensure all files have proper content
-            - Output STRICTLY valid JSON 
+            - Output STRICTLY valid JSON  
+            - Should be extracted using json extract, skip quotes, new lines and all other cases where jason will be failing
             ========================
             SPECIAL FILE RULES
             ========================
             - Create ONE common requirements.txt file
             - The file path MUST be: ../requirements.txt
-            - This ensures it is created inside src_code/
+            - This ensures it is created inside src_code/backend folder but can be accessed by both frontend and backend, and no other folders other than this
             - Do NOT create requirements.txt inside backend folder
             STRICT VALIDITY RULES:
             - Do NOT use non-existent libraries

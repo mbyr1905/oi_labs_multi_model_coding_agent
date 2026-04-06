@@ -15,7 +15,7 @@ def architecture_agent(state: AgentState):
         logger.info("ARCHITECTURE_AGENT | Started")
         llm = get_llm()
         system_spec = state["system_spec"]
-        log_param("architecture_model", "llama-3.3-70b-versatile")
+        log_param("architecture_model", "mistral:latest")
         prompt = f"""
             You are a senior software architect.
 
